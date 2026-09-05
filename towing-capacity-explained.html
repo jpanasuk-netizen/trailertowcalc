@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Towing Capacity Explained: Tow Rating vs GCWR vs Payload (2026)</title>
+<meta name="description" content="Why a '13,000 lb towing' half-ton stops at 7,000 in the real world. The four ratings — tow rating, GCWR, payload, hitch class — how they interact, and which one bites first.">
+<link rel="canonical" href="https://jpanasuk-netizen.github.io/trailertowcalc/towing-capacity-explained.html">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Towing Capacity Explained: Tow Rating vs GCWR vs Payload">
+<meta property="og:description" content="Four ratings decide your real towing capacity. The lowest one after the load is applied wins — and it's usually payload.">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between tow rating, GCWR, and payload?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Tow rating is the maximum trailer weight the manufacturer rates the drivetrain to pull. GCWR (gross combined weight rating) caps the loaded truck plus the loaded trailer together. Payload rating caps everything carried on the truck itself — passengers, cargo, and crucially the trailer's tongue weight. All three must pass at once; the tightest one is your real capacity." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why can't my half-ton really tow its max tow rating?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Max tow ratings assume a light single-cab truck with a weight-distributing hitch and a 150 lb driver — nothing else. A crew cab with four passengers, bed gear, and a 13% tongue weight on a 7,000 lb camper (about 900 lb on the hitch) consumes most of a typical 1,650 lb payload. Payload runs out long before the tow rating does." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a weight-distribution hitch increase towing capacity?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. A WDH redistributes tongue weight across both axles to restore steering, braking, and headlight aim, but it does not raise the tow rating, payload rating, or GCWR by a single pound. Some manufacturers credit a slightly higher tow rating only when a WDH is used — check the specific truck's towing guide." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-head">
+  <a class="brand" href="index.html">TrailerTowCalc</a>
+  <nav aria-label="Site">
+    <a href="index.html#calc">Calculators</a>
+    <a href="tongue-weight-guide.html">Tongue weight</a>
+    <a href="best-hitches-weight-distribution.html">Hitch picks</a>
+    <a href="https://jpanasuk-netizen.github.io/generatorsizer/" rel="noopener">GeneratorSizer ↗</a>
+    <a href="https://jpanasuk-netizen.github.io/weldingcalc/" rel="noopener">WeldingCalc ↗</a>
+  </nav>
+</header>
+
+<main>
+<h1>Towing capacity explained: tow rating vs GCWR vs payload</h1>
+<p class="sub">Short answer: your real towing capacity is the <em>smallest</em> of four ratings after your actual load is applied. Run the <a href="index.html#calc">towing capacity check</a> with your door-sticker numbers to see which one is binding.</p>
+
+<h2>The four ratings</h2>
+<div class="tbl-wrap">
+<table>
+<tr><th>Rating</th><th>What it caps</th><th>Where to find it</th></tr>
+<tr><td>Tow rating</td><td>Maximum trailer weight the drivetrain is rated to pull (with WDH on most numbers you see)</td><td>Owner's manual / towing guide for YOUR configuration</td></tr>
+<tr><td>GCWR</td><td>Loaded truck + loaded trailer, combined</td><td>Door-jamb sticker / towing guide</td></tr>
+<tr><td>Payload rating</td><td>Everything on the truck: passengers, cargo, tongue weight, hitch hardware</td><td>Door-jamb sticker: GVWR − curb weight</td></tr>
+<tr><td>Hitch class</td><td>Weight the receiver itself can carry (Class III: 5,000 lb WDH / 500 lb tongue; Class IV: 10,000 / 1,000)</td><td>Stamped on the hitch</td></tr>
+</table>
+</div>
+
+<h2>The worked example that surprises everyone</h2>
+<p>A half-ton crew cab: 13,000 lb tow rating, 1,650 lb payload. You hook up a 7,000 lb camper packed for a two-week trip.</p>
+<div class="ans">
+<strong>Tongue weight: 7,000 × 13% ≈ 900 lb.</strong> Add the WDH shank and head (~90 lb), four people (~420 lb), a cooler and bed gear (~200 lb): <strong>1,610 lb of the 1,650 lb payload is gone.</strong> Fifty pounds of margin. The tow rating is barely half used — payload is the binding limit, and any option add-on weight the brochure didn't count puts you over.
+</div>
+<p>That is why this site's first calculator computes every margin and shows you the <strong>lowest</strong> one. Never trust a single number.</p>
+
+<h2>GCWR is the silent one</h2>
+<p>Payload fits, tow rating fits — and GCWR still fails when the truck itself is heavy. Curb weight as optioned (4×4, diesel, sunroof, crew cab) plus passengers plus the trailer must stay under GCWR. Diesel half-tons are notorious: 1,000 lb heavier than the gas truck, same GVWR, meaning less payload and less GCWR margin for the same sticker tow rating.</p>
+
+<h2>What going over actually does</h2>
+<p>Over payload: rear suspension sits on the bump stops, front axle unloads (longer stops, vague steering, headlights in oncoming traffic), and tires run past their load range. Over GCWR: brakes work outside their designed thermal budget — fade is cumulative on mountain grades. This is not a ticket problem first; it is a crash mechanism. Check your rig with the <a href="index.html#calc">capacity check</a> before the first trip.</p>
+
+<div class="affil">
+<span class="tag">Affiliate</span>
+<p class="small">If payload is your binding limit, hardware can't fix it — but the right weight-distribution hitch with sway control makes a legal load dramatically safer. <!-- AFFILIATE SLOT: Amazon Associates — WDH kits with sway control --></p>
+</div>
+
+<h2>Related tools</h2>
+<div class="card"><h3><a href="index.html#calc">Towing capacity check</a></h3><p>All four margins computed from your real numbers.</p></div>
+<div class="card"><h3><a href="tongue-weight-guide.html">Tongue weight guide</a></h3><p>The 10–15% rule and how to measure it on a packed trailer.</p></div>
+</main>
+
+<footer>TrailerTowCalc · free towing safety calculators · pages may contain affiliate links · <a href="https://jpanasuk-netizen.github.io/generatorsizer/" rel="noopener">GeneratorSizer</a> · <a href="https://jpanasuk-netizen.github.io/solarsizer/" rel="noopener">SolarSizer</a> · <a href="https://jpanasuk-netizen.github.io/weldingcalc/" rel="noopener">WeldingCalc</a> · <a href="https://jpanasuk-netizen.github.io/battery-bank-sizer/" rel="noopener">Battery Bank Sizer</a></footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

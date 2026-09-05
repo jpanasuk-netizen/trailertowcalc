@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trailer Tow Calculator — Towing Capacity, Tongue Weight, Payload & Brake Controller (2026)</title>
+<meta name="description" content="Free towing calculators: check your tow rating, GCWR and payload against real trailer weight, get safe tongue weight (10–15%), payload math with hitch + passengers, and a brake controller starting gain. Warns you the moment any rating is exceeded.">
+<link rel="canonical" href="https://jpanasuk-netizen.github.io/trailertowcalc/">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Trailer Tow Calculator — Is Your Truck Legal and Safe to Tow It?">
+<meta property="og:description" content="Enter your truck's ratings and real trailer weight. Get the lowest limiting number, tongue weight band, payload margin, and a brake controller starting gain.">
+<meta property="og:url" content="https://jpanasuk-netizen.github.io/trailertowcalc/">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "TrailerTowCalc Towing Safety Calculator",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "url": "https://jpanasuk-netizen.github.io/trailertowcalc/",
+  "description": "Free towing safety calculators: towing capacity check against tow rating, GCWR, payload and hitch class; tongue weight band (10–15% of loaded trailer); payload math with tongue weight, passengers and cargo; and electric brake controller starting gain.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I know if my truck can safely tow a trailer?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Check four numbers, not one: the manufacturer tow rating, the GCWR (gross combined weight rating), the payload rating, and the hitch class rating. Your loaded trailer plus a loaded truck must fit inside ALL of them. The binding limit is almost always payload — tongue weight plus passengers plus cargo eats the payload rating long before the tow rating runs out. Whatever limit is tightest is your real towing capacity." }
+    },
+    {
+      "@type": "Question",
+      "name": "What percentage of trailer weight should be on the tongue?",
+      "acceptedAnswer": { "@type": "Answer", "text": "10–15% of the fully loaded trailer weight, with 12% as the target. Below 10% the trailer can sway dangerously at highway speed; above 15% you overload the truck's rear axle and lighten the front axle enough to hurt steering and braking. Measure with a tongue-weight scale on a packed, ready-to-travel trailer." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a weight-distribution hitch increase my towing capacity?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. A weight-distribution (load-leveling) hitch redistributes tongue weight across all axles to restore steering and headlight aim, but it does not change your tow rating, payload rating, or GCWR by even one pound. Manufacturers may credit a WDH with slightly higher tow ratings on some models — only if the truck's own documentation says so." }
+    },
+    {
+      "@type": "Question",
+      "name": "What gain should I set my brake controller to?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Start around 5 on a 0–10 scale for a typical travel trailer with drum-electric brakes, or around 3 with electric-over-hydraulic. Then calibrate properly: on an empty lot at 15 mph, use the manual slider and raise the gain until the trailer wheels just lock on dry pavement, then back off slightly. Re-test after every major load change." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-head">
+  <a class="brand" href="index.html">TrailerTowCalc</a>
+  <nav aria-label="Site">
+    <a href="#calc">Calculators</a>
+    <a href="towing-capacity-explained.html">Tow ratings explained</a>
+    <a href="tongue-weight-guide.html">Tongue weight guide</a>
+    <a href="best-hitches-weight-distribution.html">Hitch picks</a>
+    <a href="https://jpanasuk-netizen.github.io/generatorsizer/" rel="noopener">GeneratorSizer ↗</a>
+    <a href="https://jpanasuk-netizen.github.io/solarsizer/" rel="noopener">SolarSizer ↗</a>
+    <a href="https://jpanasuk-netizen.github.io/weldingcalc/" rel="noopener">WeldingCalc ↗</a>
+    <a href="https://jpanasuk-netizen.github.io/battery-bank-sizer/" rel="noopener">Battery bank sizer ↗</a>
+  </nav>
+</header>
+
+<main>
+<h1>Trailer towing calculator</h1>
+<p class="sub">Enter your truck's door-sticker numbers and your real, loaded trailer weight. Get the lowest limiting number, the safe tongue-weight band, payload margin, and a brake controller starting gain — with a loud warning the moment any rating is exceeded.</p>
+
+<div class="tabs" role="tablist" aria-label="Calculators">
+  <button role="tab" aria-selected="true" onclick="showTab('tab-tow', this)">Towing capacity check</button>
+  <button role="tab" aria-selected="false" onclick="showTab('tab-tg', this)">Tongue weight</button>
+  <button role="tab" aria-selected="false" onclick="showTab('tab-pl', this)">Payload math</button>
+  <button role="tab" aria-selected="false" onclick="showTab('tab-br', this)">Brake controller</button>
+</div>
+
+<!-- ============ 1. TOWING CAPACITY CHECK ============ -->
+<section id="tab-tow" class="panel active" role="tabpanel">
+  <p>Four limits decide whether you can tow it. This tool computes each margin and tells you which one is binding — and screams if any is negative.</p>
+  <fieldset>
+    <legend>1 · Your truck's ratings (door-jamb sticker &amp; owner's manual)</legend>
+    <div class="row2">
+      <div class="field">
+        <label for="twRating">Max tow rating (lb)</label>
+        <input type="number" id="twRating" placeholder="e.g. 9200">
+      </div>
+      <div class="field">
+        <label for="twGcwr">GCWR (lb)</label>
+        <input type="number" id="twGcwr" placeholder="e.g. 16000">
+      </div>
+      <div class="field">
+        <label for="twCurb">Truck curb weight, as optioned (lb)</label>
+        <input type="number" id="twCurb" placeholder="e.g. 5600">
+      </div>
+      <div class="field">
+        <label for="twPayload">Payload rating (lb) — GVWR − curb</label>
+        <input type="number" id="twPayload" placeholder="e.g. 1650">
+      </div>
+      <div class="field">
+        <label for="twHitchMax">Hitch max trailer weight (lb, optional)</label>
+        <input type="number" id="twHitchMax" placeholder="e.g. 10000">
+      </div>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>2 · The actual load, packed for travel</legend>
+    <div class="row2">
+      <div class="field">
+        <label for="twTrailer">Loaded trailer weight (lb)</label>
+        <input type="number" id="twTrailer" placeholder="e.g. 6800">
+      </div>
+      <div class="field">
+        <label for="twCargo">Cargo + gear in the truck (lb)</label>
+        <input type="number" id="twCargo" placeholder="e.g. 300">
+      </div>
+      <div class="field">
+        <label for="twPax">Passengers + driver (lb)</label>
+        <input type="number" id="twPax" placeholder="e.g. 420">
+      </div>
+    </div>
+  </fieldset>
+  <button onclick="checkTow()" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Check my rig</button>
+  <div id="towResult" class="ans" hidden></div>
+
+  <div class="affil">
+    <span class="tag">Affiliate</span>
+    <p class="small">Over payload? A weight-distribution hitch won't fix that — you need a lighter trailer. Hitches and WDHs on Amazon: Class III/IV receivers, weight-distribution kits with sway control. <!-- AFFILIATE SLOT: Amazon Associates — Class III/IV receivers + weight-distribution hitch picks --></p>
+  </div>
+</section>
+
+<!-- ============ 2. TONGUE WEIGHT ============ -->
+<section id="tab-tg" class="panel" role="tabpanel">
+  <p>Tongue weight must be 10–15% of the fully loaded trailer. Enter trailer weight, then either a measured tongue weight or a bathroom-scale reading taken with the lever-arm method.</p>
+  <div class="row2">
+    <div class="field">
+      <label for="tgTrailer">Loaded trailer weight (lb)</label>
+      <input type="number" id="tgTrailer" placeholder="e.g. 6800">
+    </div>
+    <div class="field">
+      <label for="tgPct">Measured tongue weight as % (leave blank if unknown)</label>
+      <input type="number" id="tgPct" placeholder="e.g. 12" step="0.1">
+    </div>
+    <div class="field">
+      <label for="tgScale">Bathroom scale reading (lb, tongue via lever method)</label>
+      <input type="number" id="tgScale" placeholder="e.g. 85">
+    </div>
+    <div class="field">
+      <label for="tgLever">Lever multiplier (standard setup: 3)</label>
+      <input type="number" id="tgLever" value="3" step="0.1">
+    </div>
+  </div>
+  <button onclick="checkTongue()" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Check tongue weight</button>
+  <div id="tgResult" class="ans" hidden></div>
+</section>
+
+<!-- ============ 3. PAYLOAD MATH ============ -->
+<section id="tab-pl" class="panel" role="tabpanel">
+  <p>The limit that actually bites. Tongue weight counts against payload — so do passengers, the fifth-wheel hitch pin weight, bed gear, and the toolbox you forgot.</p>
+  <div class="row2">
+    <div class="field">
+      <label for="plRating">Payload rating (lb, door sticker)</label>
+      <input type="number" id="plRating" placeholder="e.g. 1650">
+    </div>
+    <div class="field">
+      <label for="plTongue">Tongue / pin weight on the hitch (lb)</label>
+      <input type="number" id="plTongue" placeholder="e.g. 820">
+    </div>
+    <div class="field">
+      <label for="plHitch">Hitch / WDH hardware weight (lb)</label>
+      <input type="number" id="plHitch" placeholder="e.g. 90">
+    </div>
+    <div class="field">
+      <label for="plPax">Passengers + driver (lb)</label>
+      <input type="number" id="plPax" placeholder="e.g. 420">
+    </div>
+    <div class="field">
+      <label for="plCargo">Bed / cabin cargo (lb)</label>
+      <input type="number" id="plCargo" placeholder="e.g. 200">
+    </div>
+  </div>
+  <button onclick="checkPayload()" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Run payload math</button>
+  <div id="plResult" class="ans" hidden></div>
+</section>
+
+<!-- ============ 4. BRAKE CONTROLLER ============ -->
+<section id="tab-br" class="panel" role="tabpanel">
+  <p>A starting gain for your electric brake controller — then calibrate it with the manual-slider test, every time the load changes.</p>
+  <div class="row2">
+    <div class="field">
+      <label for="brTrailer">Loaded trailer weight (lb)</label>
+      <input type="number" id="brTrailer" placeholder="e.g. 6800">
+    </div>
+    <div class="field">
+      <label for="brTV">Tow vehicle weight, loaded (lb)</label>
+      <input type="number" id="brTV" placeholder="e.g. 6300">
+    </div>
+    <div class="field">
+      <label for="brType">Trailer brake type</label>
+      <select id="brType">
+        <option value="electric">Electric drum (most travel trailers)</option>
+        <option value="eoh">Electric-over-hydraulic (disc brakes)</option>
+      </select>
+    </div>
+  </div>
+  <button onclick="checkBrakes()" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Get starting gain</button>
+  <div id="brResult" class="ans" hidden></div>
+  <!-- AFFILIATE SLOT: Amazon Associates — proportional brake controllers, breakaway kits, tongue-weight scales -->
+</section>
+
+<!-- ============ CONTENT ============ -->
+<h2>Why the "lowest number" rule matters</h2>
+<p>A truck is a system of ratings, and towing capacity marketing quotes only the biggest one. The <strong>tow rating</strong> is what the drivetrain can pull. The <strong>GCWR</strong> caps truck + trailer together. The <strong>payload rating</strong> caps everything sitting on the truck — including the trailer's tongue weight. The <strong>hitch class</strong> caps what the receiver itself can hold. Your real capacity is the smallest of the four after the load is actually applied. Half-ton trucks towing big campers almost always hit the payload limit first, at tongue weights of 800–1,000 lb — long before the tow rating is close.</p>
+
+<h2>Typical numbers reference</h2>
+<div class="tbl-wrap">
+<table>
+<tr><th>Rig</th><th class="num">Payload rating</th><th class="num">Tow rating (WDH)</th><th class="num">Realistic max camper</th></tr>
+<tr><td>Half-ton crew cab (F-150 / Silverado 1500 class)</td><td class="num">1,550–1,850 lb</td><td class="num">11,000–13,000 lb</td><td class="num">~6,500–7,500 lb</td></tr>
+<tr><td>3/4-ton (F-250 / 2500 class)</td><td class="num">2,800–3,300 lb</td><td class="num">15,000–18,000 lb</td><td class="num">~10,000–12,000 lb</td></tr>
+<tr><td>1-ton (F-350 / 3500 class)</td><td class="num">3,800–4,500 lb</td><td class="num">20,000+ lb</td><td class="num">~14,000+ lb</td></tr>
+</table>
+</div>
+<p class="small">Realistic max assumes ~13% tongue weight, 500 lb of passengers, 200 lb of gear, and the truck's own hardware. Always verify against the door-jamb sticker of the specific truck, not the brochure maximum.</p>
+
+<h2>Guides</h2>
+<div class="card"><h3><a href="towing-capacity-explained.html">Towing capacity explained: tow rating vs GCWR vs payload</a></h3><p>The four ratings, how they interact, and why the truck with "13,000 lb towing" on the billboard stops at 7,000 in the real world.</p></div>
+<div class="card"><h3><a href="tongue-weight-guide.html">Tongue weight: the 10–15% rule and how to actually measure it</a></h3><p>Sway physics, the bathroom-scale lever method, and where to shift your cargo.</p></div>
+<div class="card"><h3><a href="best-hitches-weight-distribution.html">Best hitches and weight-distribution setups</a></h3><p>Class III vs IV vs V, WDH with sway control, and matching hardware to your numbers — ranked by the math above.</p></div>
+<div class="card"><h3><a href="https://jpanasuk-netizen.github.io/generatorsizer/" rel="noopener">GeneratorSizer ↗</a> · <a href="https://jpanasuk-netizen.github.io/solarsizer/" rel="noopener">SolarSizer ↗</a> · <a href="https://jpanasuk-netizen.github.io/weldingcalc/" rel="noopener">WeldingCalc ↗</a> · <a href="https://jpanasuk-netizen.github.io/battery-bank-sizer/" rel="noopener">Battery Bank Sizer ↗</a></h3><p>Sister calculators: size the generator, solar, welder, and battery bank that ride along on your trips.</p></div>
+</main>
+
+<footer>TrailerTowCalc · free towing safety calculators · pages may contain affiliate links · <a href="https://jpanasuk-netizen.github.io/generatorsizer/" rel="noopener">GeneratorSizer</a> · <a href="https://jpanasuk-netizen.github.io/solarsizer/" rel="noopener">SolarSizer</a> · <a href="https://jpanasuk-netizen.github.io/weldingcalc/" rel="noopener">WeldingCalc</a> · <a href="https://jpanasuk-netizen.github.io/battery-bank-sizer/" rel="noopener">Battery Bank Sizer</a></footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

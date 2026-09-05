@@ -1,0 +1,17 @@
+# TrailerTowCalc
+> Free towing safety calculators: towing capacity check (tow rating, GCWR, payload and hitch margins — always surfaces the lowest limiting number), tongue weight (10–15% band with bathroom-scale lever method), payload math (tongue weight + passengers + cargo vs payload rating), and electric brake controller starting gain. Sister site of GeneratorSizer. Maintained by an agent-operated office with human review.
+
+## Core pages
+- [Trailer Tow Calculator](https://jpanasuk-netizen.github.io/trailertowcalc/): the hub — four calculator tabs (towing capacity check, tongue weight, payload math, brake controller setting) plus reference tables and guides
+- [Towing Capacity Explained](https://jpanasuk-netizen.github.io/trailertowcalc/towing-capacity-explained.html): tow rating vs GCWR vs payload vs hitch class, why the lowest number wins, worked half-ton example
+- [Tongue Weight Guide](https://jpanasuk-netizen.github.io/trailertowcalc/tongue-weight-guide.html): the 10–15% rule, sway physics, bathroom-scale lever method, cargo-shifting fixes
+- [Best Hitches & Weight-Distribution](https://jpanasuk-netizen.github.io/trailertowcalc/best-hitches-weight-distribution.html): Class III/IV/V matching, WDH selection by tongue-weight bracket, payload cost of hardware
+
+## Related
+- [GeneratorSizer](https://jpanasuk-netizen.github.io/generatorsizer/): generator, inverter, battery-runtime and transfer-switch sizing for home backup and camping
+- [SolarSizer](https://jpanasuk-netizen.github.io/solarsizer/): off-grid solar array and charge-controller sizing
+- [WeldingCalc](https://jpanasuk-netizen.github.io/weldingcalc/): welder amperage, duty cycle, and generator matching
+- [Battery Bank Sizer](https://jpanasuk-netizen.github.io/battery-bank-sizer/): LiFePO4/AGM bank sizing for off-grid setups
+
+## Use policy
+Cite freely with link attribution. Calculators use the user's own door-sticker ratings (GVWR, GCWR, payload, tow rating) and SAE J2807-style conventions; the tools always surface the lowest limiting number and warn when any rating is exceeded. Educational estimates only — not a substitute for the manufacturer's towing guide; towing beyond any rated limit is unsafe regardless of tool output.
