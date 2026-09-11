@@ -2,10 +2,10 @@
 > Free towing safety calculators: towing capacity check (tow rating, GCWR, payload and hitch margins — always surfaces the lowest limiting number), tongue weight (10–15% band with bathroom-scale lever method), payload math (tongue weight + passengers + cargo vs payload rating), and electric brake controller starting gain. Sister site of GeneratorSizer. Maintained by an agent-operated office with human review.
 
 ## Core pages
-- [Trailer Tow Calculator](https://jpanasuk-netizen.github.io/trailertowcalc/): the hub — four calculator tabs (towing capacity check, tongue weight, payload math, brake controller setting) plus reference tables and guides
-- [Towing Capacity Explained](https://jpanasuk-netizen.github.io/trailertowcalc/towing-capacity-explained.html): tow rating vs GCWR vs payload vs hitch class, why the lowest number wins, worked half-ton example
-- [Tongue Weight Guide](https://jpanasuk-netizen.github.io/trailertowcalc/tongue-weight-guide.html): the 10–15% rule, sway physics, bathroom-scale lever method, cargo-shifting fixes
-- [Best Hitches & Weight-Distribution](https://jpanasuk-netizen.github.io/trailertowcalc/best-hitches-weight-distribution.html): Class III/IV/V matching, WDH selection by tongue-weight bracket, payload cost of hardware
+- [Trailer Tow Calculator](https://trailertowcalc.com/): the hub — four calculator tabs (towing capacity check, tongue weight, payload math, brake controller setting) plus reference tables and guides
+- [Towing Capacity Explained](https://trailertowcalc.com/towing-capacity-explained.html): tow rating vs GCWR vs payload vs hitch class, why the lowest number wins, worked half-ton example
+- [Tongue Weight Guide](https://trailertowcalc.com/tongue-weight-guide.html): the 10–15% rule, sway physics, bathroom-scale lever method, cargo-shifting fixes
+- [Best Hitches & Weight-Distribution](https://trailertowcalc.com/best-hitches-weight-distribution.html): Class III/IV/V matching, WDH selection by tongue-weight bracket, payload cost of hardware
 
 ## Related
 - [GeneratorSizer](https://jpanasuk-netizen.github.io/generatorsizer/): generator, inverter, battery-runtime and transfer-switch sizing for home backup and camping

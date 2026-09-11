@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jpanasuk-netizen.github.io/trailertowcalc/sitemap.xml
+Sitemap: https://trailertowcalc.com/sitemap.xml
