@@ -8,10 +8,10 @@
 - [Best Hitches & Weight-Distribution](https://trailertowcalc.com/best-hitches-weight-distribution.html): Class III/IV/V matching, WDH selection by tongue-weight bracket, payload cost of hardware
 
 ## Related
-- [GeneratorSizer](https://jpanasuk-netizen.github.io/generatorsizer/): generator, inverter, battery-runtime and transfer-switch sizing for home backup and camping
-- [SolarSizer](https://jpanasuk-netizen.github.io/solarsizer/): off-grid solar array and charge-controller sizing
-- [WeldingCalc](https://jpanasuk-netizen.github.io/weldingcalc/): welder amperage, duty cycle, and generator matching
-- [Battery Bank Sizer](https://jpanasuk-netizen.github.io/battery-bank-sizer/): LiFePO4/AGM bank sizing for off-grid setups
+- [GeneratorSizer](https://generator-sizer.com/): generator, inverter, battery-runtime and transfer-switch sizing for home backup and camping
+- [SolarSizer](https://solar-sizer.com/): off-grid solar array and charge-controller sizing
+- [WeldingCalc](https://welding-calculator.com/): welder amperage, duty cycle, and generator matching
+- [Battery Bank Sizer](https://battery-bank-sizer.com/): LiFePO4/AGM bank sizing for off-grid setups
 
 ## Use policy
 Cite freely with link attribution. Calculators use the user's own door-sticker ratings (GVWR, GCWR, payload, tow rating) and SAE J2807-style conventions; the tools always surface the lowest limiting number and warn when any rating is exceeded. Educational estimates only — not a substitute for the manufacturer's towing guide; towing beyond any rated limit is unsafe regardless of tool output.
