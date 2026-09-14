@@ -194,6 +194,7 @@ function towInputs(){
 function checkTow(){
   var r = TTC.towCheck(towInputs());
   var box = el("towResult"); box.hidden = false;
+  if (window.updateMatchedCTA) window.updateMatchedCTA(1, 'tow');
   if(r.error){ box.innerHTML = '<p class="note">'+r.error+'</p>'; return; }
   var rows = r.limits.map(function(l){
     return '<tr><td>'+l.key+'</td><td class="num">'+fmt(l.cap)+' lb</td><td class="num">'+fmt(l.used)+' lb</td><td class="num" style="color:'+(l.over?'var(--acc)':'var(--ok)')+'">'+(l.over?'OVER by '+fmt(-l.room):fmt(l.room)+' lb left')+'</td></tr>';
@@ -222,6 +223,7 @@ function checkTongue(){
     measuredPct: parseFloat(el("tgPct").value)
   });
   var box = el("tgResult"); box.hidden = false;
+  if (window.updateMatchedCTA) window.updateMatchedCTA(r.tongue, 'tongue');
   if(r.error){ box.innerHTML = '<p class="note">'+r.error+'</p>'; return; }
   var color = r.band === "ok" ? "var(--ok)" : "var(--acc)";
   box.innerHTML = '<div class="big" style="color:'+color+'">'+fmt(r.tongue)+' <span class="unit">lb ('+r.pct+'% of loaded trailer)</span></div>'+
@@ -242,6 +244,7 @@ function checkPayload(){
     cargo: n_(el("plCargo").value)
   });
   var box = el("plResult"); box.hidden = false;
+  if (window.updateMatchedCTA) window.updateMatchedCTA(1, 'payload');
   if(r.error){ box.innerHTML = '<p class="note">'+r.error+'</p>'; return; }
   var rows = r.lines.map(function(l){ return '<tr><td>'+l.key+'</td><td class="num">'+fmt(l.val)+' lb</td></tr>'; }).join("");
   var color = r.ok ? "var(--ok)" : "var(--acc)";
@@ -260,6 +263,7 @@ function checkBrakes(){
     brakeType: el("brType").value
   });
   var box = el("brResult"); box.hidden = false;
+  if (window.updateMatchedCTA) window.updateMatchedCTA(1, 'brake');
   if(r.error){ box.innerHTML = '<p class="note">'+r.error+'</p>'; return; }
   box.innerHTML = '<div class="big">'+r.gain+' <span class="unit">starting gain (0–10 scale)</span></div>'+
     '<div class="grid2">'+

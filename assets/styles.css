@@ -83,3 +83,15 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--bd);color:v
 .affil{border-left:3px solid var(--warn);padding-left:.8rem;margin:1rem 0}
 .affil .tag{margin:0 0 .3rem}
 .answer-box{background:var(--card);border:1px solid var(--ok);border-left:4px solid var(--ok);border-radius:10px;padding:1rem 1.2rem;margin:0 0 1.4rem}
+
+
+.btn-amz{display:inline-block;background:var(--card,#1a1a1a);color:var(--fg,#eee);border:1px solid var(--warn,#f5a623);border-radius:8px;padding:.55rem .9rem;font-size:.92rem;text-decoration:none;min-height:44px;line-height:1.4;margin:.2rem}
+.btn-amz-primary{background:var(--acc,#3b82f6);color:#fff!important;border-color:var(--acc,#3b82f6);font-weight:700;width:100%;text-align:center}
+@media(min-width:560px){.btn-amz-primary{width:auto;min-width:240px}}
+#matchedCta{margin:.85rem 0 1rem;padding:.85rem 1rem;border:1px solid var(--warn,#f5a623);border-radius:10px;background:var(--card,#1a1a1a)}
+#matchedCta[hidden]{display:none!important}
+#amzSticky{position:fixed;left:0;right:0;bottom:0;z-index:90;display:flex;align-items:center;gap:.75rem;justify-content:space-between;padding:.7rem .9rem;background:var(--card,#1a1a1a);border-top:2px solid var(--warn,#f5a623);box-shadow:0 -6px 24px rgba(0,0,0,.35)}
+#amzSticky[hidden]{display:none!important}
+#amzSticky .btn-amz-primary{width:auto;flex:1;max-width:420px}
+#amzSticky .dismiss{background:transparent;border:1px solid var(--bd,#333);color:var(--mut,#999);border-radius:8px;padding:.45rem .7rem;cursor:pointer;min-height:44px}
+body{padding-bottom:4.5rem}
