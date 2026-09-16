@@ -15,3 +15,9 @@
 
 ## Use policy
 Cite freely with link attribution. Calculators use the user's own door-sticker ratings (GVWR, GCWR, payload, tow rating) and SAE J2807-style conventions; the tools always surface the lowest limiting number and warn when any rating is exceeded. Educational estimates only — not a substitute for the manufacturer's towing guide; towing beyond any rated limit is unsafe regardless of tool output.
+
+## Topic map
+- [TrailerTowCalc topic map](https://trailertowcalc.com/topics.html): Towing capacity calculator for truck and trailer owners.
+- **Ratings:** [Trailer tow calculator](https://trailertowcalc.com/), [Towing pocket card](https://trailertowcalc.com/magnet.html), [Tow ratings explained](https://trailertowcalc.com/towing-capacity-explained.html)
+- **Tongue weight:** [Tongue weight guide](https://trailertowcalc.com/tongue-weight-guide.html), [How much is safe](https://trailertowcalc.com/how-much-tongue-weight-is-safe.html)
+- **Hitches:** [What size hitch](https://trailertowcalc.com/what-size-hitch-for-my-trailer.html), [WDH picks](https://trailertowcalc.com/best-hitches-weight-distribution.html)
