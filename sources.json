@@ -1,0 +1,14 @@
+{
+  "sources": [
+    {
+      "title": "DOT FMVSS Towing Standards",
+      "url": "https://www.nhtsa.gov/vehicle-manufacturers/towing-capacity",
+      "date": "2026-09-17"
+    },
+    {
+      "title": "SAE J2807 Trailer Load Rating",
+      "url": "https://www.sae.org/standards/content/j2807_201801/",
+      "date": "2026-09-17"
+    }
+  ]
+}
