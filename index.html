@@ -247,10 +247,20 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 </section>
 
 <!-- ============ CONTENT ============ -->
-<h2>Why the "lowest number" rule matters</h2>
+<aside id="key-takeaways" class="card" aria-label="Key takeaways" style="margin:1.5rem 0">
+<h2 style="margin-top:0">Key takeaways</h2>
+<ul>
+<li>Your real towing capacity is the <strong>smallest of four ratings</strong>: tow rating, GCWR, payload, and hitch class.</li>
+<li><strong>Payload is usually the binding limit</strong>, because the trailer's tongue weight counts against it.</li>
+<li>Keep tongue weight at <strong>10–15% of the loaded trailer weight</strong>, with 12% as the target.</li>
+<li>A weight-distribution hitch <strong>does not increase</strong> your tow rating, payload, or GCWR.</li>
+</ul>
+</aside>
+<h2>What is my truck's real towing capacity?</h2>
 <p>A truck is a system of ratings, and towing capacity marketing quotes only the biggest one. The <strong>tow rating</strong> is what the drivetrain can pull. The <strong>GCWR</strong> caps truck + trailer together. The <strong>payload rating</strong> caps everything sitting on the truck — including the trailer's tongue weight. The <strong>hitch class</strong> caps what the receiver itself can hold. Your real capacity is the smallest of the four after the load is actually applied. Half-ton trucks towing big campers almost always hit the payload limit first, at tongue weights of 800–1,000 lb — long before the tow rating is close.</p>
 
-<h2>Typical numbers reference</h2>
+<p class="small" id="methodology-note"><strong>Methodology &amp; disclosure:</strong> the calculator applies the published rules of thumb on this page in your browser. It is a planning estimate, not a measured result — always verify against your truck's door-jamb sticker. Amazon links on this site are affiliate links; they do not change the math.</p>
+<h2>How much can a half-ton, 3/4-ton, or 1-ton truck realistically tow?</h2>
 <div class="tbl-wrap">
 <table>
 <tr><th>Rig</th><th class="num">Payload rating</th><th class="num">Tow rating (WDH)</th><th class="num">Realistic max camper</th></tr>
@@ -260,6 +270,18 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 </table>
 </div>
 <p class="small">Realistic max assumes ~13% tongue weight, 500 lb of passengers, 200 lb of gear, and the truck's own hardware. Always verify against the door-jamb sticker of the specific truck, not the brochure maximum.</p>
+
+<section id="faq-answers" aria-label="Common questions, answered">
+<h2>Common questions, answered</h2>
+<h3>How do I know if my truck can safely tow a trailer?</h3>
+<p>Check four numbers, not one: the manufacturer tow rating, the GCWR (gross combined weight rating), the payload rating, and the hitch class rating. Your loaded trailer plus a loaded truck must fit inside ALL of them. The binding limit is almost always payload — tongue weight plus passengers plus cargo eats the payload rating long before the tow rating runs out. Whatever limit is tightest is your real towing capacity.</p>
+<h3>What percentage of trailer weight should be on the tongue?</h3>
+<p>10–15% of the fully loaded trailer weight, with 12% as the target. Below 10% the trailer can sway dangerously at highway speed; above 15% you overload the truck's rear axle and lighten the front axle enough to hurt steering and braking. Measure with a tongue-weight scale on a packed, ready-to-travel trailer.</p>
+<h3>Does a weight-distribution hitch increase my towing capacity?</h3>
+<p>No. A weight-distribution (load-leveling) hitch redistributes tongue weight across all axles to restore steering and headlight aim, but it does not change your tow rating, payload rating, or GCWR by even one pound. Manufacturers may credit a WDH with slightly higher tow ratings on some models — only if the truck's own documentation says so.</p>
+<h3>What gain should I set my brake controller to?</h3>
+<p>Start around 5 on a 0–10 scale for a typical travel trailer with drum-electric brakes, or around 3 with electric-over-hydraulic. Then calibrate properly: on an empty lot at 15 mph, use the manual slider and raise the gain until the trailer wheels just lock on dry pavement, then back off slightly. Re-test after every major load change.</p>
+</section>
 
 <h2>Guides</h2>
 <div class="card"><h3><a href="towing-capacity-explained.html">Towing capacity explained: tow rating vs GCWR vs payload</a></h3><p>The four ratings, how they interact, and why the truck with "13,000 lb towing" on the billboard stops at 7,000 in the real world.</p></div>
