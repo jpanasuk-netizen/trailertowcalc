@@ -24,12 +24,12 @@
     {
       "@type": "Question",
       "name": "What is the difference between Class III, IV, and V hitches?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Class III receivers handle up to 5,000 lb with a weight-distribution hitch (8,000 lb weight-carrying), 500 lb tongue weight (800 WDH). Class IV handles 10,000 lb WDH / 1,000 lb tongue. Class V goes beyond that for commercial-style towing. Match the hitch to your trailer's loaded tongue weight with headroom — the hitch rating must never be the binding limit." }
+      "acceptedAnswer": { "@type": "Answer", "text": "CURT lists Class 3 up to 8,000 lb gross and 800 lb tongue, or up to 12,000 lb and 1,200 lb tongue with weight distribution. Class 4 is up to 10,000 lb and 1,000 lb tongue, or 12,000 lb and 1,200 lb with weight distribution. Class 5 Xtra Duty is 16,000 to 17,000 lb and 2,400 to 2,550 lb tongue. Ratings vary by part number. Match the hitch to loaded tongue weight with headroom — capacity stops at the lowest-rated component." }
     },
     {
       "@type": "Question",
       "name": "Do I need a weight-distribution hitch?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Generally yes above about 5,000 lb trailer weight or 500 lb tongue weight, and always when the truck's rear squats noticeably or the headlights aim high. A WDH redistributes tongue weight across all axles, restoring steering feel, braking, and headlight aim. It does not increase payload, tow rating, or GCWR." }
+      "acceptedAnswer": { "@type": "Answer", "text": "A weight-distribution hitch redistributes tongue weight across the tow vehicle axles, which restores steering feel, braking, and headlight aim. It does not increase payload, tow rating, or GCWR. CURT's Class 3 and Class 4 weight-distribution column is 12,000 lb gross and 1,200 lb tongue, above the weight-carrying caps. Use one when the rear squats or the headlights pitch up, and read the rating stamped on the hitch." }
     },
     {
       "@type": "Question",
@@ -44,20 +44,20 @@
 {
   "sources": [
     {
-      "title": "DOT FMVSS Towing Standards",
-      "url": "https://www.nhtsa.gov/vehicle-manufacturers/towing-capacity",
-      "date": "2026-09-17"
+      "title": "CURT Manufacturing, Types of Trailer Hitches and Hitch Classes",
+      "url": "https://www.curtmfg.com/types-trailer-hitches",
+      "date": "2026-10-02"
     },
     {
-      "title": "SAE J2807 Trailer Load Rating",
-      "url": "https://www.sae.org/standards/content/j2807_201801/",
-      "date": "2026-09-17"
+      "title": "NHTSA, Towing a Trailer: Being Equipped for Safety",
+      "url": "https://dmna.ny.gov/nynm/training/NHTSA_TowingSafety.pdf",
+      "date": "2026-10-02"
     }
   ]
 }
 </script>
 <script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>All calculations verified against:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
+document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>Sources for the ratings and rules cited on this page:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
 </script>
 <meta name="llms.txt" content="https://trailertowcalc.com/sources.json">
 </head>
@@ -78,23 +78,23 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <h1>Best hitches and weight-distribution setups, ranked by the math</h1>
 <p class="sub">Hardware doesn't raise ratings — it makes a legal load safe and stable. Match the class and the WDH to your real numbers from the <a href="index.html#calc">capacity check</a>.</p>
 
-<div class="answer-box"><strong>Quick answer:</strong> You generally need a weight-distribution hitch above about 5,000 lb trailer weight or 500 lb tongue weight — and always when the rear squats or headlights pitch up. A WDH restores steering and braking; it adds no capacity.</div>
+<div class="answer-box"><strong>Quick answer:</strong> Match the receiver to CURT's class chart, then add a weight-distribution hitch when the rear squats or the headlights pitch up. A WDH restores steering and braking; it adds no capacity. Class 3 weight-carrying is up to 8,000 lb and 800 lb tongue; the weight-distribution column on Class 3 and Class 4 is up to 12,000 lb and 1,200 lb tongue.</div>
 
 <h2>Step 1: match the class to your tongue weight</h2>
 <div class="tbl-wrap">
 <table>
-<tr><th>Class</th><th>Weight-carrying</th><th>With WDH</th><th>Tongue weight</th><th>Fits</th></tr>
-<tr><td>Class II</td><td class="num">3,500 lb</td><td class="num">—</td><td class="num">350 lb</td><td>Small utility, pop-ups</td></tr>
-<tr><td>Class III</td><td class="num">8,000 lb</td><td class="num">5,000 lb</td><td class="num">500–800 lb</td><td>Small campers, boats to ~5k</td></tr>
-<tr><td>Class IV</td><td class="num">10,000 lb</td><td class="num">10,000–12,000 lb</td><td class="num">1,000–1,200 lb</td><td>Most travel trailers, big boats</td></tr>
-<tr><td>Class V</td><td class="num">16,000+ lb</td><td class="num">17,000+ lb</td><td class="num">1,700+ lb</td><td>Fifth-wheel-adjacent bumper pulls, equipment</td></tr>
+<tr><th>Class</th><th>Weight-carrying gross</th><th>Weight-carrying tongue</th><th>With weight distribution</th><th>Fits</th></tr>
+<tr><td>Class 2</td><td class="num">up to 3,500 lb</td><td class="num">up to 350 lb</td><td class="num">—</td><td>Small utility, pop-ups</td></tr>
+<tr><td>Class 3</td><td class="num">up to 8,000 lb</td><td class="num">up to 800 lb</td><td class="num">up to 12,000 lb / 1,200 lb tongue</td><td>Campers, boats, equipment</td></tr>
+<tr><td>Class 4</td><td class="num">up to 10,000 lb</td><td class="num">up to 1,000 lb</td><td class="num">up to 12,000 lb / 1,200 lb tongue</td><td>Travel trailers, larger boats</td></tr>
+<tr><td>Class 5 Xtra Duty</td><td class="num">16,000–17,000 lb</td><td class="num">2,400–2,550 lb</td><td class="num">17,000 lb / 2,400–2,550 lb tongue</td><td>Heavy bumper-pull trailers, equipment</td></tr>
 </table>
 </div>
-<p class="small">Typical published class ratings; individual receivers vary — read the stamp on the actual hitch. The hitch rating must have headroom over your measured tongue weight, never be the binding limit.</p>
+<p class="small">CURT's published class chart. Individual receivers vary by part number — read the stamp on the hitch. Capacity stops at the lowest-rated component, and no hitch increases what the vehicle can tow.</p>
 
 <h2>Step 2: do you need a WDH?</h2>
 <div class="ans">
-<strong>Rule of thumb:</strong> yes, above ~5,000 lb trailer or ~500 lb tongue weight, and always if the rear squats or headlights pitch up. WDHs redistribute tongue weight across both axles — steering returns, braking improves, sway behavior settles. It does <strong>not</strong> add capacity: payload, tow rating, and GCWR are unchanged.
+Use one when the rear squats or the headlights pitch up. A weight-distribution hitch moves tongue weight back toward the front axle — steering returns, braking improves, sway behavior settles. CURT's Class 3 and Class 4 weight-distribution ratings are higher than the weight-carrying caps (12,000 lb and 1,200 lb tongue). It does <strong>not</strong> add capacity: payload, tow rating, and GCWR are unchanged.
 </div>
 
 <h2>Step 3: count the hardware against payload</h2>

@@ -65,20 +65,30 @@
 {
   "sources": [
     {
-      "title": "DOT FMVSS Towing Standards",
-      "url": "https://www.nhtsa.gov/vehicle-manufacturers/towing-capacity",
-      "date": "2026-09-17"
+      "title": "NHTSA, Towing a Trailer: Being Equipped for Safety",
+      "url": "https://dmna.ny.gov/nynm/training/NHTSA_TowingSafety.pdf",
+      "date": "2026-10-02"
     },
     {
-      "title": "SAE J2807 Trailer Load Rating",
-      "url": "https://www.sae.org/standards/content/j2807_201801/",
-      "date": "2026-09-17"
+      "title": "CURT Manufacturing, Types of Trailer Hitches and Hitch Classes",
+      "url": "https://www.curtmfg.com/types-trailer-hitches",
+      "date": "2026-10-02"
+    },
+    {
+      "title": "CURT, How to Measure Tongue Weight",
+      "url": "https://www.curtmfg.com/trailer-parts/couplers/learn-more",
+      "date": "2026-10-02"
+    },
+    {
+      "title": "SAE J2807_202411, Performance Requirements for Determining Tow-Vehicle GCWR and Trailer Weight Rating",
+      "url": "https://saemobilus.sae.org/standards/j2807_202411-performance-requirements-determining-tow-vehicle-gross-combination-weight-rating-trailer-weight-rating",
+      "date": "2026-10-02"
     }
   ]
 }
 </script>
 <script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>All calculations verified against:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
+document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>Sources for the ratings and rules cited on this page:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
 </script>
 <meta name="llms.txt" content="https://trailertowcalc.com/sources.json">
 </head>
@@ -104,6 +114,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <h1>Trailer Tow Calculator</h1>
 <p class="sub">Towing capacity calculator for truck and trailer owners.</p>
 <p class="sub">Enter your truck's door-sticker numbers and your real, loaded trailer weight. Get the lowest limiting number, the safe tongue-weight band, payload margin, and a brake controller starting gain — with a loud warning the moment any rating is exceeded.</p>
+<p class="small">Questions for one trailer weight or ball size are in <a href="#common-questions">common questions</a>.</p>
 
 <div class="tabs" role="tablist" aria-label="Calculators">
   <button role="tab" aria-selected="true" onclick="showTab('tab-tow', this)">Towing capacity check</button>
@@ -288,6 +299,34 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <div class="card"><h3><a href="tongue-weight-guide.html">Tongue weight: the 10–15% rule and how to actually measure it</a></h3><p>Sway physics, the bathroom-scale lever method, and where to shift your cargo.</p></div>
 <div class="card"><h3><a href="best-hitches-weight-distribution.html">Best hitches and weight-distribution setups</a></h3><p>Class III vs IV vs V, WDH with sway control, and matching hardware to your numbers — ranked by the math above.</p></div>
 <div class="card"><h3><a href="https://generator-sizer.com/" rel="noopener">GeneratorSizer ↗</a> · <a href="https://solar-sizer.com/" rel="noopener">SolarSizer ↗</a> · <a href="https://welding-calculator.com/" rel="noopener">WeldingCalc ↗</a> · <a href="https://battery-bank-sizer.com/" rel="noopener">Battery Bank Sizer ↗</a></h3><p>Sister calculators: size the generator, solar, welder, and battery bank that ride along on your trips.</p></div>
+
+<section id="common-questions" aria-label="Common questions">
+<h2>Common questions</h2>
+<h3>By trailer weight</h3>
+<ul>
+<li><a href="what-size-hitch-for-a-2000-lb-trailer.html">What size hitch for a 2,000 lb trailer?</a></li>
+<li><a href="what-size-hitch-for-a-3000-lb-trailer.html">What size hitch for a 3,000 lb trailer?</a></li>
+<li><a href="what-size-hitch-for-a-3500-lb-trailer.html">What size hitch for a 3,500 lb trailer?</a></li>
+<li><a href="what-size-hitch-for-a-5000-lb-trailer.html">What size hitch for a 5,000 lb trailer?</a></li>
+<li><a href="what-size-hitch-for-a-6000-lb-trailer.html">What size hitch for a 6,000 lb trailer?</a></li>
+<li><a href="what-size-hitch-for-a-7000-lb-trailer.html">What size hitch for a 7,000 lb trailer?</a></li>
+<li><a href="what-size-hitch-for-a-8000-lb-trailer.html">What size hitch for an 8,000 lb trailer?</a></li>
+<li><a href="what-size-hitch-for-a-10000-lb-trailer.html">What size hitch for a 10,000 lb trailer?</a></li>
+<li><a href="what-size-hitch-for-a-12000-lb-trailer.html">What size hitch for a 12,000 lb trailer?</a></li>
+<li><a href="what-size-hitch-for-a-15000-lb-trailer.html">What size hitch for a 15,000 lb trailer?</a></li>
+</ul>
+<h3>By trailer type</h3>
+<ul>
+<li><a href="what-size-hitch-ball-for-a-boat-trailer.html">What size hitch ball for a boat trailer?</a></li>
+<li><a href="what-size-hitch-ball-for-a-utility-trailer.html">What size hitch ball for a utility trailer?</a></li>
+<li><a href="what-size-hitch-ball-for-a-travel-trailer.html">What size hitch ball for a travel trailer?</a></li>
+<li><a href="what-size-ball-for-a-gooseneck-trailer.html">What size ball for a gooseneck trailer?</a></li>
+</ul>
+<h3>Brakes</h3>
+<ul>
+<li><a href="does-my-trailer-need-brakes.html">Does my trailer need brakes?</a></li>
+</ul>
+</section>
 </main>
 
 <section id="soft-rail" class="panel" aria-label="Related guides and offers" style="margin-top:1.5rem">

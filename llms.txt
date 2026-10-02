@@ -14,7 +14,7 @@
 - [Battery Bank Sizer](https://battery-bank-sizer.com/): LiFePO4/AGM bank sizing for off-grid setups
 
 ## Use policy
-Cite freely with link attribution. Calculators use the user's own door-sticker ratings (GVWR, GCWR, payload, tow rating) and SAE J2807-style conventions; the tools always surface the lowest limiting number and warn when any rating is exceeded. Educational estimates only — not a substitute for the manufacturer's towing guide; towing beyond any rated limit is unsafe regardless of tool output.
+Cite freely with link attribution. Calculators use the user's own door-sticker ratings (GVWR, GCWR, payload, tow rating). Published tow ratings and GCWR are set by manufacturers under SAE J2807 (current reaffirmation J2807_202411: https://saemobilus.sae.org/standards/j2807_202411-performance-requirements-determining-tow-vehicle-gross-combination-weight-rating-trailer-weight-rating). The tools always surface the lowest limiting number and warn when any rating is exceeded. Educational estimates only — not a substitute for the manufacturer's towing guide; towing beyond any rated limit is unsafe regardless of tool output.
 
 ## Questions
 - [What size hitch for a 2,000 lb trailer](https://trailertowcalc.com/what-size-hitch-for-a-2000-lb-trailer.html): Class 1 at its 2,000 lb limit; Class 2 covers a 300 lb tongue

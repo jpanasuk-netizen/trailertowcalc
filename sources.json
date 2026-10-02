@@ -1,14 +1,24 @@
 {
   "sources": [
     {
-      "title": "DOT FMVSS Towing Standards",
-      "url": "https://www.nhtsa.gov/vehicle-manufacturers/towing-capacity",
-      "date": "2026-09-17"
+      "title": "NHTSA, Towing a Trailer: Being Equipped for Safety",
+      "url": "https://dmna.ny.gov/nynm/training/NHTSA_TowingSafety.pdf",
+      "date": "2026-10-02"
     },
     {
-      "title": "SAE J2807 Trailer Load Rating",
-      "url": "https://www.sae.org/standards/content/j2807_201801/",
-      "date": "2026-09-17"
+      "title": "CURT Manufacturing, Types of Trailer Hitches and Hitch Classes",
+      "url": "https://www.curtmfg.com/types-trailer-hitches",
+      "date": "2026-10-02"
+    },
+    {
+      "title": "CURT, How to Measure Tongue Weight",
+      "url": "https://www.curtmfg.com/trailer-parts/couplers/learn-more",
+      "date": "2026-10-02"
+    },
+    {
+      "title": "SAE J2807_202411, Performance Requirements for Determining Tow-Vehicle GCWR and Trailer Weight Rating",
+      "url": "https://saemobilus.sae.org/standards/j2807_202411-performance-requirements-determining-tow-vehicle-gross-combination-weight-rating-trailer-weight-rating",
+      "date": "2026-10-02"
     }
   ]
 }

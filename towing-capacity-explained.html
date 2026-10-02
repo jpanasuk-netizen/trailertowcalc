@@ -44,20 +44,25 @@
 {
   "sources": [
     {
-      "title": "DOT FMVSS Towing Standards",
-      "url": "https://www.nhtsa.gov/vehicle-manufacturers/towing-capacity",
-      "date": "2026-09-17"
+      "title": "SAE J2807_202411, Performance Requirements for Determining Tow-Vehicle GCWR and Trailer Weight Rating",
+      "url": "https://saemobilus.sae.org/standards/j2807_202411-performance-requirements-determining-tow-vehicle-gross-combination-weight-rating-trailer-weight-rating",
+      "date": "2026-10-02"
     },
     {
-      "title": "SAE J2807 Trailer Load Rating",
-      "url": "https://www.sae.org/standards/content/j2807_201801/",
-      "date": "2026-09-17"
+      "title": "NHTSA, Towing a Trailer: Being Equipped for Safety",
+      "url": "https://dmna.ny.gov/nynm/training/NHTSA_TowingSafety.pdf",
+      "date": "2026-10-02"
+    },
+    {
+      "title": "CURT Manufacturing, Types of Trailer Hitches and Hitch Classes",
+      "url": "https://www.curtmfg.com/types-trailer-hitches",
+      "date": "2026-10-02"
     }
   ]
 }
 </script>
 <script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>All calculations verified against:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
+document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>Sources for the ratings and rules cited on this page:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
 </script>
 <meta name="llms.txt" content="https://trailertowcalc.com/sources.json">
 </head>
@@ -87,7 +92,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <tr><td>Tow rating</td><td>Maximum trailer weight the drivetrain is rated to pull (with WDH on most numbers you see)</td><td>Owner's manual / towing guide for YOUR configuration</td></tr>
 <tr><td>GCWR</td><td>Loaded truck + loaded trailer, combined</td><td>Door-jamb sticker / towing guide</td></tr>
 <tr><td>Payload rating</td><td>Everything on the truck: passengers, cargo, tongue weight, hitch hardware</td><td>Door-jamb sticker: GVWR − curb weight</td></tr>
-<tr><td>Hitch class</td><td>Weight the receiver itself can carry (Class III: 5,000 lb WDH / 500 lb tongue; Class IV: 10,000 / 1,000)</td><td>Stamped on the hitch</td></tr>
+<tr><td>Hitch class</td><td>Weight the receiver itself can carry. CURT lists Class 3 up to 8,000 lb gross and 800 lb tongue (12,000 lb and 1,200 lb with weight distribution) and Class 4 up to 10,000 lb and 1,000 lb tongue (12,000 lb and 1,200 lb with weight distribution). The stamp on a specific hitch can be lower.</td><td>Stamped on the hitch; class chart at CURT</td></tr>
 </table>
 </div>
 

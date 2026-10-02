@@ -25,17 +25,17 @@
     {
       "@type": "Question",
       "name": "What size hitch do I need for my trailer?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Size the hitch class to your fully loaded trailer weight: Class I to 2,000 lb, Class II to 3,500 lb, Class III to 8,000 lb (5,000 without weight distribution), Class IV to 10,000 lb, and Class V to 12,000 lb+. Always size to loaded weight — trailer plus cargo plus water plus batteries — never the dry weight on the brochure." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Size the hitch to loaded trailer weight. CURT lists Class 1 up to 2,000 lb and 200 lb tongue, Class 2 up to 3,500 lb and 350 lb tongue, Class 3 up to 8,000 lb and 800 lb tongue (up to 12,000 lb and 1,200 lb with weight distribution), Class 4 up to 10,000 lb and 1,000 lb tongue (up to 12,000 lb and 1,200 lb with weight distribution), and Class 5 Xtra Duty at 16,000 to 17,000 lb. Ratings vary by part number. Always size to loaded weight — trailer plus cargo plus water plus batteries — never the dry weight on the brochure." }
     },
     {
       "@type": "Question",
       "name": "When do I need a weight distribution hitch?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Two triggers: trailer weight above roughly 50% of the tow vehicle's curb weight, and steering-wheel wander, trailer sway, or headlight pitch at speed. A WDH redistributes tongue weight across all four axles, restoring front-axle steering grip — many Class III setups are rated 8,000 lb with WDH but only 5,000 without." }
+      "acceptedAnswer": { "@type": "Answer", "text": "A weight-distribution hitch redistributes tongue weight across the tow vehicle axles. On CURT's chart, Class 3 and Class 4 weight-distribution ratings go to 12,000 lb gross and 1,200 lb tongue, above those classes' weight-carrying caps. It does not raise the vehicle's tow rating. Consider one when the rear squats, the trailer sways, or the headlights pitch up." }
     },
     {
       "@type": "Question",
       "name": "What size ball does my trailer need?",
-      "acceptedAnswer": { "@type": "Answer", "text": "1-7/8 inch balls for trailers under 2,000 lb (small utility, pop-ups), 2 inch for 2,000–3,500 lb (most utility and small campers), and 2-5/16 inch for everything above 3,500 lb — nearly all travel trailers. Match the coupler stamp, not the trailer size; the coupler is stamped with its required ball diameter." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Match the coupler stamp first. CURT lists 1-7/8 in balls at 2,000 to 3,500 lb gross, 2 in balls at 3,500 to 12,000 lb, 2-5/16 in balls at 6,000 to 30,000 lb, and 3 in balls at 30,000 lb. The ball's gross rating must exceed the loaded trailer, and ratings vary by part number. Travel trailers commonly use a 2 in or 2-5/16 in ball." }
     }
   ]
 }
@@ -45,20 +45,30 @@
 {
   "sources": [
     {
-      "title": "DOT FMVSS Towing Standards",
-      "url": "https://www.nhtsa.gov/vehicle-manufacturers/towing-capacity",
-      "date": "2026-09-17"
+      "title": "CURT Manufacturing, Types of Trailer Hitches and Hitch Classes",
+      "url": "https://www.curtmfg.com/types-trailer-hitches",
+      "date": "2026-10-02"
     },
     {
-      "title": "SAE J2807 Trailer Load Rating",
-      "url": "https://www.sae.org/standards/content/j2807_201801/",
-      "date": "2026-09-17"
+      "title": "CURT, Standard Trailer Hitch Ball Sizes",
+      "url": "https://www.curtmfg.com/towing-accessories/trailer-balls/learn-more",
+      "date": "2026-10-02"
+    },
+    {
+      "title": "CURT, How to Measure Tongue Weight",
+      "url": "https://www.curtmfg.com/trailer-parts/couplers/learn-more",
+      "date": "2026-10-02"
+    },
+    {
+      "title": "NHTSA, Towing a Trailer: Being Equipped for Safety",
+      "url": "https://dmna.ny.gov/nynm/training/NHTSA_TowingSafety.pdf",
+      "date": "2026-10-02"
     }
   ]
 }
 </script>
 <script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>All calculations verified against:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
+document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>Sources for the ratings and rules cited on this page:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
 </script>
 <meta name="llms.txt" content="https://trailertowcalc.com/sources.json">
 </head>
@@ -79,7 +89,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <h1>What size hitch do I need for my trailer?</h1>
 <p class="sub">Hitch class is sized to your <em>loaded</em> trailer weight — and the class chart is only the first of three numbers to check.</p>
 
-<div class="answer-box"><strong>Quick answer:</strong> Size the hitch class to your fully loaded trailer weight — Class I to 2,000 lb, Class II to 3,500 lb, Class III to 8,000 lb with weight distribution, Class IV to 10,000 lb. Never use the dry brochure weight.</div>
+<div class="answer-box"><strong>Quick answer:</strong> Size the hitch class to your fully loaded trailer weight. CURT lists Class 1 up to 2,000 lb, Class 2 up to 3,500 lb, Class 3 up to 8,000 lb weight-carrying (12,000 lb with weight distribution), and Class 4 up to 10,000 lb. Never use the dry brochure weight.</div>
 
 <h2>Step 1: know the real weight</h2>
 <div class="ans">
@@ -90,35 +100,31 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <h2>Step 2: the hitch class chart</h2>
 <div class="tbl-wrap">
 <table>
-<tr><th>Class</th><th class="num">Max trailer (with WDH)</th><th class="num">Max tongue weight</th><th>Typical trailers</th></tr>
-<tr><td>I</td><td class="num">2,000 lb</td><td class="num">200 lb</td><td>Small utility, bike racks</td></tr>
-<tr><td>II</td><td class="num">3,500 lb</td><td class="num">350 lb</td><td>Utility, pop-ups, small boats</td></tr>
-<tr><td>III</td><td class="num">8,000 lb</td><td class="num">800–1,000 lb</td><td>Single-axle campers, boats, equipment</td></tr>
-<tr><td>IV</td><td class="num">10,000 lb</td><td class="num">1,000–1,200 lb</td><td>Travel trailers, toy haulers</td></tr>
-<tr><td>V</td><td class="num">12,000+ lb</td><td class="num">1,200–1,400 lb</td><td>Large campers, livestock</td></tr>
+<tr><th>Class</th><th class="num">Weight-carrying</th><th class="num">Tongue weight</th><th class="num">With weight distribution</th><th>Typical trailers</th></tr>
+<tr><td>1</td><td class="num">up to 2,000 lb</td><td class="num">up to 200 lb</td><td class="num">—</td><td>Small utility, bike racks</td></tr>
+<tr><td>2</td><td class="num">up to 3,500 lb</td><td class="num">up to 350 lb</td><td class="num">—</td><td>Utility, pop-ups, small boats</td></tr>
+<tr><td>3</td><td class="num">up to 8,000 lb</td><td class="num">up to 800 lb</td><td class="num">up to 12,000 lb / 1,200 lb tongue</td><td>Campers, boats, equipment</td></tr>
+<tr><td>4</td><td class="num">up to 10,000 lb</td><td class="num">up to 1,000 lb</td><td class="num">up to 12,000 lb / 1,200 lb tongue</td><td>Travel trailers, larger boats</td></tr>
+<tr><td>5 Xtra Duty</td><td class="num">16,000–17,000 lb</td><td class="num">2,400–2,550 lb</td><td class="num">17,000 lb / 2,400–2,550 lb tongue</td><td>Large campers, equipment</td></tr>
 </table>
 </div>
-<p class="small">Class III ratings are commonly two numbers: 5,000 lb weight-carrying, 8,000 lb with a weight-distribution hitch. The receiver is the same; the rating changes with the hardware bolted into it.</p>
+<p class="small">CURT's published class chart. A specific receiver can be rated lower than the class maximum. Capacity stops at the lowest-rated component, and no hitch increases what the vehicle can tow.</p>
 <p>Worked numbers for one weight in that band: <a href="what-size-hitch-for-a-5000-lb-trailer.html">what size hitch for a 5,000 lb trailer</a>.</p>
 
 <h2>Step 3: the ball</h2>
 <div class="tbl-wrap">
 <table>
-<tr><th>Ball size</th><th class="num">Trailer weight</th><th>Typical</th></tr>
-<tr><td>1-7/8"</td><td class="num">under 2,000 lb</td><td>Small utility, pop-ups</td></tr>
-<tr><td>2"</td><td class="num">2,000–3,500 lb</td><td>Utility, small campers</td></tr>
-<tr><td>2-5/16"</td><td class="num">3,500 lb+</td><td>Nearly all travel trailers</td></tr>
+<tr><th>Ball diameter</th><th class="num">Gross trailer weight</th><th>Typical</th></tr>
+<tr><td>1-7/8 in</td><td class="num">2,000–3,500 lb</td><td>Light-duty utility, small fishing boats</td></tr>
+<tr><td>2 in</td><td class="num">3,500–12,000 lb</td><td>Most common; utility, boats, many campers</td></tr>
+<tr><td>2-5/16 in</td><td class="num">6,000–30,000 lb</td><td>Heavier travel trailers</td></tr>
+<tr><td>3 in</td><td class="num">30,000 lb</td><td>Gooseneck</td></tr>
 </table>
 </div>
-<p>Match the coupler's stamped requirement, and carry the adjustable dual-ball mount if you tow more than one trailer — a 2"/2-5/16" combo covers everything from utility to camper duty.</p>
+<p>Match the coupler's stamped diameter first. The ball's gross rating must exceed the loaded trailer, and ratings vary by part number. An adjustable 2 in / 2-5/16 in mount only helps if each ball matches a coupler you actually tow.</p>
 
 <h2>Step 4: weight distribution — the line most people miss</h2>
-<p>Two triggers for a WDH:</p>
-<ul>
-  <li><strong>Hard trigger:</strong> loaded trailer above ~50% of the tow vehicle's curb weight. A 4,500 lb camper behind a 5,500 lb SUV is at 82% — WDH territory, no exceptions.</li>
-  <li><strong>Symptom trigger:</strong> wheel wander, trailer sway, or headlight pitch at highway speed — the rear axle is squatting and the front tires have lost steering grip.</li>
-</ul>
-<p>A WDH redistributes tongue weight across all four axles with spring bars sized to a bracket: pick bars rated for your <strong>tongue weight bracket</strong> (e.g. 600–800 lb bars for a 700 lb tongue), not "the biggest ones." Oversprung bars ride harsh and transfer every bump. How to measure the tongue number first: the <a href="tongue-weight-guide.html">tongue weight guide</a>.</p>
+<p>CURT rates weight distribution separately from weight-carrying. On Class 3 and Class 4 that column is up to 12,000 lb gross and 1,200 lb of tongue, above the weight-carrying caps. Use it when the rear squats, the trailer sways, or the headlights pitch up — the front axle has unloaded. A WDH redistributes tongue weight across the tow vehicle axles. It does not raise the vehicle's tow rating. Size the spring bars to the measured tongue weight, not to the biggest bars on the shelf. How to measure the tongue number first: the <a href="tongue-weight-guide.html">tongue weight guide</a>.</p>
 
 <h2>The hitch is never the only limit</h2>
 <p>A Class IV receiver on a half-ton truck doesn't make the truck a 10,000 lb tower. Four ratings all bind: the manufacturer's tow rating, the GCWR, the payload (tongue weight + passengers + cargo), and the hitch class — and <strong>payload is almost always the binding one</strong>. A 1,000 lb tongue against a 1,500 lb payload rating leaves 500 lb for two adults and a cooler. Run all four in the <a href="index.html#calc">towing calculator</a> before buying hardware.</p>
@@ -129,7 +135,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 </div>
 
 <h2>Reading the rating stickers you already own</h2>
-<p>Every piece of this system is stamped, and the stamps beat the marketing: the receiver has a weight-carrying and weight-distributing rating on a sticker or stamp on its face; the ball mount has its capacity cast into the shank; the ball itself lists a max gross weight and shank diameter on the box (a 2-5/16" ball is rated 10,000–15,000 lb, a 2" ball 3,500–6,000, a 1-7/8" ball 2,000). The coupler on the trailer lists the ball diameter it demands. Chain them: coupler → ball → mount → receiver, each rated at or above your loaded weight — and the weakest link, not the strongest, is the system's rating.</p>
+<p>Every piece of this system is stamped, and the stamps beat the marketing: the receiver has a weight-carrying and weight-distributing rating on a sticker or stamp on its face; the ball mount has its capacity cast into the shank; the ball lists a gross-weight rating. CURT's ball chart runs 2,000 to 3,500 lb for 1-7/8 in, 3,500 to 12,000 lb for 2 in, and 6,000 to 30,000 lb for 2-5/16 in, and a given part can sit anywhere in that span. The coupler on the trailer lists the ball diameter it demands. Chain them: coupler → ball → mount → receiver, each rated at or above your loaded weight — and the weakest link, not the strongest, is the system's rating.</p>
 <p>Two details people miss on used rigs: the receiver may have been on a previous vehicle with different ratings, and hitch bolts loosen — check the torque on the carriage bolts (usually 100–150 ft-lb per the manufacturer) once a season and after any hard sway event. A receiver that's shifted even a quarter inch under load tells you everything; catch it parked, not at 65 mph.</p>
 <p>Safety chains are part of the hitch too: cross them under the coupler so a coupler failure lets the tongue ride on the crossed chains instead of plowing the road, keep enough slack to turn but never enough to drag, and use rated S-hooks or shackles — never the spring clips that came with a bike rack.</p>
 
@@ -140,7 +146,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 
 <h2>FAQ</h2>
 <h3>What size hitch for a travel trailer?</h3>
-<p>Almost all travel trailers need Class III minimum (8,000 lb with WDH), a 2-5/16" ball, and a weight-distribution hitch — the tongue weights (500–1,000 lb) and 50%-of-curb rule put them past weight-carrying limits. Run your loaded weight and tongue through the calculator, then buy hardware to the bracket.</p>
+<p>Many travel trailers land in Class 3 or Class 4. CURT lists Class 3 to 8,000 lb weight-carrying and 12,000 lb with weight distribution, and travel-trailer balls as 2 in or 2-5/16 in. Match the coupler and the loaded weight, then run tongue weight through the calculator before you buy hardware.</p>
 <h3>Can my hitch be bigger than I need?</h3>
 <p>Up to Class III/IV on a vehicle that can handle it, yes — headroom is free capability. But the receiver's rating never raises the truck's: tow rating, GCWR, and payload still bind, and a Class V receiver bolted to a crossover is a Class V number with Class II reality.</p>
 <h3>Does tongue weight count against payload?</h3>
