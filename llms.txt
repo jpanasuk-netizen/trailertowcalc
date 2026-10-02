@@ -16,6 +16,23 @@
 ## Use policy
 Cite freely with link attribution. Calculators use the user's own door-sticker ratings (GVWR, GCWR, payload, tow rating) and SAE J2807-style conventions; the tools always surface the lowest limiting number and warn when any rating is exceeded. Educational estimates only — not a substitute for the manufacturer's towing guide; towing beyond any rated limit is unsafe regardless of tool output.
 
+## Questions
+- [What size hitch for a 2,000 lb trailer](https://trailertowcalc.com/what-size-hitch-for-a-2000-lb-trailer.html): Class 1 at its 2,000 lb limit; Class 2 covers a 300 lb tongue
+- [What size hitch for a 3,000 lb trailer](https://trailertowcalc.com/what-size-hitch-for-a-3000-lb-trailer.html): Class 2 gross rating; 450 lb tongue needs Class 3
+- [What size hitch for a 3,500 lb trailer](https://trailertowcalc.com/what-size-hitch-for-a-3500-lb-trailer.html): Class 2 maximum; Class 3 for margin
+- [What size hitch for a 5,000 lb trailer](https://trailertowcalc.com/what-size-hitch-for-a-5000-lb-trailer.html): Class 3, 500 to 750 lb tongue weight
+- [What size hitch for a 6,000 lb trailer](https://trailertowcalc.com/what-size-hitch-for-a-6000-lb-trailer.html): Class 3; 900 lb tongue is over the 800 lb tongue cap
+- [What size hitch for a 7,000 lb trailer](https://trailertowcalc.com/what-size-hitch-for-a-7000-lb-trailer.html): Class 3, 700 to 1,050 lb tongue weight
+- [What size hitch for an 8,000 lb trailer](https://trailertowcalc.com/what-size-hitch-for-a-8000-lb-trailer.html): Class 3 at 8,000 lb; tongue 800 to 1,200 lb
+- [What size hitch for a 10,000 lb trailer](https://trailertowcalc.com/what-size-hitch-for-a-10000-lb-trailer.html): Class 4, or Class 3/4 with weight distribution
+- [What size hitch for a 12,000 lb trailer](https://trailertowcalc.com/what-size-hitch-for-a-12000-lb-trailer.html): weight distribution at 12,000 lb, or Class 5
+- [What size hitch for a 15,000 lb trailer](https://trailertowcalc.com/what-size-hitch-for-a-15000-lb-trailer.html): Class 5 Xtra Duty, 16,000 to 17,000 lb
+- [What size hitch ball for a boat trailer](https://trailertowcalc.com/what-size-hitch-ball-for-a-boat-trailer.html): 2 in most common; 1-7/8 in for small fishing-boat trailers
+- [What size hitch ball for a utility trailer](https://trailertowcalc.com/what-size-hitch-ball-for-a-utility-trailer.html): 1-7/8 in or 2 in; match the coupler
+- [What size hitch ball for a travel trailer](https://trailertowcalc.com/what-size-hitch-ball-for-a-travel-trailer.html): 2 in or 2-5/16 in; trailers of 5,000 to 10,000 lb or more
+- [What size ball for a gooseneck trailer](https://trailertowcalc.com/what-size-ball-for-a-gooseneck-trailer.html): 3 in ball rated 30,000 lb; gooseneck hitch up to 38,000 lb, pickups only
+- [Does my trailer need brakes](https://trailertowcalc.com/does-my-trailer-need-brakes.html): many states require brakes and a breakaway switch above 1,500 lb loaded
+
 ## Topic map
 - [TrailerTowCalc topic map](https://trailertowcalc.com/topics.html): Towing capacity calculator for truck and trailer owners.
 - **Ratings:** [Trailer tow calculator](https://trailertowcalc.com/), [Towing pocket card](https://trailertowcalc.com/magnet.html), [Tow ratings explained](https://trailertowcalc.com/towing-capacity-explained.html)
