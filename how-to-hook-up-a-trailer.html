@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Hook Up a Trailer to a Truck</title>
+<meta name="description" content="NHTSA's connection order and pre-departure checks, then a 5,000 lb example through this site's tongue-weight and payload functions.">
+<link rel="canonical" href="https://trailertowcalc.com/how-to-hook-up-a-trailer.html">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="How to Hook Up a Trailer to a Truck">
+<meta property="og:description" content="Coupler, chains, and lights from the NHTSA brochure, plus the payload math a finished hookup does not answer.">
+<meta property="og:url" content="https://trailertowcalc.com/how-to-hook-up-a-trailer.html">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How should safety chains be connected?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "NHTSA says safety chains are required by most states. Connected chains should have slack for sharp turns, should not drag on the road, and should cross under the trailer tongue so the tongue does not drop to the road if the trailer separates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What tongue weight does this calculator return for a 5,000 lb trailer at 10 percent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TTC.tongueWeight with trailer weight 5,000 lb and measured percentage 10 returns 500 lb of tongue weight, inside the 10–15 percent band, with printed targets of 500, 600, and 750 lb. Ten percent is Ford's conventional tongue-load note and the floor of CURT's 10–15 percent band."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a finished hookup prove the truck can tow the trailer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The coupler latch, chains, and lights do not check payload, GCWR, or the hitch rating. A worked payload example using Ford's published 1,815 lb PowerBoost maximum available payload, a 500 lb tongue, and Ford's 150 lb driver-and-passenger footnote returns 1,165 lb left. That payload figure is an engine-line maximum, not the payload of one specific truck."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Hook Up a Trailer to a Truck",
+  "datePublished": "2026-10-03",
+  "dateModified": "2026-10-03",
+  "author": {"@type": "Organization", "name": "Trailer Tow Calc", "url": "https://trailertowcalc.com"},
+  "publisher": {"@type": "Organization", "name": "Trailer Tow Calc", "url": "https://trailertowcalc.com"},
+  "mainEntityOfPage": "https://trailertowcalc.com/how-to-hook-up-a-trailer.html",
+  "description": "NHTSA's connection order and pre-departure checks, then a 5,000 lb example through this site's tongue-weight and payload functions."
+}
+</script>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="index.html">TrailerTowCalc</a>
+  <nav aria-label="Site">
+    <a href="index.html#calc">Calculators</a>
+    <a href="what-size-hitch-for-my-trailer.html">Hitch size</a>
+    <a href="towing-capacity-explained.html">Tow ratings explained</a>
+    <a href="tongue-weight-guide.html">Tongue weight guide</a>
+    <a href="best-hitches-weight-distribution.html">Hitch picks</a>
+  </nav>
+</header>
+<main>
+<p class="small"><a href="index.html">Home</a> · <a href="topics.html">Topics</a> · How to hook up a trailer</p>
+<h1>How to Hook Up a Trailer to a Truck</h1>
+<p class="small">Built by <a href="/about.html">Jeremy Panasuk</a> · Published October 3, 2026</p>
+<p class="sub">The latch, the chains, and the plug are a connection. Whether the truck can carry the tongue is a separate calculation, and a latched coupler does not answer it.</p>
+<div class="answer-box"><strong>Quick answer:</strong> NHTSA's connection is a secured coupler on a draw bar pinned into the receiver, safety chains crossed under the tongue with slack but no drag, and a plug whose signals match the trailer. On a 5,000 lb loaded trailer at the 10 percent tongue load Ford's conventional note calls for, this site's tongue-weight function returns 500 lb. That 500 lb fits CURT Class 3's 800 lb tongue cap. It still has to fit the truck's payload sticker.</div>
+
+<h2>What you are connecting</h2>
+<p>NHTSA's brochure separates the pieces that people lump together as "the hitch." The receiver is mounted on the tow vehicle. A towing package rarely includes the draw bar (ball mount) or the hitch ball. The draw bar slides into the receiver and is secured with a locking pin. The ball is mounted on the draw bar. The trailer tongue ends in a coupler that goes over the ball and is secured. Weight-carrying hitches carry all of the tongue weight. A weight-distributing hitch uses extra parts to spread that weight among the tow vehicle and trailer axles. A fifth-wheel or gooseneck mounts the connection in the truck bed, which is a different hookup from the bumper receiver this page covers.</p>
+<p>The hitch you buy should follow the tow-vehicle and trailer manufacturers' recommendations for the type and weight of the trailer, and it should have a place to attach safety chains. Most states require those chains. When they are connected they need some slack for sharp turns, they must not drag on the road, and they should cross under the tongue so a separation does not drop the tongue onto the pavement.</p>
+<p>Class and drop are the hardware questions before you lower the coupler: <a href="what-size-hitch-for-my-trailer.html">what size hitch for my trailer</a>. If the trailer is at the 3,000 lb line where Wisconsin's brake statute starts, the controller setup is a different page: <a href="how-to-set-up-trailer-brakes.html">how to set up trailer brakes</a>.</p>
+
+<h2>The checks NHTSA puts before you move</h2>
+<p>The brochure's pre-departure list is the hookup, not a suggestion to add later. Tire pressure on the tow vehicle and the trailer. Lug nuts or bolts tightened to the correct torque — the brochure does not print a torque number, so the axle or vehicle label is the number, not a guess. Hitch, coupler, draw bar, and the other connecting parts secured and adjusted. Wiring connected, not touching the road, and loose enough to turn without pulling apart or damaging the wires. Running lights, brake lights, turn signals, and hazard lights working. Brakes on both the tow vehicle and the trailer operating. Cargo fastened. Trailer jack, tongue support, and any stabilizers raised and locked. Load balanced front to back and side to side. Mirrors with a real view. Routes and restrictions on bridges and tunnels checked. Wheel chocks and jack stands in the truck.</p>
+<p>Federal law, as NHTSA states it, requires taillights, brake lights, side marker lights, turn signals, and side and rear reflectors. Power reaches them through a four-way or larger connector. Many manufacturers offer a 7-way that can add an electric brake signal, a power supply, and backup lights. The signals on the tow vehicle's connector have to match the trailer's. If the truck splits turn and stop onto separate wires, a converter may be required. A factory towing package often includes the harness that does that job.</p>
+<p>A trailer wider than the tow vehicle needs extended side-view mirrors so you can see traffic approaching from the rear and the side. A trailer over eight feet wide may need permits. Those are motor-vehicle-administration questions, state by state, including the state you are driving into.</p>
+
+<div class="affil">
+<span class="tag">Affiliate</span>
+<p class="small">Affiliate disclosure: as an Amazon Associate, we earn from qualifying purchases — at no cost to you.</p>
+<p><a class="btn-amz" href="https://www.amazon.com/s?k=trailer+safety+chains&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">Trailer safety chains</a></p>
+</div>
+
+<h2>Worked example: 5,000 lb at Ford's 10 percent</h2>
+<p>The 5,000 lb figure is a published line, not a sample trailer from a lot. The 2025 F-150 towing guide says not to exceed a trailer weight of 5,000 lb when towing without a weight-distribution system. The same guide's factory hitch-receiver chart lists the F-150 weight-carrying maximum at 5,000 lb of trailer and 500 lb of tongue, and the weight-distributing maximum at 13,500 lb and 1,350 lb of tongue. Ford also says those receiver capacities may exceed the maximum loaded trailer weight for the vehicle, so the receiver chart is not a tow rating. The conventional note on the selector says trailer tongue load should be 10 percent of total loaded trailer weight. CURT's band is about 10 to 15 percent of gross trailer weight, so Ford's 10 percent sits on the floor of that band, not in the middle of it.</p>
+<p>Inputs to <code>TTC.tongueWeight</code>: trailer weight 5,000 lb, measured tongue percentage 10.</p>
+<div class="tbl-wrap"><table>
+<tr><th>Output</th><th class="num">Value</th></tr>
+<tr><td>Tongue weight</td><td class="num">500 lb</td></tr>
+<tr><td>Percent of trailer</td><td class="num">10%</td></tr>
+<tr><td>10% floor the function prints</td><td class="num">500 lb</td></tr>
+<tr><td>12% midpoint the function prints</td><td class="num">600 lb</td></tr>
+<tr><td>15% ceiling the function prints</td><td class="num">750 lb</td></tr>
+<tr><td>Verdict</td><td>In the safe 10–15% band</td></tr>
+</table></div>
+<p>The 12 percent midpoint is this calculator's middle of CURT's published band. It is not a Ford specification. Five hundred pounds equals the F-150 factory receiver's weight-carrying tongue figure, and 5,000 lb equals that receiver's weight-carrying trailer figure. CURT Class 3 is rated up to 8,000 lb gross and 800 lb of tongue weight-carrying, so both the 5,000 lb trailer and the 500 lb tongue fit that class's weight-carrying column. The hitch class is still not the truck.</p>
+<p>Payload is the next function, and the inputs have to stay labeled. The engine summary in the same Ford guide lists 1,815 lb as the available maximum payload for the 3.5L PowerBoost Full Hybrid V6. A note on that page says horsepower, torque, payload, and towing are independent attributes and may not be achieved simultaneously. Footnote 3 says maximum payload varies and the doorjamb label is the carrying capacity of a specific vehicle. Footnote 1 on the towing selector says maximum towing capabilities are for properly equipped vehicles with required equipment and "a 150-lb. driver and passenger." This example uses 150 lb as that footnote's figure. It does not assume the phrase means two people, and it does not claim the 1,815 lb payload belongs to the same truck as any one GCWR row.</p>
+<p>Inputs to <code>TTC.payloadCheck</code>: payload rating 1,815 lb, tongue weight 500 lb, hitch hardware 0 lb, passengers 150 lb, cargo 0 lb.</p>
+<div class="tbl-wrap"><table>
+<tr><th>Output</th><th class="num">Value</th></tr>
+<tr><td>Used</td><td class="num">650 lb</td></tr>
+<tr><td>Left</td><td class="num">1,165 lb</td></tr>
+<tr><td>Verdict</td><td>Passes with 1,165 lb to spare</td></tr>
+</table></div>
+<p>Ford's selector note still applies: tongue load plus passengers and cargo cannot push the vehicle over rear GAWR or GVWR on the Safety Compliance Certification Label, and combined weight of vehicle and trailer cannot exceed the listed GCWR. Ratings in that guide are calculated with the SAE J2807 method. Run your own sticker in <a href="index.html#tab-pl">the payload tab</a> and <a href="index.html#tab-tg">the tongue-weight tab</a>. A latched coupler is not that check. Why the lowest rating wins is <a href="towing-capacity-explained.html">towing capacity explained</a>.</p>
+
+<h2>A common mistake</h2>
+<p>Leaving the jack or a stabilizer down, and leaving the chains long enough to drag. Both are on NHTSA's list as items that have to be raised, locked, or shortened before you move. The other miss is treating a successful light check as proof of capacity. Lights confirm the connector. They do not confirm tongue weight, payload, or GCWR.</p>
+
+<h2>Limits, and when to stop</h2>
+<p>NHTSA says the brochure is not a substitute for the manufacturers' towing guides and owner's manuals. If the coupler will not lock, the plug pins do not match, or you cannot get the trailer level, do not leave. Coupler lubrication and dielectric grease on electrical terminals are maintenance items in that same brochure, not steps you invent on the side of the road. Brake gain, if the trailer has electric brakes, is <a href="how-to-set-up-trailer-brakes.html">the brake-controller page</a>, and the legal question of whether brakes are required is <a href="does-my-trailer-need-brakes.html">does my trailer need brakes</a>.</p>
+
+<h2>Related</h2>
+<ul>
+<li><a href="index.html#calc">Trailer tow calculator</a></li>
+<li><a href="what-size-hitch-for-my-trailer.html">What size hitch for my trailer</a></li>
+<li><a href="how-to-set-up-trailer-brakes.html">How to set up trailer brakes</a></li>
+<li><a href="does-my-trailer-need-brakes.html">Does my trailer need brakes</a></li>
+</ul>
+
+<h2>FAQ</h2>
+<h3>How should safety chains be connected?</h3>
+<p>With slack for sharp turns, off the pavement, and crossed under the tongue. NHTSA says most states require them, and the cross is what keeps the tongue off the road if the coupler lets go.</p>
+<h3>What does the calculator return at 5,000 lb and 10 percent?</h3>
+<p>Five hundred pounds of tongue weight, inside the band, with targets of 500, 600, and 750 lb. The 500 lb result matches the F-150 factory receiver's weight-carrying tongue figure. Class 3's weight-carrying tongue cap is 800 lb.</p>
+<h3>Does hooking up prove the truck can tow it?</h3>
+<p>No. The payload example above uses Ford's 1,815 lb PowerBoost maximum available payload, a 500 lb tongue, and the 150 lb figure from Ford's driver-and-passenger footnote, and the function returns 1,165 lb left. Your door sticker can be lower, and payload and towing may not be achieved at the same time.</p>
+<p>Compiled with AI assistance from the sources below. Spot an error? Email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
+<h2>Sources</h2>
+<ul>
+<li>NHTSA, "Towing a Trailer: Being Equipped for Safety" (DOT HS 809 433, April 2002; copy hosted by NY DMNA). <a href="https://dmna.ny.gov/nynm/training/NHTSA_TowingSafety.pdf">https://dmna.ny.gov/nynm/training/NHTSA_TowingSafety.pdf</a>. Accessed October 3, 2026.</li>
+<li>Ford, "2025 Ford F-150 Towing Guide." <a href="https://www.ford.com/content/dam/brand_ford/en_us/brand/towing/pdf/2025-Ford-F150-Towing-Guide-1.pdf">https://www.ford.com/content/dam/brand_ford/en_us/brand/towing/pdf/2025-Ford-F150-Towing-Guide-1.pdf</a>. Accessed October 3, 2026.</li>
+<li>CURT, "How to Measure Tongue Weight." <a href="https://www.curtmfg.com/trailer-parts/couplers/learn-more">https://www.curtmfg.com/trailer-parts/couplers/learn-more</a>. Accessed October 3, 2026.</li>
+<li>CURT Manufacturing, "Types of Trailer Hitches and Hitch Classes." <a href="https://www.curtmfg.com/types-trailer-hitches">https://www.curtmfg.com/types-trailer-hitches</a>. Accessed October 3, 2026.</li>
+<li>SAE J2807 (cited by Ford as the method used for the ratings; the standard itself is not reproduced here). <a href="https://saemobilus.sae.org/standards/j2807_202411-performance-requirements-determining-tow-vehicle-gross-combination-weight-rating-trailer-weight-rating">https://saemobilus.sae.org/standards/j2807_202411-performance-requirements-determining-tow-vehicle-gross-combination-weight-rating-trailer-weight-rating</a>. Accessed October 3, 2026.</li>
+</ul>
+</main>
+<footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/index.html#methodology-note">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

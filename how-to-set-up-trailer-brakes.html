@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Set Up Trailer Brakes</title>
+<meta name="description" content="Wisconsin's 3,000 lb brake line, NHTSA's controller note, a CURT road test at about 25 mph, and this calculator's starting gain for that legal threshold.">
+<link rel="canonical" href="https://trailertowcalc.com/how-to-set-up-trailer-brakes.html">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="How to Set Up Trailer Brakes">
+<meta property="og:description" content="A starting gain from this site's formula, then the controller maker's road test. Wisconsin's statute is the weight in the example.">
+<meta property="og:url" content="https://trailertowcalc.com/how-to-set-up-trailer-brakes.html">
+<meta property="og:type" content="article">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When does Wisconsin require trailer brakes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wisconsin Statutes section 347.35(3)(a) requires brakes on a trailer with a gross weight of 3,000 pounds or more manufactured after January 1, 1942, with a 40 percent exception in 347.35(3)(am). Section 348.10(4) also requires brakes when trailer gross weight exceeds the tow vehicle's empty weight."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What starting gain does this calculator return at Wisconsin's 3,000 lb line?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With a 3,000 lb trailer and a 7,500 lb tow-vehicle gross weight (3,000 divided by 0.40, the statute's 40 percent line), TTC.brakeSetting returns 6.5 for electric drum brakes and 4.5 for electric-over-hydraulic. That number is this site's starting heuristic, not a controller manufacturer's specification."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What road speed does CURT's TriFlex manual use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The TriFlex installation sheet says to drive on a dry, level paved or concrete surface at approximately 25 mph and adjust output until stops are firm, just short of lockup. This site's on-screen note says 15 mph. Use the manual for the controller you installed."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Set Up Trailer Brakes",
+  "datePublished": "2026-10-03",
+  "dateModified": "2026-10-03",
+  "author": {"@type": "Organization", "name": "Trailer Tow Calc", "url": "https://trailertowcalc.com"},
+  "publisher": {"@type": "Organization", "name": "Trailer Tow Calc", "url": "https://trailertowcalc.com"},
+  "mainEntityOfPage": "https://trailertowcalc.com/how-to-set-up-trailer-brakes.html",
+  "description": "Wisconsin's 3,000 lb brake line, NHTSA's controller note, a CURT road test at about 25 mph, and this calculator's starting gain for that legal threshold."
+}
+</script>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="index.html">TrailerTowCalc</a>
+  <nav aria-label="Site">
+    <a href="index.html#calc">Calculators</a>
+    <a href="what-size-hitch-for-my-trailer.html">Hitch size</a>
+    <a href="towing-capacity-explained.html">Tow ratings explained</a>
+    <a href="tongue-weight-guide.html">Tongue weight guide</a>
+    <a href="best-hitches-weight-distribution.html">Hitch picks</a>
+  </nav>
+</header>
+<main>
+<p class="small"><a href="index.html">Home</a> · <a href="topics.html">Topics</a> · How to set up trailer brakes</p>
+<h1>How to Set Up Trailer Brakes</h1>
+<p class="small">Built by <a href="/about.html">Jeremy Panasuk</a> · Published October 3, 2026</p>
+<p class="sub">The legal weight and the road test come from the statute and the controller manual. The starting gain is this site's formula, and it is only a start.</p>
+<div class="answer-box"><strong>Quick answer:</strong> Wisconsin requires brakes on a trailer of 3,000 lb gross or more, with a narrow exception. At that 3,000 lb line, and a tow-vehicle gross weight of 7,500 lb (the weight at which 3,000 lb is exactly 40 percent), this site's brake function returns a starting gain of 6.5 for electric drums and 4.5 for electric-over-hydraulic. CURT's TriFlex sheet then says to finish the setup at about 25 mph on dry, level pavement, just short of wheel lock.</div>
+
+<h2>The weight that forces the conversation in Wisconsin</h2>
+<p>NHTSA's towing brochure says that for a loaded trailer over 1,500 lb, many states require a separate braking system and a breakaway switch on the tongue. It also says some states require brakes on all axles, and that you have to check the motor vehicle administration where you tow. It does not list Wisconsin's number. Wisconsin Statutes § 347.35(3)(a) does: no person shall operate on a highway a trailer, semitrailer, or other towed vehicle with a gross weight of 3,000 pounds or more, manufactured after January 1, 1942, unless it has brakes adequate to control, stop, and hold it.</p>
+<p>The exception in § 347.35(3)(am) is narrow. A towed vehicle may be without those brakes if its gross weight is not more than 40 percent of the towing vehicle's gross weight, and the tow vehicle's brakes can still stop the combination as § 347.36 requires. A second rule, § 348.10(4), says you may not operate a trailer or semitrailer whose gross weight exceeds the empty weight of the tow vehicle unless it has brakes under § 347.35(3)(a) and (b). Paragraph (b) points at design and performance standards set by department rule. This page is not that rule.</p>
+<p>Whether a trailer needs brakes at all, including the NHTSA 1,500 lb line and the breakaway switch, is <a href="does-my-trailer-need-brakes.html">does my trailer need brakes</a>. The rest of this page is the controller, after that legal check is done.</p>
+
+<h2>What kind of brake you are adjusting</h2>
+<p>NHTSA describes two systems. Electronically controlled brakes usually give automatic and manual control. They need a controlling device in the tow vehicle and extra wiring. The control box is in reach of the driver, and NHTSA says it may require adjustment for variations in trailer load. Surge brakes are a separate hydraulic system at the hitch. They are not controlled by the tow vehicle's brake fluid. NHTSA's note is absolute: the tow vehicle's hydraulic system should never be connected directly to the trailer's. Surge brakes are self-compensating and do not require adjustment for a change in trailer load. They are also not legal everywhere. NHTSA says surge brakes may not be legal in some jurisdictions.</p>
+<p>A gain knob applies to the electronic controller. It does not apply to surge brakes. If the trailer is surge-braked, stop here and follow that hitch manufacturer's instructions, then confirm the state allows surge brakes where you will tow.</p>
+
+<div class="affil">
+<span class="tag">Affiliate</span>
+<p class="small">Affiliate disclosure: as an Amazon Associate, we earn from qualifying purchases — at no cost to you.</p>
+<p><a class="btn-amz" href="https://www.amazon.com/s?k=trailer+brake+controller&tag=generatorsi0d-20" rel="sponsored nofollow noopener" target="_blank">Trailer brake controllers</a></p>
+</div>
+
+<h2>Worked example: starting gain at the Wisconsin line</h2>
+<p>The inputs are the statute, not a door sticker. Trailer weight is 3,000 lb, the gross-weight line in § 347.35(3)(a). Tow-vehicle weight is 7,500 lb because 3,000 ÷ 0.40 = 7,500. That is the towing-vehicle gross weight at which a 3,000 lb trailer is exactly 40 percent, the edge of the exception in § 347.35(3)(am). It is not a curb weight and it is not a claim about a particular truck.</p>
+<p>Inputs to <code>TTC.brakeSetting</code>: trailer 3,000 lb, tow vehicle 7,500 lb.</p>
+<div class="tbl-wrap"><table>
+<tr><th>Brake type passed in</th><th class="num">Ratio</th><th class="num">Starting gain</th><th>Note the function returns</th></tr>
+<tr><td>electric</td><td class="num">0.40</td><td class="num">6.5</td><td>Time-delayed or proportional drum-electric: start at this gain, boost 0.</td></tr>
+<tr><td>eoh</td><td class="num">0.40</td><td class="num">4.5</td><td>Electric-over-hydraulic: keep boost ON (start LOW), gain stays lower than drum-electric.</td></tr>
+</table></div>
+<p>Those gains are this site's heuristic: a base of 5 for electric drums or 3 for electric-over-hydraulic, then an adjustment from how heavy the trailer is relative to the tow vehicle, capped on a 0–10 scale. They are not printed in the Wisconsin statute and they are not a Tekonsha or CURT specification. The function also returns a procedure that says to test at 15 mph. CURT's TriFlex installation sheet says something else: on a dry, level paved or concrete surface, at approximately 25 mph, apply the tow vehicle brakes. If trailer braking is insufficient, move output one way; if the trailer brakes lock, move it the other way; repeat until stops are firm, just short of lockup. Use the sheet for the controller that is actually on the dash. The 6.5 or 4.5 is only where you set the knob before that drive.</p>
+<p>NHTSA's reason to do it again later is load. The control box may need adjustment when the trailer load changes. Re-run <a href="index.html#tab-br">the brake-controller tab</a> when the loaded weight changes, then repeat the manual's road test. A 3,000 lb trailer is also a hitch question: <a href="what-size-hitch-for-a-3000-lb-trailer.html">what size hitch for a 3,000 lb trailer</a>.</p>
+
+<h2>A common mistake</h2>
+<p>Leaving the knob on the calculator's starting gain and skipping the lockup test. The second mistake is the one NHTSA states in a note: connecting the tow vehicle's hydraulic brake system to the trailer's. Surge brakes are not fed from the truck's master cylinder. The third is treating a breakaway battery as optional once a controller is installed. NHTSA pairs the separate braking system with a breakaway switch on the tongue for the trailers many states cover above 1,500 lb loaded.</p>
+
+<h2>Limits, and when to take it to a shop</h2>
+<p>This calculator does not know your controller's scale, your magnet size, or whether the state you are entering uses Wisconsin's 3,000 lb line. If you cannot do the road test on an empty, dry, level lot, a trailer-brake shop can. Wisconsin's performance standards for the brakes themselves are department rules under § 347.35(3)(b), not a gain number. Electric-over-hydraulic setup also has to follow that actuator's manual. The boost note above is the function's text, not a substitute for it.</p>
+
+<h2>Related</h2>
+<ul>
+<li><a href="index.html#tab-br">Brake controller calculator</a></li>
+<li><a href="does-my-trailer-need-brakes.html">Does my trailer need brakes</a></li>
+<li><a href="what-size-hitch-for-a-3000-lb-trailer.html">What size hitch for a 3,000 lb trailer</a></li>
+<li><a href="how-to-hook-up-a-trailer.html">How to hook up a trailer</a></li>
+</ul>
+
+<h2>FAQ</h2>
+<h3>When does Wisconsin require trailer brakes?</h3>
+<p>At a gross weight of 3,000 lb or more for trailers manufactured after January 1, 1942, unless the towed vehicle is not more than 40 percent of the tow vehicle's gross weight and the combination can still stop as § 347.36 requires. A separate statute requires brakes when trailer gross weight exceeds the tow vehicle's empty weight.</p>
+<h3>What starting gain does this calculator return at that line?</h3>
+<p>6.5 for electric and 4.5 for electric-over-hydraulic, using 3,000 lb and 7,500 lb. Finish with the controller manual's road test.</p>
+<h3>Why does the page mention both 15 mph and 25 mph?</h3>
+<p>The on-screen note from this site's function says 15 mph. CURT's TriFlex sheet says approximately 25 mph. The manual for the unit on the truck is the test you drive.</p>
+<p>Compiled with AI assistance from the sources below. Spot an error? Email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
+<h2>Sources</h2>
+<ul>
+<li>Wisconsin Statutes § 347.35. <a href="https://docs.legis.wisconsin.gov/statutes/statutes/347/iii/35">https://docs.legis.wisconsin.gov/statutes/statutes/347/iii/35</a>. Accessed October 3, 2026.</li>
+<li>Wisconsin Statutes § 348.10(4). <a href="https://docs.legis.wisconsin.gov/document/statutes/348.10(4)">https://docs.legis.wisconsin.gov/document/statutes/348.10(4)</a>. Accessed October 3, 2026.</li>
+<li>NHTSA, "Towing a Trailer: Being Equipped for Safety" (DOT HS 809 433, April 2002; copy hosted by NY DMNA). <a href="https://dmna.ny.gov/nynm/training/NHTSA_TowingSafety.pdf">https://dmna.ny.gov/nynm/training/NHTSA_TowingSafety.pdf</a>. Accessed October 3, 2026.</li>
+<li>CURT / Tekonsha, TriFlex brake control installation sheet, part 51140. <a href="https://assets.curtmfg.com/masterlibrary/51140/installsheet/51140_INS.pdf">https://assets.curtmfg.com/masterlibrary/51140/installsheet/51140_INS.pdf</a>. Accessed October 3, 2026.</li>
+</ul>
+</main>
+<footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/index.html#methodology-note">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

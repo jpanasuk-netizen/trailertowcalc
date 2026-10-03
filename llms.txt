@@ -33,8 +33,17 @@ Cite freely with link attribution. Calculators use the user's own door-sticker r
 - [What size ball for a gooseneck trailer](https://trailertowcalc.com/what-size-ball-for-a-gooseneck-trailer.html): 3 in ball rated 30,000 lb; gooseneck hitch up to 38,000 lb, pickups only
 - [Does my trailer need brakes](https://trailertowcalc.com/does-my-trailer-need-brakes.html): many states require brakes and a breakaway switch above 1,500 lb loaded
 
+## Setup
+- [How to grease trailer wheel bearings](https://trailertowcalc.com/how-to-grease-trailer-wheel-bearings.html): Dexter's 12-month or 12,000-mile interval, and axle load after tongue weight
+- [How to set up trailer brakes](https://trailertowcalc.com/how-to-set-up-trailer-brakes.html): Wisconsin's 3,000 lb brake line and a starting controller gain
+- [How to hook up a trailer](https://trailertowcalc.com/how-to-hook-up-a-trailer.html): NHTSA connection order, then tongue weight and payload at 5,000 lb
+- [How to choose a trailer](https://trailertowcalc.com/how-to-choose-a-trailer.html): loaded weight against hitch class, 5,000 lb versus 10,800 lb
+- [Fifth-wheel hitches](https://trailertowcalc.com/fifth-wheel-hitches.html): kingpin versus gooseneck, and why 22 percent is the wrong band for the tongue function
+- [Towing a new travel trailer](https://trailertowcalc.com/towing-a-new-travel-trailer.html): first-trip checks and a payload example
+
 ## Topic map
 - [TrailerTowCalc topic map](https://trailertowcalc.com/topics.html): Towing capacity calculator for truck and trailer owners.
 - **Ratings:** [Trailer tow calculator](https://trailertowcalc.com/), [Towing pocket card](https://trailertowcalc.com/magnet.html), [Tow ratings explained](https://trailertowcalc.com/towing-capacity-explained.html)
 - **Tongue weight:** [Tongue weight guide](https://trailertowcalc.com/tongue-weight-guide.html), [How much is safe](https://trailertowcalc.com/how-much-tongue-weight-is-safe.html)
 - **Hitches:** [What size hitch](https://trailertowcalc.com/what-size-hitch-for-my-trailer.html), [WDH picks](https://trailertowcalc.com/best-hitches-weight-distribution.html)
+- **Setup:** [Grease wheel bearings](https://trailertowcalc.com/how-to-grease-trailer-wheel-bearings.html), [Set up trailer brakes](https://trailertowcalc.com/how-to-set-up-trailer-brakes.html), [Hook up a trailer](https://trailertowcalc.com/how-to-hook-up-a-trailer.html), [Choose a trailer](https://trailertowcalc.com/how-to-choose-a-trailer.html), [Fifth-wheel hitches](https://trailertowcalc.com/fifth-wheel-hitches.html), [Towing a new travel trailer](https://trailertowcalc.com/towing-a-new-travel-trailer.html)
