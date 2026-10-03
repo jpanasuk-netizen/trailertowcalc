@@ -1,0 +1,8 @@
+# GitHub Pages runs Jekyll. These repo files stay in git and are not published.
+# HTML, assets/, sitemap.xml, robots.txt, llms.txt, CNAME, sources.json,
+# and the IndexNow key file are left off this list so they are still copied as-is.
+exclude:
+  - README.md
+  - LAUNCH_CHECKLIST.md
+  - "*.md"
+  - test

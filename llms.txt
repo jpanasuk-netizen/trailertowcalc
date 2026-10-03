@@ -1,5 +1,5 @@
 # TrailerTowCalc
-> Free towing safety calculators: towing capacity check (tow rating, GCWR, payload and hitch margins — always surfaces the lowest limiting number), tongue weight (10–15% band with bathroom-scale lever method), payload math (tongue weight + passengers + cargo vs payload rating), and electric brake controller starting gain. Sister site of GeneratorSizer. Maintained by an agent-operated office with human review.
+> Free towing safety calculators: towing capacity check (tow rating, GCWR, payload and hitch margins — always surfaces the lowest limiting number), tongue weight (10–15% band with bathroom-scale lever method), payload math (tongue weight + passengers + cargo vs payload rating), and electric brake controller starting gain. Sister site of GeneratorSizer. Built and owned by Jeremy Panasuk (jpanasuk@gmail.com). Page text is drafted with AI assistance from the sources cited on each page.
 
 ## Core pages
 - [Trailer Tow Calculator](https://trailertowcalc.com/): the hub — four calculator tabs (towing capacity check, tongue weight, payload math, brake controller setting) plus reference tables and guides
