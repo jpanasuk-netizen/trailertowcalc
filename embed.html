@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trailer Tow Calculator</title>
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://trailertowcalc.com/">
+<style>
+  :root { --bg:#f6f8fa; --card:#fff; --fg:#1f2328; --mut:#57606a; --bd:#d0d7de; --acc:#9a3412; --ok:#1a7f37; --okbg:#eaf5ea; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0d1117; --card:#161b22; --fg:#e6edf3; --mut:#8b949e; --bd:#30363d; --acc:#f78166; --ok:#3fb950; --okbg:#121a12; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; padding: 12px 14px 10px; }
+  h1 { font-size: 1.05rem; margin: 0 0 8px; }
+  label { display: block; font-weight: 600; font-size: .82rem; margin: 8px 0 3px; }
+  input { width: 100%; background: var(--card); color: var(--fg); border: 1px solid var(--bd); border-radius: 8px; padding: 7px 8px; font: inherit; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  button { margin-top: 10px; background: var(--acc); color: #fff; border: 0; border-radius: 8px; padding: 8px 14px; font: inherit; font-weight: 650; cursor: pointer; }
+  #out { margin-top: 10px; }
+  .ans { background: var(--okbg); border: 1px solid var(--ok); border-radius: 8px; padding: 8px 10px; margin-top: 8px; }
+  .ans.over { border-color: var(--acc); background: transparent; }
+  .credit { margin: 10px 0 0; font-size: .82rem; color: var(--mut); }
+  .credit a { color: var(--acc); }
+  .small { color: var(--mut); font-size: .78rem; margin: 4px 0 0; }
+</style>
+</head>
+<body>
+<h1>Tongue weight and payload</h1>
+<p class="small">Same functions as trailertowcalc.com. The door-jamb sticker is the rating you type in.</p>
+<div class="row">
+  <div>
+    <label for="trailer">Loaded trailer weight (lb)</label>
+    <input id="trailer" type="number" inputmode="decimal" min="0" step="1" placeholder="lb">
+  </div>
+  <div>
+    <label for="pct">Measured tongue percent</label>
+    <input id="pct" type="number" inputmode="decimal" min="0" step="0.1" placeholder="percent">
+  </div>
+</div>
+<div class="row">
+  <div>
+    <label for="payload">Payload rating (lb)</label>
+    <input id="payload" type="number" inputmode="decimal" min="0" step="1" placeholder="lb">
+  </div>
+  <div>
+    <label for="hitch">Hitch hardware (lb)</label>
+    <input id="hitch" type="number" inputmode="decimal" min="0" step="1" placeholder="lb">
+  </div>
+</div>
+<div class="row">
+  <div>
+    <label for="pax">Passengers (lb)</label>
+    <input id="pax" type="number" inputmode="decimal" min="0" step="1" placeholder="lb">
+  </div>
+  <div>
+    <label for="cargo">Cargo (lb)</label>
+    <input id="cargo" type="number" inputmode="decimal" min="0" step="1" placeholder="lb">
+  </div>
+</div>
+<button type="button" id="go">Check tongue and payload</button>
+<div id="out" aria-live="polite"></div>
+<p class="credit">Calculator by <a href="https://trailertowcalc.com/" target="_blank" rel="noopener">Trailer Tow Calculator</a></p>
+<script src="/assets/app.js" defer></script>
+<script defer>
+document.getElementById("go").addEventListener("click", function () {
+  function n(id) {
+    var x = parseFloat(document.getElementById(id).value);
+    return isNaN(x) ? 0 : x;
+  }
+  var out = document.getElementById("out");
+  var tongue = TTC.tongueWeight({ trailerWeight: n("trailer"), measuredPct: n("pct") });
+  var html = "";
+  if (tongue.error) {
+    html += '<div class="ans over">' + tongue.error + "</div>";
+    out.innerHTML = html;
+    return;
+  }
+  html += '<div class="ans' + (tongue.band === "over" ? " over" : "") + '"><strong>' + tongue.tongue.toLocaleString("en-US") + " lb tongue</strong> (" + tongue.pct + "%). " + tongue.verdict + ". Targets " + tongue.targetLow.toLocaleString("en-US") + " / " + tongue.targetMid.toLocaleString("en-US") + " / " + tongue.targetHigh.toLocaleString("en-US") + " lb.</div>";
+  var payload = TTC.payloadCheck({
+    payloadRating: n("payload"),
+    tongueWeight: tongue.tongue,
+    hitchHardware: n("hitch"),
+    passengers: n("pax"),
+    cargo: n("cargo")
+  });
+  if (payload.error) {
+    html += '<div class="ans over">' + payload.error + "</div>";
+  } else {
+    html += '<div class="ans' + (payload.ok ? "" : " over") + '"><strong>' + payload.verdict + ".</strong> Used " + payload.used.toLocaleString("en-US") + " lb of a " + payload.rating.toLocaleString("en-US") + " lb payload rating.</div>";
+  }
+  out.innerHTML = html;
+});
+</script>
+</body>
+</html>

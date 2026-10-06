@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Embed the Trailer Tow Calculator on Your Site</title>
+<meta name="description" content="Free iframe embed of the Trailer Tow Calculator tongue-weight and payload checks. Keep the credit link. No ads inside the embed.">
+<link rel="canonical" href="https://trailertowcalc.com/embed-calculator.html">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Embed the Trailer Tow Calculator on Your Site">
+<meta property="og:description" content="Free iframe embed of the Trailer Tow Calculator tongue-weight and payload checks. Keep the credit link.">
+<meta property="og:url" content="https://trailertowcalc.com/embed-calculator.html">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Trailer Tow Calculator", "item": "https://trailertowcalc.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Embed the Trailer Tow Calculator on Your Site", "item": "https://trailertowcalc.com/embed-calculator.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the embed free?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. Keep the credit link under the iframe. Do not hide it, and do not add nofollow to it."}
+    },
+    {
+      "@type": "Question",
+      "name": "Does the embed include every calculator tab?",
+      "acceptedAnswer": {"@type": "Answer", "text": "The embed runs the tongue-weight and payload functions from the same script as the homepage. The towing-capacity tab and the brake-controller tab stay on the homepage."}
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="index.html">TrailerTowCalc</a>
+  <nav aria-label="Site">
+    <a href="index.html">Home</a>
+    <a href="topics.html">Topics</a>
+    <a href="2026-truck-towing-capacity-chart.html">2026 capacity chart</a>
+  </nav>
+</header>
+<main>
+<h1>Embed the Trailer Tow Calculator on Your Site</h1>
+<p class="sub">A compact tongue-weight and payload check you can place in an iframe. The full calculator stays on the <a href="/">homepage</a>.</p>
+<p>The embed calls <code>TTC.tongueWeight</code> and <code>TTC.payloadCheck</code> from the same <code>assets/app.js</code> the site uses. It has no ads, no affiliate links, and no pocket-card bar. The door-jamb sticker is still the number the reader types in.</p>
+
+<h2>Preview</h2>
+<iframe src="/embed.html" title="Trailer Tow Calculator preview" width="800" height="560" style="width:100%;height:560px;border:1px solid var(--bd);border-radius:10px;background:var(--bg)"></iframe>
+
+<h2>Copy this snippet</h2>
+<p>Paste the iframe and the credit paragraph together. The credit link stays visible.</p>
+<textarea id="snippet" rows="6" readonly style="width:100%;max-width:100%;font-family:ui-monospace,monospace;font-size:.85rem">&lt;iframe src="https://trailertowcalc.com/embed.html" title="Trailer Tow Calculator" width="100%" height="560" style="border:0;max-width:100%"&gt;&lt;/iframe&gt;
+&lt;p&gt;Calculator by &lt;a href="https://trailertowcalc.com/"&gt;Trailer Tow Calculator&lt;/a&gt;&lt;/p&gt;</textarea>
+<p><button type="button" id="copy" style="background:var(--acc);color:#fff;border:0;border-radius:8px;padding:.55rem 1rem;font:inherit;font-weight:650;cursor:pointer">Copy snippet</button> <span id="copied" class="small" role="status"></span></p>
+
+<h2>Usage terms</h2>
+<p>Free to embed. Keep the credit link visible and followed: do not hide it, and do not add <code>nofollow</code> to it. Do not present the rest of this site as your own. The result is a planning estimate from the numbers the reader enters. The door-jamb sticker governs.</p>
+
+<h2>FAQ</h2>
+<h3>Is the embed free?</h3>
+<p>Yes. Keep the credit link under the iframe. Do not hide it, and do not add nofollow to it.</p>
+<h3>Does the embed include every calculator tab?</h3>
+<p>The embed runs the tongue-weight and payload functions from the same script as the homepage. The towing-capacity tab and the brake-controller tab stay on the homepage.</p>
+<p>Compiled with AI assistance from the sources below. Spot an error? Email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
+<section class="sources-section" aria-labelledby="sources-heading">
+<h2 id="sources-heading">Sources</h2>
+<p>The embed does not publish a manufacturer rating. Tongue percentage uses CURT's 10–15 percent band, the same rule as the <a href="/tongue-weight-guide.html">tongue weight guide</a>. Payload is whatever rating the reader types, which should be the door-jamb sticker.</p>
+<ul>
+<li><a href="https://www.curtmfg.com/trailer-parts/couplers/learn-more">CURT, How to Measure Tongue Weight</a></li>
+</ul>
+</section>
+</main>
+<footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/index.html#methodology-note">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
+<script defer>
+document.getElementById("copy").addEventListener("click", function () {
+  var text = document.getElementById("snippet").value;
+  var note = document.getElementById("copied");
+  function done() { note.textContent = "Copied."; }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done, function () { note.textContent = "Select the box and copy."; });
+  } else {
+    note.textContent = "Select the box and copy.";
+  }
+});
+</script>
+</body>
+</html>

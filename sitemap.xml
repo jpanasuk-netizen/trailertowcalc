@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://trailertowcalc.com/</loc><lastmod>2026-10-06</lastmod>
+    <image:image><image:loc>https://trailertowcalc.com/assets/img/four-ratings-flow.svg</image:loc></image:image>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://trailertowcalc.com/towing-capacity-explained.html</loc><lastmod>2026-10-06</lastmod>
+    <image:image><image:loc>https://trailertowcalc.com/assets/img/payload-1815-split.svg</image:loc></image:image>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://trailertowcalc.com/tongue-weight-guide.html</loc><lastmod>2026-10-06</lastmod>
+    <image:image><image:loc>https://trailertowcalc.com/assets/img/tongue-weight-band-5000.svg</image:loc></image:image>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -22,6 +25,7 @@
   </url>
   <url>
     <loc>https://trailertowcalc.com/what-size-hitch-for-my-trailer.html</loc><lastmod>2026-10-06</lastmod>
+    <image:image><image:loc>https://trailertowcalc.com/assets/img/curt-hitch-class-weights.svg</image:loc></image:image>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -157,11 +161,22 @@
   </url>
   <url>
     <loc>https://trailertowcalc.com/how-to-weigh-truck-and-trailer.html</loc><lastmod>2026-10-06</lastmod>
+    <image:image><image:loc>https://trailertowcalc.com/assets/img/cat-scale-platforms.svg</image:loc></image:image>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://trailertowcalc.com/trailer-sway.html</loc><lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trailertowcalc.com/embed-calculator.html</loc><lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://trailertowcalc.com/2026-truck-towing-capacity-chart.html</loc><lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -73,6 +73,8 @@ th,td{text-align:left;padding:.5rem .6rem;border-bottom:1px solid var(--bd)}
 th{color:var(--mut);font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.05em}
 .num{font-variant-numeric:tabular-nums;text-align:right}
 .tbl-wrap{overflow-x:auto}
+figure{margin:1rem 0}
+figure img{max-width:100%;height:auto}
 
 /* cards / footer */
 .card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:1rem 1.1rem;margin:.7rem 0}

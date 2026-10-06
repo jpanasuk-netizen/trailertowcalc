@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="230" viewBox="0 0 720 230" role="img" aria-labelledby="t d">
+  <title id="t">Payload split against a 1,815 lb rating</title>
+  <desc id="d">Of a 1,815 lb payload rating, 500 lb is tongue weight and 150 lb is passengers, leaving 1,165 lb.</desc>
+  <rect width="720" height="230" fill="#f6f8fa"/>
+  <g font-family="system-ui,Segoe UI,sans-serif" fill="#1f2328">
+    <text x="36" y="36" font-size="16" font-weight="700">1,815 lb payload rating</text>
+    <text x="36" y="58" font-size="13" fill="#57606a">500 lb tongue + 150 lb passengers + 0 hitch + 0 cargo</text>
+    <rect x="36" y="84" width="640" height="36" rx="6" fill="#fff" stroke="#d0d7de"/>
+    <rect x="36" y="84" width="176" height="36" fill="#9a3412"/>
+    <rect x="212" y="84" width="53" height="36" fill="#8a5a00"/>
+    <rect x="265" y="84" width="411" height="36" fill="#dafbe1"/>
+    <g font-size="13">
+      <text x="36" y="148">Tongue 500 lb</text>
+      <rect x="150" y="136" width="14" height="14" fill="#9a3412"/>
+      <text x="250" y="148">Passengers 150 lb</text>
+      <rect x="390" y="136" width="14" height="14" fill="#8a5a00"/>
+      <text x="430" y="148">Left 1,165 lb</text>
+      <rect x="530" y="136" width="14" height="14" fill="#dafbe1" stroke="#1a7f37"/>
+    </g>
+    <text x="36" y="190" font-size="13">Used 650 lb. Verdict: Passes with 1,165 lb to spare.</text>
+    <text x="36" y="212" font-size="12" fill="#57606a">Bar lengths are 500, 150, and 1,165 out of 1,815.</text>
+  </g>
+</svg>

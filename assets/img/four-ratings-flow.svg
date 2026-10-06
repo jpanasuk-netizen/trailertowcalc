@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="220" viewBox="0 0 720 220" role="img" aria-labelledby="t d">
+  <title id="t">Four ratings, smallest margin wins</title>
+  <desc id="d">Tow rating, GCWR, payload rating, and hitch class feed one result: the smallest margin after the load is applied.</desc>
+  <rect width="720" height="220" fill="#f6f8fa"/>
+  <g font-family="system-ui,Segoe UI,sans-serif" font-size="14" fill="#1f2328">
+    <rect x="24" y="28" width="140" height="48" rx="8" fill="#fff" stroke="#d0d7de"/>
+    <text x="94" y="56" text-anchor="middle">Tow rating</text>
+    <rect x="184" y="28" width="140" height="48" rx="8" fill="#fff" stroke="#d0d7de"/>
+    <text x="254" y="56" text-anchor="middle">GCWR</text>
+    <rect x="344" y="28" width="150" height="48" rx="8" fill="#fff" stroke="#d0d7de"/>
+    <text x="419" y="56" text-anchor="middle">Payload rating</text>
+    <rect x="514" y="28" width="150" height="48" rx="8" fill="#fff" stroke="#d0d7de"/>
+    <text x="589" y="56" text-anchor="middle">Hitch class</text>
+    <path d="M94 76 V108 H360" fill="none" stroke="#9a3412" stroke-width="2"/>
+    <path d="M254 76 V96 H360" fill="none" stroke="#9a3412" stroke-width="2"/>
+    <path d="M419 76 V96 H360" fill="none" stroke="#9a3412" stroke-width="2"/>
+    <path d="M589 76 V108 H360" fill="none" stroke="#9a3412" stroke-width="2"/>
+    <path d="M360 108 V132" fill="none" stroke="#9a3412" stroke-width="2"/>
+    <polygon points="360,140 354,128 366,128" fill="#9a3412"/>
+    <rect x="180" y="142" width="360" height="52" rx="8" fill="#fff" stroke="#9a3412"/>
+    <text x="360" y="164" text-anchor="middle" font-weight="700">Smallest margin after the load</text>
+    <text x="360" y="184" text-anchor="middle" fill="#57606a" font-size="13">Read each rating from the door-jamb sticker</text>
+  </g>
+</svg>
