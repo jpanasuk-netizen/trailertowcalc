@@ -17,7 +17,10 @@
   label { display: block; font-weight: 600; font-size: .82rem; margin: 8px 0 3px; }
   input { width: 100%; background: var(--card); color: var(--fg); border: 1px solid var(--bd); border-radius: 8px; padding: 7px 8px; font: inherit; }
   .row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-  button { margin-top: 10px; background: var(--acc); color: #fff; border: 0; border-radius: 8px; padding: 8px 14px; font: inherit; font-weight: 650; cursor: pointer; }
+  button.action { margin-top: 10px; background: var(--acc); color: #fff; border: 0; border-radius: 8px; padding: 8px 14px; font: inherit; font-weight: 650; cursor: pointer; }
+  .tabs { display: flex; gap: 6px; margin: 0 0 8px; }
+  .tabs button { background: var(--card); color: var(--fg); border: 1px solid var(--bd); border-radius: 8px; padding: 6px 10px; font: inherit; cursor: pointer; }
+  .tabs button[aria-selected="true"] { border-color: var(--acc); color: var(--acc); font-weight: 650; }
   #out { margin-top: 10px; }
   .ans { background: var(--okbg); border: 1px solid var(--ok); border-radius: 8px; padding: 8px 10px; margin-top: 8px; }
   .ans.over { border-color: var(--acc); background: transparent; }
@@ -27,8 +30,60 @@
 </style>
 </head>
 <body>
-<h1>Tongue weight and payload</h1>
-<p class="small">Same functions as trailertowcalc.com. The door-jamb sticker is the rating you type in.</p>
+<h1>Trailer tow check</h1>
+<div class="tabs" role="tablist">
+  <button type="button" id="show-tow" role="tab" aria-selected="true" aria-controls="panel-tow">Towing capacity</button>
+  <button type="button" id="show-load" role="tab" aria-selected="false" aria-controls="panel-load">Tongue and payload</button>
+</div>
+
+<section id="panel-tow" role="tabpanel">
+<p class="small">Same towing-capacity function as trailertowcalc.com. Tongue weight is planned at 12 percent of the loaded trailer. Type the door-jamb ratings.</p>
+<div class="row">
+  <div>
+    <label for="towRating">Max tow rating (lb)</label>
+    <input id="towRating" type="number" inputmode="decimal" min="0" step="1" placeholder="lb">
+  </div>
+  <div>
+    <label for="towGcwr">GCWR (lb)</label>
+    <input id="towGcwr" type="number" inputmode="decimal" min="0" step="1" placeholder="lb">
+  </div>
+</div>
+<div class="row">
+  <div>
+    <label for="towCurb">Curb weight (lb)</label>
+    <input id="towCurb" type="number" inputmode="decimal" min="0" step="1" placeholder="lb">
+  </div>
+  <div>
+    <label for="towPayload">Payload rating (lb)</label>
+    <input id="towPayload" type="number" inputmode="decimal" min="0" step="1" placeholder="lb">
+  </div>
+</div>
+<div class="row">
+  <div>
+    <label for="towTrailer">Loaded trailer (lb)</label>
+    <input id="towTrailer" type="number" inputmode="decimal" min="0" step="1" placeholder="lb">
+  </div>
+  <div>
+    <label for="towHitch">Hitch max trailer (lb, optional)</label>
+    <input id="towHitch" type="number" inputmode="decimal" min="0" step="1" placeholder="lb">
+  </div>
+</div>
+<div class="row">
+  <div>
+    <label for="towCargo">Cargo in the truck (lb)</label>
+    <input id="towCargo" type="number" inputmode="decimal" min="0" step="1" placeholder="lb">
+  </div>
+  <div>
+    <label for="towPax">Passengers (lb)</label>
+    <input id="towPax" type="number" inputmode="decimal" min="0" step="1" placeholder="lb">
+  </div>
+</div>
+<button type="button" class="action" id="go-tow">Check towing capacity</button>
+<div id="tow-out" aria-live="polite"></div>
+</section>
+
+<section id="panel-load" role="tabpanel" hidden>
+<p class="small">Tongue weight and payload use the same functions as the site. The payload rating you type should be the door-jamb sticker.</p>
 <div class="row">
   <div>
     <label for="trailer">Loaded trailer weight (lb)</label>
@@ -59,16 +114,53 @@
     <input id="cargo" type="number" inputmode="decimal" min="0" step="1" placeholder="lb">
   </div>
 </div>
-<button type="button" id="go">Check tongue and payload</button>
+<button type="button" class="action" id="go">Check tongue and payload</button>
 <div id="out" aria-live="polite"></div>
+</section>
 <p class="credit">Calculator by <a href="https://trailertowcalc.com/" target="_blank" rel="noopener">Trailer Tow Calculator</a></p>
 <script src="/assets/app.js" defer></script>
 <script defer>
-document.getElementById("go").addEventListener("click", function () {
-  function n(id) {
-    var x = parseFloat(document.getElementById(id).value);
-    return isNaN(x) ? 0 : x;
+function n(id) {
+  var x = parseFloat(document.getElementById(id).value);
+  return isNaN(x) ? 0 : x;
+}
+document.getElementById("show-tow").addEventListener("click", function () {
+  document.getElementById("panel-tow").hidden = false;
+  document.getElementById("panel-load").hidden = true;
+  document.getElementById("show-tow").setAttribute("aria-selected", "true");
+  document.getElementById("show-load").setAttribute("aria-selected", "false");
+});
+document.getElementById("show-load").addEventListener("click", function () {
+  document.getElementById("panel-tow").hidden = true;
+  document.getElementById("panel-load").hidden = false;
+  document.getElementById("show-tow").setAttribute("aria-selected", "false");
+  document.getElementById("show-load").setAttribute("aria-selected", "true");
+});
+document.getElementById("go-tow").addEventListener("click", function () {
+  var out = document.getElementById("tow-out");
+  var hitch = n("towHitch");
+  var r = TTC.towCheck({
+    towRating: n("towRating"),
+    gcwr: n("towGcwr"),
+    curbWeight: n("towCurb"),
+    payloadRating: n("towPayload"),
+    trailerWeight: n("towTrailer"),
+    cargoInTruck: n("towCargo"),
+    passengers: n("towPax"),
+    tonguePct: 0.12,
+    hitchMax: hitch
+  });
+  if (r.error) {
+    out.innerHTML = '<div class="ans over">' + r.error + "</div>";
+    return;
   }
+  var cls = r.ok ? "ans" : "ans over";
+  var headline = r.ok
+    ? "<strong>" + r.maxSafeTrailer.toLocaleString("en-US") + " lb max safe trailer — limited by " + r.limitingFactor + ".</strong>"
+    : "<strong>Do not tow this load.</strong> Binding limit: " + r.limitingFactor + ". Largest trailer that fits every limit at 12% tongue weight: " + r.maxSafeTrailer.toLocaleString("en-US") + " lb.";
+  out.innerHTML = '<div class="' + cls + '">' + headline + " Tongue " + r.tongueWeight.toLocaleString("en-US") + " lb. Payload used " + r.payloadUsed.toLocaleString("en-US") + " lb of " + r.payloadRating.toLocaleString("en-US") + " lb.</div>";
+});
+document.getElementById("go").addEventListener("click", function () {
   var out = document.getElementById("out");
   var tongue = TTC.tongueWeight({ trailerWeight: n("trailer"), measuredPct: n("pct") });
   var html = "";

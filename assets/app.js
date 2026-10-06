@@ -34,34 +34,34 @@ TTC.towCheck = function(inp){
   if(errs.length) return { error: "missing inputs: " + errs.join(", ") };
   if(inp.trailerWeight <= 0) return { error: "trailerWeight must be > 0" };
 
-  var tonguePct = inp.tonguePct || 0.12; // 12% planning default, 10–15% band
+  var tonguePct = (typeof inp.tonguePct === "number" && inp.tonguePct > 0) ? inp.tonguePct : 0.12;
   var tongue = inp.trailerWeight * tonguePct;
 
-  // Limit 1: manufacturer tow rating
-  var byTow = inp.towRating - inp.trailerWeight;
-
-  // Limit 2: GCWR — combined weight of loaded truck + loaded trailer
+  // Loaded truck without the trailer. GCWR headroom for the trailer is GCWR minus this.
   var truckLoaded = inp.curbWeight + inp.cargoInTruck + inp.passengers;
-  var byGCWR = inp.gcwr - (truckLoaded + inp.trailerWeight);
 
-  // Limit 3: payload — tongue weight + truck cargo + passengers must fit payload rating
+  // Payload margin stays in payload pounds (what the result table shows).
+  // The trailer cap is a different number: cargo and passengers are already on the
+  // truck, and the tongue at tonguePct has to fit in whatever payload remains.
   var payloadRating = inp.payloadRating || (inp.gvwrTongue - inp.curbWeight);
   var payloadUsed = tongue + inp.cargoInTruck + inp.passengers;
   var payloadLeft = payloadRating - payloadUsed;
-  // Max trailer weight the payload rating can carry (tongue = pct of trailer)
-  var byPayload = payloadLeft / tonguePct + inp.trailerWeight;
+  var maxByTow = inp.towRating;
+  var maxByGCWR = inp.gcwr - truckLoaded;
+  var maxByPayload = (payloadRating - inp.cargoInTruck - inp.passengers) / tonguePct;
 
   var limits = [
-    { key:"tow rating",     room: byTow,     cap: inp.towRating,      used: inp.trailerWeight },
-    { key:"GCWR",           room: byGCWR,    cap: inp.gcwr,           used: truckLoaded + inp.trailerWeight },
-    { key:"payload rating", room: payloadLeft, cap: payloadRating,    used: payloadUsed }
+    { key:"tow rating",     room: maxByTow - inp.trailerWeight, cap: inp.towRating, used: inp.trailerWeight, maxTrailer: maxByTow },
+    { key:"GCWR",           room: maxByGCWR - inp.trailerWeight, cap: inp.gcwr, used: truckLoaded + inp.trailerWeight, maxTrailer: maxByGCWR },
+    { key:"payload rating", room: payloadLeft, cap: payloadRating, used: payloadUsed, maxTrailer: maxByPayload }
   ];
   if(inp.hitchMax){
-    limits.push({ key:"hitch rating", room: inp.hitchMax - inp.trailerWeight, cap: inp.hitchMax, used: inp.trailerWeight });
+    limits.push({ key:"hitch rating", room: inp.hitchMax - inp.trailerWeight, cap: inp.hitchMax, used: inp.trailerWeight, maxTrailer: inp.hitchMax });
   }
 
-  var limiting = limits.reduce(function(a,b){ return b.room < a.room ? b : a; });
-  var worst = limits.reduce(function(a,b){ return b.room < a.room ? b : a; });
+  // Compare trailer-weight caps, not the mixed-unit margins. Payload "room" is
+  // leftover payload pounds; adding that to the trailer was the old bug.
+  var limiting = limits.reduce(function(a,b){ return b.maxTrailer < a.maxTrailer ? b : a; });
   var overAny = limits.some(function(l){ return l.room < 0; });
 
   return {
@@ -73,7 +73,7 @@ TTC.towCheck = function(inp){
     payloadUsed: Math.round(payloadUsed),
     payloadLeft: Math.round(payloadLeft),
     limitingFactor: limiting.key,
-    maxSafeTrailer: Math.round(inp.trailerWeight + Math.max(0, limiting.room)),
+    maxSafeTrailer: Math.round(Math.max(0, limiting.maxTrailer)),
     limits: limits.map(function(l){
       return { key:l.key, cap:Math.round(l.cap), used:Math.round(l.used), room:Math.round(l.room), over:l.room < 0 };
     })
@@ -201,7 +201,8 @@ function checkTow(){
   }).join("");
   var head = r.ok
     ? '<div class="big">'+fmt(r.maxSafeTrailer)+' <span class="unit">lb max safe trailer — limited by '+r.limitingFactor+'</span></div>'
-    : '<div class="big" style="color:var(--acc)">⚠ DO NOT TOW THIS LOAD</div>';
+    : '<div class="big" style="color:var(--acc)">⚠ DO NOT TOW THIS LOAD</div>'+
+      '<p>Binding limit: '+r.limitingFactor+'. Largest trailer that fits every limit at 12% tongue weight: '+fmt(r.maxSafeTrailer)+' lb.</p>';
   box.innerHTML = head +
     '<table><tr><th>Limit</th><th class="num">Rating</th><th class="num">Your weight</th><th class="num">Margin</th></tr>'+rows+'</table>' +
     '<div class="grid2">'+
@@ -211,8 +212,8 @@ function checkTow(){
       '<div class="stat"><b>'+fmt(r.payloadRating)+' lb</b><span>Payload rating</span></div>'+
     '</div>' +
     (r.ok
-      ? '<p class="note">Your real limit is always the LOWEST number above — the truck can only tow as much as its tightest constraint allows.</p>'
-      : '<p class="note">At least one rating is exceeded. Exceeding payload or GCWR is not a fine — it is failed brakes, blown tires, and lost steering. Remove weight or use a lighter trailer.</p>');
+      ? '<p class="note">Max safe trailer is the lowest of the tow rating, GCWR minus the loaded truck, the trailer whose 12% tongue fits the payload left after passengers and cargo, and the hitch rating when one is entered. This load is limited by '+r.limitingFactor+'.</p>'
+      : '<p class="note">At least one rating is exceeded. Exceeding payload or GCWR is not a fine — it is failed brakes, blown tires, and lost steering. Remove weight or use a lighter trailer. The binding limit is '+r.limitingFactor+'.</p>');
 }
 
 function checkTongue(){

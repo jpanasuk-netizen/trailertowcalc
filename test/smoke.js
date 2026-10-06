@@ -37,6 +37,13 @@ check("towCheck tongue = 816", r.tongueWeight === 816, "got " + r.tongueWeight);
 check("towCheck limiting = payload rating", r.limitingFactor === "payload rating", "got " + r.limitingFactor);
 check("towCheck payload room = 114", r.payloadLeft === 114, "got " + r.payloadLeft);
 check("towCheck passes", r.ok === true);
+// Payload-limited max safe trailer, in trailer pounds:
+// payload left for the tongue = 1650 - 300 - 420 = 930
+// max trailer at 12% = 930 / 0.12 = 7750
+// tow cap 9200; GCWR cap 16000 - (5600+300+420) = 9680; hitch 10000
+// minimum is 7750, so payload governs.
+// Old bug added the 114 lb payload margin to the 6800 lb trailer and returned 6914.
+check("towCheck payload-limited max safe = 7750", r.maxSafeTrailer === 7750, "got " + r.maxSafeTrailer);
 
 // Over-payload scenario: same truck, 7300 lb trailer + 500 cargo
 var over = TTC.towCheck(Object.assign({}, base, { trailerWeight: 7300, cargoInTruck: 500 }));
@@ -52,6 +59,42 @@ var gcwrCase = TTC.towCheck({ towRating: 12000, gcwr: 12000, curbWeight: 5000, p
 // GCWR room: 12000-(5000+6000)=1000 ; tow room 6000 ; payload: 2000-600=1400
 check("towCheck GCWR binding", gcwrCase.limitingFactor === "GCWR", "got " + gcwrCase.limitingFactor);
 check("towCheck GCWR room = 1000", gcwrCase.limits.filter(function(l){return l.key==="GCWR";})[0].room === 1000);
+// GCWR-limited max safe trailer = 12000 - 5000 = 7000
+// tow cap 12000; payload cap (2000 - 0 - 0) / 0.10 = 20000; hitch 12000
+// minimum is 7000. The old formula also returned 7000 here, because GCWR
+// room was already in trailer pounds (6000 + 1000).
+check("towCheck GCWR-limited max safe = 7000", gcwrCase.maxSafeTrailer === 7000, "got " + gcwrCase.maxSafeTrailer);
+
+// Towing-limited. Caps:
+// tow 5000
+// GCWR 20000 - (4500+100+200) = 15200
+// payload (2500-100-200) / 0.12 = 2200 / 0.12 = 18333.333… → 18333
+// hitch 12000
+// minimum is 5000, tow rating.
+// Old code compared the 1840 lb payload margin with the 2000 lb tow margin,
+// named payload, and returned 3000 + 1840 = 4840.
+var towLimited = TTC.towCheck({
+  towRating: 5000, gcwr: 20000, curbWeight: 4500, payloadRating: 2500,
+  hitchMax: 12000, trailerWeight: 3000, cargoInTruck: 100, passengers: 200, tonguePct: 0.12
+});
+check("towCheck towing-limited factor", towLimited.limitingFactor === "tow rating", "got " + towLimited.limitingFactor);
+check("towCheck towing-limited max safe = 5000", towLimited.maxSafeTrailer === 5000, "got " + towLimited.maxSafeTrailer);
+check("towCheck towing-limited passes", towLimited.ok === true);
+
+// Hitch-limited, when a hitch rating is supplied:
+// hitch 4000; tow 9000; GCWR 20000-4000 = 16000; payload 3000/0.12 = 25000
+// minimum is 4000.
+var hitchLimited = TTC.towCheck({
+  towRating: 9000, gcwr: 20000, curbWeight: 4000, payloadRating: 3000,
+  hitchMax: 4000, trailerWeight: 2000, cargoInTruck: 0, passengers: 0, tonguePct: 0.12
+});
+check("towCheck hitch-limited factor", hitchLimited.limitingFactor === "hitch rating", "got " + hitchLimited.limitingFactor);
+check("towCheck hitch-limited max safe = 4000", hitchLimited.maxSafeTrailer === 4000, "got " + hitchLimited.maxSafeTrailer);
+
+// Over-payload still names payload. Max safe is the cap, not the current trailer:
+// tongue room = 1650 - 500 - 420 = 730; 730 / 0.12 = 6083.333… → 6083
+// tow 9200; GCWR 16000 - (5600+500+420) = 7480; hitch 10000
+check("towCheck over-payload max safe = 6083", over.maxSafeTrailer === 6083, "got " + over.maxSafeTrailer);
 
 check("towCheck rejects missing input", TTC.towCheck({towRating:1}).error !== undefined);
 check("towCheck rejects zero trailer", TTC.towCheck(Object.assign({}, base, {trailerWeight: 0})).error !== undefined);
