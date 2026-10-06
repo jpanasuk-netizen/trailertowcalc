@@ -13,7 +13,7 @@
     bar.style.cssText = "margin:.6rem 0 1.1rem;padding:.7rem .9rem;border-left:4px solid #f59e0b;background:rgba(245,158,11,.08);font-size:1.02rem";
     var a = document.createElement("a");
     a.href = MAGNET_HREF;
-    a.textContent = MAGNET_LABEL + " — print it, 10 minutes.";
+    a.textContent = MAGNET_LABEL + " — print it.";
     a.style.fontWeight = "700";
     bar.appendChild(a);
     h1.parentNode.insertBefore(bar, h1.nextSibling);

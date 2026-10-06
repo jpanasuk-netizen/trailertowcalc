@@ -41,12 +41,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://trailertowcalc.com/what-size-hitch-for-a-2000-lb-trailer.html</loc><lastmod>2026-10-02</lastmod>
+    <loc>https://trailertowcalc.com/what-size-hitch-for-a-2000-lb-trailer.html</loc><lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://trailertowcalc.com/what-size-hitch-for-a-3000-lb-trailer.html</loc><lastmod>2026-10-02</lastmod>
+    <loc>https://trailertowcalc.com/what-size-hitch-for-a-3000-lb-trailer.html</loc><lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -71,17 +71,17 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://trailertowcalc.com/what-size-hitch-for-a-8000-lb-trailer.html</loc><lastmod>2026-10-02</lastmod>
+    <loc>https://trailertowcalc.com/what-size-hitch-for-a-8000-lb-trailer.html</loc><lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://trailertowcalc.com/what-size-hitch-for-a-10000-lb-trailer.html</loc><lastmod>2026-10-02</lastmod>
+    <loc>https://trailertowcalc.com/what-size-hitch-for-a-10000-lb-trailer.html</loc><lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://trailertowcalc.com/what-size-hitch-for-a-12000-lb-trailer.html</loc><lastmod>2026-10-02</lastmod>
+    <loc>https://trailertowcalc.com/what-size-hitch-for-a-12000-lb-trailer.html</loc><lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -96,12 +96,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://trailertowcalc.com/what-size-hitch-ball-for-a-utility-trailer.html</loc><lastmod>2026-10-02</lastmod>
+    <loc>https://trailertowcalc.com/what-size-hitch-ball-for-a-utility-trailer.html</loc><lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://trailertowcalc.com/what-size-hitch-ball-for-a-travel-trailer.html</loc><lastmod>2026-10-02</lastmod>
+    <loc>https://trailertowcalc.com/what-size-hitch-ball-for-a-travel-trailer.html</loc><lastmod>2026-10-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -165,4 +165,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://trailertowcalc.com/contact.html</loc><lastmod>2026-10-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>
+

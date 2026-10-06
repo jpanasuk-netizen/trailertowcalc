@@ -54,17 +54,17 @@
     {
       "@type": "Question",
       "name": "What percentage of trailer weight should be on the tongue?",
-      "acceptedAnswer": { "@type": "Answer", "text": "10–15% of the fully loaded trailer weight, with 12% as the target. Below 10% the trailer can sway dangerously at highway speed; above 15% you overload the truck's rear axle and lighten the front axle enough to hurt steering and braking. Measure with a tongue-weight scale on a packed, ready-to-travel trailer." }
+      "acceptedAnswer": { "@type": "Answer", "text": "CURT's range is 10–15% of the fully loaded trailer weight. Below 10% the trailer can sway; above 15% you overload the truck's rear axle and lighten the front axle enough to hurt steering and braking. Measure on a packed, ready-to-travel trailer." }
     },
     {
       "@type": "Question",
       "name": "Does a weight-distribution hitch increase my towing capacity?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. A weight-distribution (load-leveling) hitch redistributes tongue weight across all axles to restore steering and headlight aim, but it does not change your tow rating, payload rating, or GCWR by even one pound. Manufacturers may credit a WDH with slightly higher tow ratings on some models — only if the truck's own documentation says so." }
+      "acceptedAnswer": { "@type": "Answer", "text": "No. A weight-distribution (load-leveling) hitch redistributes tongue weight across all axles to restore steering and headlight aim, but it does not change your tow rating, payload rating, or GCWR. Manufacturers may credit a WDH with a higher tow rating on some models only if the truck's own documentation says so." }
     },
     {
       "@type": "Question",
       "name": "What gain should I set my brake controller to?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Start around 5 on a 0–10 scale for a typical travel trailer with drum-electric brakes, or around 3 with electric-over-hydraulic. Then calibrate properly: on an empty lot at 15 mph, use the manual slider and raise the gain until the trailer wheels just lock on dry pavement, then back off slightly. Re-test after every major load change." }
+      "acceptedAnswer": { "@type": "Answer", "text": "Use the brake-controller tab on this page. It prints a starting gain from this site's formula. Then follow the controller maker's instructions and the owner's manuals for the tow vehicle and the trailer. This page does not publish a gain setting or a test speed." }
     }
   ]
 }
@@ -99,7 +99,7 @@
 
 <main>
 <h1>Trailer Tow Calculator</h1>
-<p data-magnet-cta="1" style="margin:.6rem 0 1.1rem;padding:.7rem .9rem;border-left:4px solid #f59e0b;background:rgba(245,158,11,.08);font-size:1.02rem"><a href="magnet.html" style="font-weight:700">Free towing pocket card — print it, 10 minutes.</a></p>
+<p data-magnet-cta="1" style="margin:.6rem 0 1.1rem;padding:.7rem .9rem;border-left:4px solid #f59e0b;background:rgba(245,158,11,.08);font-size:1.02rem"><a href="magnet.html" style="font-weight:700">Free towing pocket card — print it.</a></p>
 <p class="sub">Towing capacity calculator for truck and trailer owners.</p>
 <p class="sub">Enter your truck's door-sticker numbers and your real, loaded trailer weight. Get the lowest limiting number, the safe tongue-weight band, payload margin, and a brake controller starting gain — with a loud warning the moment any rating is exceeded.</p>
 <p class="small">Questions for one trailer weight or ball size are in <a href="#common-questions">common questions</a>.</p>
@@ -119,23 +119,23 @@
     <div class="row2">
       <div class="field">
         <label for="twRating">Max tow rating (lb)</label>
-        <input type="number" id="twRating" placeholder="e.g. 9200">
+        <input type="number" id="twRating" placeholder="lb">
       </div>
       <div class="field">
         <label for="twGcwr">GCWR (lb)</label>
-        <input type="number" id="twGcwr" placeholder="e.g. 16000">
+        <input type="number" id="twGcwr" placeholder="lb">
       </div>
       <div class="field">
         <label for="twCurb">Truck curb weight, as optioned (lb)</label>
-        <input type="number" id="twCurb" placeholder="e.g. 5600">
+        <input type="number" id="twCurb" placeholder="lb">
       </div>
       <div class="field">
         <label for="twPayload">Payload rating (lb) — GVWR − curb</label>
-        <input type="number" id="twPayload" placeholder="e.g. 1650">
+        <input type="number" id="twPayload" placeholder="lb">
       </div>
       <div class="field">
         <label for="twHitchMax">Hitch max trailer weight (lb, optional)</label>
-        <input type="number" id="twHitchMax" placeholder="e.g. 10000">
+        <input type="number" id="twHitchMax" placeholder="lb">
       </div>
     </div>
   </fieldset>
@@ -144,15 +144,15 @@
     <div class="row2">
       <div class="field">
         <label for="twTrailer">Loaded trailer weight (lb)</label>
-        <input type="number" id="twTrailer" placeholder="e.g. 6800">
+        <input type="number" id="twTrailer" placeholder="lb">
       </div>
       <div class="field">
         <label for="twCargo">Cargo + gear in the truck (lb)</label>
-        <input type="number" id="twCargo" placeholder="e.g. 300">
+        <input type="number" id="twCargo" placeholder="lb">
       </div>
       <div class="field">
         <label for="twPax">Passengers + driver (lb)</label>
-        <input type="number" id="twPax" placeholder="e.g. 420">
+        <input type="number" id="twPax" placeholder="lb">
       </div>
     </div>
   </fieldset>
@@ -172,15 +172,15 @@
   <div class="row2">
     <div class="field">
       <label for="tgTrailer">Loaded trailer weight (lb)</label>
-      <input type="number" id="tgTrailer" placeholder="e.g. 6800">
+      <input type="number" id="tgTrailer" placeholder="lb">
     </div>
     <div class="field">
       <label for="tgPct">Measured tongue weight as % (leave blank if unknown)</label>
-      <input type="number" id="tgPct" placeholder="e.g. 12" step="0.1">
+      <input type="number" id="tgPct" placeholder="percent" step="0.1">
     </div>
     <div class="field">
       <label for="tgScale">Bathroom scale reading (lb, tongue via lever method)</label>
-      <input type="number" id="tgScale" placeholder="e.g. 85">
+      <input type="number" id="tgScale" placeholder="lb">
     </div>
     <div class="field">
       <label for="tgLever">Lever multiplier (standard setup: 3)</label>
@@ -197,23 +197,23 @@
   <div class="row2">
     <div class="field">
       <label for="plRating">Payload rating (lb, door sticker)</label>
-      <input type="number" id="plRating" placeholder="e.g. 1650">
+      <input type="number" id="plRating" placeholder="lb">
     </div>
     <div class="field">
       <label for="plTongue">Tongue / pin weight on the hitch (lb)</label>
-      <input type="number" id="plTongue" placeholder="e.g. 820">
+      <input type="number" id="plTongue" placeholder="lb">
     </div>
     <div class="field">
       <label for="plHitch">Hitch / WDH hardware weight (lb)</label>
-      <input type="number" id="plHitch" placeholder="e.g. 90">
+      <input type="number" id="plHitch" placeholder="lb">
     </div>
     <div class="field">
       <label for="plPax">Passengers + driver (lb)</label>
-      <input type="number" id="plPax" placeholder="e.g. 420">
+      <input type="number" id="plPax" placeholder="lb">
     </div>
     <div class="field">
       <label for="plCargo">Bed / cabin cargo (lb)</label>
-      <input type="number" id="plCargo" placeholder="e.g. 200">
+      <input type="number" id="plCargo" placeholder="lb">
     </div>
   </div>
   <button onclick="checkPayload()" style="background:var(--acc);color:#fff;border:none;border-radius:8px;padding:.7rem 1.4rem;font-size:1.05rem;cursor:pointer;font-weight:600">Run payload math</button>
@@ -226,11 +226,11 @@
   <div class="row2">
     <div class="field">
       <label for="brTrailer">Loaded trailer weight (lb)</label>
-      <input type="number" id="brTrailer" placeholder="e.g. 6800">
+      <input type="number" id="brTrailer" placeholder="lb">
     </div>
     <div class="field">
       <label for="brTV">Tow vehicle weight, loaded (lb)</label>
-      <input type="number" id="brTV" placeholder="e.g. 6300">
+      <input type="number" id="brTV" placeholder="lb">
     </div>
     <div class="field">
       <label for="brType">Trailer brake type</label>
@@ -251,35 +251,27 @@
 <ul>
 <li>Your real towing capacity is the <strong>smallest of four ratings</strong>: tow rating, GCWR, payload, and hitch class.</li>
 <li><strong>Payload is usually the binding limit</strong>, because the trailer's tongue weight counts against it.</li>
-<li>Keep tongue weight at <strong>10–15% of the loaded trailer weight</strong>, with 12% as the target.</li>
+<li>Keep tongue weight in <strong>CURT's 10–15% band</strong> of the loaded trailer weight.</li>
 <li>A weight-distribution hitch <strong>does not increase</strong> your tow rating, payload, or GCWR.</li>
 </ul>
 </aside>
 <h2>What is my truck's real towing capacity?</h2>
-<p>A truck is a system of ratings, and towing capacity marketing quotes only the biggest one. The <strong>tow rating</strong> is what the drivetrain can pull. The <strong>GCWR</strong> caps truck + trailer together. The <strong>payload rating</strong> caps everything sitting on the truck — including the trailer's tongue weight. The <strong>hitch class</strong> caps what the receiver itself can hold. Your real capacity is the smallest of the four after the load is actually applied. Half-ton trucks towing big campers almost always hit the payload limit first, at tongue weights of 800–1,000 lb — long before the tow rating is close.</p>
+<p>A truck is a system of ratings, and towing capacity marketing quotes only the biggest one. The <strong>tow rating</strong> is what the drivetrain can pull. The <strong>GCWR</strong> caps truck + trailer together. The <strong>payload rating</strong> caps everything sitting on the truck — including the trailer's tongue weight. The <strong>hitch class</strong> caps what the receiver itself can hold. Your real capacity is the smallest of the four after the load is actually applied. Read those four figures from the door-jamb sticker and the owner's manual, then enter them in the calculator above.</p>
 
 <p class="small" id="methodology-note"><strong>Methodology &amp; disclosure:</strong> the calculator applies the published rules of thumb on this page in your browser. It is a planning estimate, not a measured result — always verify against your truck's door-jamb sticker. Amazon links on this site are affiliate links; they do not change the math.</p>
-<h2>How much can a half-ton, 3/4-ton, or 1-ton truck realistically tow?</h2>
-<div class="tbl-wrap">
-<table>
-<tr><th>Rig</th><th class="num">Payload rating</th><th class="num">Tow rating (WDH)</th><th class="num">Realistic max camper</th></tr>
-<tr><td>Half-ton crew cab (F-150 / Silverado 1500 class)</td><td class="num">1,550–1,850 lb</td><td class="num">11,000–13,000 lb</td><td class="num">~6,500–7,500 lb</td></tr>
-<tr><td>3/4-ton (F-250 / 2500 class)</td><td class="num">2,800–3,300 lb</td><td class="num">15,000–18,000 lb</td><td class="num">~10,000–12,000 lb</td></tr>
-<tr><td>1-ton (F-350 / 3500 class)</td><td class="num">3,800–4,500 lb</td><td class="num">20,000+ lb</td><td class="num">~14,000+ lb</td></tr>
-</table>
-</div>
-<p class="small">Realistic max assumes ~13% tongue weight, 500 lb of passengers, 200 lb of gear, and the truck's own hardware. Always verify against the door-jamb sticker of the specific truck, not the brochure maximum.</p>
+<h2>How much can your truck tow?</h2>
+<p>Read the door-jamb sticker and the owner's manual for that truck. The brochure maximum is not a substitute for either one. Enter the sticker figures and the loaded trailer weight in the <a href="#calc">towing capacity check</a>. This page does not publish a payload range or a tow rating for a half-ton, a 3/4-ton, or a 1-ton.</p>
 
 <section id="faq-answers" aria-label="Common questions, answered">
 <h2>Common questions, answered</h2>
 <h3>How do I know if my truck can safely tow a trailer?</h3>
 <p>Check four numbers, not one: the manufacturer tow rating, the GCWR (gross combined weight rating), the payload rating, and the hitch class rating. Your loaded trailer plus a loaded truck must fit inside ALL of them. The binding limit is almost always payload — tongue weight plus passengers plus cargo eats the payload rating long before the tow rating runs out. Whatever limit is tightest is your real towing capacity.</p>
 <h3>What percentage of trailer weight should be on the tongue?</h3>
-<p>10–15% of the fully loaded trailer weight, with 12% as the target. Below 10% the trailer can sway dangerously at highway speed; above 15% you overload the truck's rear axle and lighten the front axle enough to hurt steering and braking. Measure with a tongue-weight scale on a packed, ready-to-travel trailer.</p>
+<p>CURT's range is 10–15% of the fully loaded trailer weight. Below 10% the trailer can sway; above 15% you overload the truck's rear axle and lighten the front axle enough to hurt steering and braking. Measure on a packed, ready-to-travel trailer.</p>
 <h3>Does a weight-distribution hitch increase my towing capacity?</h3>
-<p>No. A weight-distribution (load-leveling) hitch redistributes tongue weight across all axles to restore steering and headlight aim, but it does not change your tow rating, payload rating, or GCWR by even one pound. Manufacturers may credit a WDH with slightly higher tow ratings on some models — only if the truck's own documentation says so.</p>
+<p>No. A weight-distribution (load-leveling) hitch redistributes tongue weight across all axles to restore steering and headlight aim, but it does not change your tow rating, payload rating, or GCWR. Manufacturers may credit a WDH with a higher tow rating on some models only if the truck's own documentation says so.</p>
 <h3>What gain should I set my brake controller to?</h3>
-<p>Start around 5 on a 0–10 scale for a typical travel trailer with drum-electric brakes, or around 3 with electric-over-hydraulic. Then calibrate properly: on an empty lot at 15 mph, use the manual slider and raise the gain until the trailer wheels just lock on dry pavement, then back off slightly. Re-test after every major load change.</p>
+<p>Use the brake-controller tab on this page. It prints a starting gain from this site's formula. Then follow the controller maker's instructions and the owner's manuals for the tow vehicle and the trailer. This page does not publish a gain setting or a test speed.</p>
 </section>
 
 <h2>Guides</h2>
