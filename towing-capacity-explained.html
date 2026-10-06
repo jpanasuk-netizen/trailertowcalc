@@ -9,11 +9,11 @@
 <meta property="og:image" content="https://trailertowcalc.com/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://trailertowcalc.com/assets/og-image.png">
-<meta name="description" content="Why a '13,000 lb towing' half-ton stops at 7,000 in the real world. The four ratings — tow rating, GCWR, payload, hitch class — how they interact, and which one bites first.">
+<meta name="description" content="Tow rating, GCWR, payload, and hitch class. A 5,000 lb Ford F-150 example through this site's tongue-weight and payload checks.">
 <link rel="canonical" href="https://trailertowcalc.com/towing-capacity-explained.html">
 <meta name="robots" content="index,follow">
 <meta property="og:title" content="Towing Capacity Explained: Tow Rating vs GCWR vs Payload">
-<meta property="og:description" content="Four ratings decide your real towing capacity. The lowest one after the load is applied wins — and it's usually payload.">
+<meta property="og:description" content="Tow rating, GCWR, payload, and hitch class. A 5,000 lb Ford F-150 example through this site's tongue-weight and payload checks.">
 <meta property="og:type" content="article">
 <link rel="stylesheet" href="assets/styles.css">
 <script type="application/ld+json">
@@ -24,47 +24,50 @@
     {
       "@type": "Question",
       "name": "What is the difference between tow rating, GCWR, and payload?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Tow rating is the maximum trailer weight the manufacturer rates the drivetrain to pull. GCWR (gross combined weight rating) caps the loaded truck plus the loaded trailer together. Payload rating caps everything carried on the truck itself — passengers, cargo, and crucially the trailer's tongue weight. All three must pass at once; the tightest one is your real capacity." }
-    },
-    {
-      "@type": "Question",
-      "name": "Why can't my half-ton really tow its max tow rating?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Max tow ratings assume a light single-cab truck with a weight-distributing hitch and a 150 lb driver — nothing else. A crew cab with four passengers, bed gear, and a 13% tongue weight on a 7,000 lb camper (about 900 lb on the hitch) consumes most of a typical 1,650 lb payload. Payload runs out long before the tow rating does." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tow rating is the maximum trailer weight in the manufacturer's guide. GCWR caps the loaded truck and the loaded trailer together. Payload caps what the truck carries, including tongue weight. NHTSA says to look up all of them. The lowest one after the load is applied is the limit that binds."
+      }
     },
     {
       "@type": "Question",
       "name": "Does a weight-distribution hitch increase towing capacity?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. A WDH redistributes tongue weight across both axles to restore steering, braking, and headlight aim, but it does not raise the tow rating, payload rating, or GCWR by a single pound. Some manufacturers credit a slightly higher tow rating only when a WDH is used — check the specific truck's towing guide." }
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Ford's F-150 notes require a weight-distribution system above a 5,000 lb trailer, and a weight-distribution hitch transfers weight to the front axle. CURT says an adjustable hitch does not itself alter the vehicle's towing capacity. Payload, tow rating, and GCWR do not increase because the hitch did."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does this calculator return for a 5,000 lb trailer at 10 percent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tongue weight is 500 lb, inside the band, with targets of 500, 600, and 750 lb. Against Ford's published 1,815 lb PowerBoost maximum available payload, with 150 lb of passengers and no extra hitch or cargo weight, payload used is 650 lb and 1,165 lb remains."
+      }
     }
   ]
 }
 </script>
-
-<script id="sources-data" type="application/json">
+<script type="application/ld+json">
 {
-  "sources": [
-    {
-      "title": "SAE J2807_202411, Performance Requirements for Determining Tow-Vehicle GCWR and Trailer Weight Rating",
-      "url": "https://saemobilus.sae.org/standards/j2807_202411-performance-requirements-determining-tow-vehicle-gross-combination-weight-rating-trailer-weight-rating",
-      "date": "2026-10-02"
-    },
-    {
-      "title": "NHTSA, Towing a Trailer: Being Equipped for Safety",
-      "url": "https://dmna.ny.gov/nynm/training/NHTSA_TowingSafety.pdf",
-      "date": "2026-10-02"
-    },
-    {
-      "title": "CURT Manufacturing, Types of Trailer Hitches and Hitch Classes",
-      "url": "https://www.curtmfg.com/types-trailer-hitches",
-      "date": "2026-10-02"
-    }
-  ]
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Trailer Tow Calculator",
+   "item": "https://trailertowcalc.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Towing capacity explained: tow rating vs GCWR vs payload",
+   "item": "https://trailertowcalc.com/towing-capacity-explained.html"
+  }
+ ]
 }
 </script>
-<script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>Sources for the ratings and rules cited on this page:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
-</script>
-<meta name="llms.txt" content="https://trailertowcalc.com/sources.json">
 </head>
 <body>
 
@@ -74,8 +77,6 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
     <a href="index.html#calc">Calculators</a>
     <a href="tongue-weight-guide.html">Tongue weight</a>
     <a href="best-hitches-weight-distribution.html">Hitch picks</a>
-    <a href="https://generator-sizer.com/" rel="noopener">GeneratorSizer ↗</a>
-    <a href="https://welding-calculator.com/" rel="noopener">WeldingCalc ↗</a>
   </nav>
 </header>
 
@@ -83,7 +84,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <h1>Towing capacity explained: tow rating vs GCWR vs payload</h1>
 <p class="sub">Short answer: your real towing capacity is the <em>smallest</em> of four ratings after your actual load is applied. Run the <a href="index.html#calc">towing capacity check</a> with your door-sticker numbers to see which one is binding.</p>
 
-<div class="answer-box"><strong>Quick answer:</strong> Tow rating, GCWR, and payload must all pass at once — and on crew-cab half-tons, payload (including tongue weight) almost always runs out before the tow rating does. Run the calculator below to find your binding limit.</div>
+<div class="answer-box"><strong>Quick answer:</strong> Tow rating, GCWR, payload, and hitch class all have to pass. The worked example below uses Ford's published 5,000 lb weight-distribution line and this site's tongue-weight and payload functions. Your own check is the <a href="index.html#calc">towing capacity check</a>, with the sticker from your truck.</div>
 
 <h2>The four ratings</h2>
 <div class="tbl-wrap">
@@ -96,18 +97,26 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 </table>
 </div>
 
-<h2>The worked example that surprises everyone</h2>
-<p>A half-ton crew cab: 13,000 lb tow rating, 1,650 lb payload. You hook up a 7,000 lb camper packed for a two-week trip.</p>
+<h2>A worked example from a published towing guide</h2>
+<p>Ford's 2025 F-150 Towing Guide says horsepower, torque, payload, and towing are independent and may not be achieved simultaneously. The summary line for the 3.5L PowerBoost Full Hybrid lists a maximum tow of 11,200 lb, with a footnote that this uses Tow/Haul and the Max Tow Axle, and a maximum available payload of 1,815 lb. A payload footnote says maximum payload varies and to see the doorjamb. Do not treat 1,815 lb as the payload of one truck, and do not pair it with a different row's GCWR.</p>
+<p>The same guide says not to exceed a trailer weight of 5,000 lb without a weight-distribution system, and that trailer tongue load should be 10 percent of total loaded trailer weight. Ten percent is the floor of the 10–15 percent band CURT publishes for conventional tongue weight. A footnote describes those maximum towing capabilities as properly equipped vehicles with required equipment and "a 150-lb. driver and passenger." Combined weight cannot exceed the listed GCWR. Tongue weight plus passengers plus cargo cannot exceed rear GAWR or GVWR on the Safety Compliance Certification Label. Ford says the ratings were calculated with SAE J2807. This page does not copy that standard's tables.</p>
 <div class="ans">
-<strong>Tongue weight: 7,000 × 13% ≈ 900 lb.</strong> Add the WDH shank and head (~90 lb), four people (~420 lb), a cooler and bed gear (~200 lb): <strong>1,610 lb of the 1,650 lb payload is gone.</strong> Fifty pounds of margin. The tow rating is barely half used — payload is the binding limit, and any option add-on weight the brochure didn't count puts you over.
+<p><strong>Tongue-weight inputs:</strong> loaded trailer 5,000 lb, measured percentage 10. <code>TTC.tongueWeight</code> returns 500 lb, inside the 10–15 percent band, with targets of 500, 600, and 750 lb.</p>
+<p><strong>Payload inputs:</strong> payload rating 1,815 lb (the published PowerBoost maximum available payload, not a door sticker), tongue 500 lb, hitch hardware 0 lb because no hitch weight is published for this example, passengers 150 lb, cargo 0 lb. <code>TTC.payloadCheck</code> returns 650 lb used and 1,165 lb left, and the verdict "Passes with 1,165 lb to spare."</p>
 </div>
-<p>That is why this site's first calculator computes every margin and shows you the <strong>lowest</strong> one. Never trust a single number.</p>
+<p>CURT Class 3 weight-carrying is up to 8,000 lb gross and 800 lb of tongue, so 500 lb of tongue fits that column. The factory hitch-receiver chart in the Ford guide lists F-150 weight-carrying at a maximum trailer weight of 5,000 lb and a maximum tongue of 500 lb, and weight-distributing at 13,500 lb of trailer and 1,350 lb of tongue. The guide says receiver capacities may exceed the vehicle's maximum loaded trailer weight.</p>
 
-<h2>GCWR is the silent one</h2>
-<p>Payload fits, tow rating fits — and GCWR still fails when the truck itself is heavy. Curb weight as optioned (4×4, diesel, sunroof, crew cab) plus passengers plus the trailer must stay under GCWR. Diesel half-tons are notorious: 1,000 lb heavier than the gas truck, same GVWR, meaning less payload and less GCWR margin for the same sticker tow rating.</p>
+<h2>A common mistake</h2>
+<p>Reading only the maximum tow rating. On the PowerBoost summary, 11,200 lb of tow and 1,815 lb of payload are separate maxima. The guide says they may not be available at the same time. The binding check is the door sticker plus the loaded trailer.</p>
+
+<h2>GCWR still has to pass</h2>
+<p>Payload can pass and GCWR can still fail, because GCWR caps the loaded truck and the loaded trailer together. NHTSA's brochure says to look up GVWR, maximum trailer weight (it varies by transmission and four-wheel drive), GCWR, and GAWR. Ford's notes say combined weight cannot exceed the listed GCWR. If the door sticker is missing, do not invent a curb weight by subtracting a tow rating from GCWR. This page does not run the tow-capacity function for that reason: when payload is the limit, the leftover pounds are payload pounds, not extra trailer pounds.</p>
 
 <h2>What going over actually does</h2>
-<p>Over payload: rear suspension sits on the bump stops, front axle unloads (longer stops, vague steering, headlights in oncoming traffic), and tires run past their load range. Over GCWR: brakes work outside their designed thermal budget — fade is cumulative on mountain grades. This is not a ticket problem first; it is a crash mechanism. Check your rig with the <a href="index.html#calc">capacity check</a> before the first trip.</p>
+<p>NHTSA says too much tongue weight unloads the front wheels and makes steering less responsive, and that a weight-distribution hitch transfers weight to the front axle. CURT's adjustable-hitch guide says an adjustable hitch does not itself alter the vehicle's towing capacity. Check the rig with the <a href="index.html#calc">capacity check</a> using the sticker on that truck.</p>
+
+<h2>Limits</h2>
+<p>The NHTSA brochure is not a substitute for the owner's manuals. Ford's 1,815 lb payload and 11,200 lb tow rating are summary maxima for one engine family. If you cannot find the door sticker, get the label rather than substituting a brochure row.</p>
 
 <div class="affil">
 <span class="tag">Affiliate</span>
@@ -121,11 +130,33 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <div class="card"><h3><a href="how-to-choose-a-trailer.html">How to choose a trailer</a></h3><p>Loaded weight first, then the hitch column that weight actually fits.</p></div>
 <div class="card"><h3><a href="fifth-wheel-hitches.html">Fifth-wheel hitches</a></h3><p>Why a conventional maximum and a fifth-wheel maximum can differ at the same GCWR.</p></div>
 <div class="card"><h3><a href="towing-a-new-travel-trailer.html">Towing a new travel trailer</a></h3><p>The first trip, after the four ratings are known.</p></div>
+<div class="card"><h3><a href="how-to-weigh-truck-and-trailer.html">How to weigh a truck and trailer</a></h3><p>Axle weights on a CAT Scale, compared with the door-sticker ratings.</p></div>
+
+<h2>FAQ</h2>
+<h3>What is the difference between tow rating, GCWR, and payload?</h3>
+<p>Tow rating is the maximum trailer weight in the manufacturer's guide. GCWR caps the loaded truck and the loaded trailer together. Payload caps what the truck carries, including tongue weight. NHTSA says to look up all of them. The lowest one after the load is applied is the limit that binds.</p>
+<h3>Does a weight-distribution hitch increase towing capacity?</h3>
+<p>No. Ford's F-150 notes require a weight-distribution system above a 5,000 lb trailer, and a weight-distribution hitch transfers weight to the front axle. CURT says an adjustable hitch does not itself alter the vehicle's towing capacity. Payload, tow rating, and GCWR do not increase because the hitch did.</p>
+<h3>What does this calculator return for a 5,000 lb trailer at 10 percent?</h3>
+<p>Tongue weight is 500 lb, inside the band, with targets of 500, 600, and 750 lb. Against Ford's published 1,815 lb PowerBoost maximum available payload, with 150 lb of passengers and no extra hitch or cargo weight, payload used is 650 lb and 1,165 lb remains.</p>
+<p>Compiled with AI assistance from the sources below. Spot an error? Email <a href="mailto:jpanasuk@gmail.com">jpanasuk@gmail.com</a>.</p>
+
+<section class="sources-section" aria-labelledby="sources-heading">
+<h2 id="sources-heading">Sources</h2>
+<p>Sources for the ratings and rules cited on this page:</p>
+<ul>
+<li>Ford, "2025 Ford F-150 Towing Guide." <a href="https://www.ford.com/content/dam/brand_ford/en_us/brand/towing/pdf/2025-Ford-F150-Towing-Guide-1.pdf">https://www.ford.com/content/dam/brand_ford/en_us/brand/towing/pdf/2025-Ford-F150-Towing-Guide-1.pdf</a></li>
+<li>SAE J2807, cited by Ford as the method for the ratings. The standard's tables are not copied here. <a href="https://saemobilus.sae.org/standards/j2807_202411-performance-requirements-determining-tow-vehicle-gross-combination-weight-rating-trailer-weight-rating">https://saemobilus.sae.org/standards/j2807_202411-performance-requirements-determining-tow-vehicle-gross-combination-weight-rating-trailer-weight-rating</a></li>
+<li>NHTSA, "Towing a Trailer: Being Equipped for Safety." <a href="https://dmna.ny.gov/nynm/training/NHTSA_TowingSafety.pdf">https://dmna.ny.gov/nynm/training/NHTSA_TowingSafety.pdf</a></li>
+<li>CURT Manufacturing, "Types of Trailer Hitches and Hitch Classes." <a href="https://www.curtmfg.com/types-trailer-hitches">https://www.curtmfg.com/types-trailer-hitches</a></li>
+<li>CURT, "The Complete Buyer's Guide for Adjustable Trailer Hitches." <a href="https://www.curtmfg.com/curt-adjustable-trailer-hitch-buyers-guide">https://www.curtmfg.com/curt-adjustable-trailer-hitch-buyers-guide</a></li>
+</ul>
+</section>
 </main>
 
 <footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/index.html#methodology-note">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
 
-<script src="assets/app.js"></script>
+<script src="assets/app.js" defer></script>
 
 
 <section class="faq" style="max-width:760px;margin:3rem auto;padding:0 1rem">

@@ -17,38 +17,6 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is a fifth-wheel hitch the same as a gooseneck?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. CURT says a fifth-wheel hitch uses jaws and a pivoting plate on a kingpin, and a gooseneck uses a ball and a vertical coupler. NHTSA groups them as the bed-mounted type. CURT lists fifth-wheel hitch capacities from 16,000 to 30,000 lb."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Why does this calculator call 22 percent of 7,100 lb too heavy?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "TTC.tongueWeight implements the bumper-pull 10–15 percent band. At 7,100 lb and 22 percent it returns 1,562 lb and the verdict TOO HEAVY. CURT's Helux sheet uses 22 percent of GVWR only as an approximate pin weight and prefers a certified scale. Do not read that verdict as a fifth-wheel failure."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can the same hybrid truck list a lower fifth-wheel maximum than a conventional maximum?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, on the published row. The 2025 F-150 Hybrid selector lists a 3.5L Hybrid V6, 3.73 axle, and 17,100 lb GCWR at 10,800 lb conventional on both SuperCrew 4x4 wheelbases, and 7,100 lb fifth-wheel or gooseneck on the 145.4-inch wheelbase and 7,000 lb on the 157.2-inch wheelbase."
-      }
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Fifth-Wheel Hitches: Pin Weight and the Bumper-Pull Band",
   "datePublished": "2026-10-03",
@@ -57,6 +25,58 @@
   "publisher": {"@type": "Organization", "name": "Trailer Tow Calc", "url": "https://trailertowcalc.com"},
   "mainEntityOfPage": "https://trailertowcalc.com/fifth-wheel-hitches.html",
   "description": "CURT's kingpin hitch versus a gooseneck ball, Ford's hybrid fifth-wheel row, and why this site's 10–15 percent function is the wrong band for a 22 percent pin estimate."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is a fifth-wheel the same hitch as a gooseneck?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Jaws and a kingpin versus a ball and a vertical coupler. NHTSA groups them as the bed-mounted type. CURT lists fifth-wheel capacities from 16,000 to 30,000 lb."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does 22 percent come back \"TOO HEAVY\"?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because this site's tongue function only implements the 10–15 percent bumper-pull band. At 7,100 lb and 22 percent it returns 1,562 lb and that verdict. The 22 percent figure is CURT's approximation, and the sheet says to prefer a scale."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the fifth-wheel maximum lower than the conventional maximum on that row?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The guide prints both. Same engine, axle, and 17,100 lb GCWR: 10,800 lb conventional, and 7,100 lb or 7,000 lb fifth-wheel/gooseneck depending on wheelbase. Use the column that matches the hitch in the bed."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Trailer Tow Calculator",
+   "item": "https://trailertowcalc.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Fifth-Wheel Hitches",
+   "item": "https://trailertowcalc.com/fifth-wheel-hitches.html"
+  }
+ ]
 }
 </script>
 </head>
@@ -148,6 +168,6 @@
 </ul>
 </main>
 <footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/index.html#methodology-note">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
-<script src="assets/app.js"></script>
+<script src="assets/app.js" defer></script>
 </body>
 </html>

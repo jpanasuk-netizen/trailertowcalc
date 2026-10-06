@@ -17,38 +17,6 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What four trailer categories does NHTSA list?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Flat bed or open trailers, boat trailers, enclosed trailers, and recreational vehicle trailers, including travel trailers, fifth-wheel trailers, and folding camping trailers. Selection still depends on fully loaded weight, not the category name."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does a 10,800 lb trailer fit Class 3 weight-carrying tongue weight at 10 percent?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. TTC.tongueWeight at 10,800 lb and 10 percent returns 1,080 lb of tongue weight. CURT Class 3 weight-carrying tongue is up to 800 lb. The Class 3 and Class 4 weight-distribution tongue rating is up to 1,200 lb, which is above 1,080 lb. The hitch class changes before payload is even checked."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does a bigger hitch raise what the vehicle can tow?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "CURT's adjustable-hitch guide says an adjustable trailer hitch does not itself alter the vehicle's towing capacity, and the hitch still has to match the vehicle's rated capability. NHTSA says to look up GVWR, maximum tow weight, GCWR, and GAWR, and to match the hitch to those specifications."
-      }
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
   "@type": "Article",
   "headline": "How to Choose a Trailer the Truck Can Tow",
   "datePublished": "2026-10-03",
@@ -57,6 +25,58 @@
   "publisher": {"@type": "Organization", "name": "Trailer Tow Calc", "url": "https://trailertowcalc.com"},
   "mainEntityOfPage": "https://trailertowcalc.com/how-to-choose-a-trailer.html",
   "description": "NHTSA's four trailer categories and the ratings to look up, then two loaded weights run through this site's tongue-weight function against CURT Class 3."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What four categories does NHTSA use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Flat bed or open, boat, enclosed, and recreational vehicle trailers (travel trailers, fifth-wheels, and folding camping trailers). Loaded weight still decides the tow vehicle and the hitch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does 10,800 lb fail Class 3 weight-carrying if the percentage is fine?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because 10 percent of 10,800 lb is 1,080 lb, and Class 3 weight-carrying tongue stops at 800 lb. The weight-distribution tongue rating of 1,200 lb is the column that still covers 1,080 lb. The percentage verdict and the hitch cap are different tests."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will a bigger hitch fix a truck that is over its rating?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Match the hitch to the vehicle ratings NHTSA tells you to look up. An adjustable mount changes ball height. It does not change GVWR, GCWR, or the tow rating."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Trailer Tow Calculator",
+   "item": "https://trailertowcalc.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "How to Choose a Trailer the Truck Can Tow",
+   "item": "https://trailertowcalc.com/how-to-choose-a-trailer.html"
+  }
+ ]
 }
 </script>
 </head>
@@ -145,6 +165,6 @@
 </ul>
 </main>
 <footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/index.html#methodology-note">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
-<script src="assets/app.js"></script>
+<script src="assets/app.js" defer></script>
 </body>
 </html>

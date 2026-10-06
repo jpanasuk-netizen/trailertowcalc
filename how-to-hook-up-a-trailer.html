@@ -17,38 +17,6 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How should safety chains be connected?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "NHTSA says safety chains are required by most states. Connected chains should have slack for sharp turns, should not drag on the road, and should cross under the trailer tongue so the tongue does not drop to the road if the trailer separates."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What tongue weight does this calculator return for a 5,000 lb trailer at 10 percent?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "TTC.tongueWeight with trailer weight 5,000 lb and measured percentage 10 returns 500 lb of tongue weight, inside the 10–15 percent band, with printed targets of 500, 600, and 750 lb. Ten percent is Ford's conventional tongue-load note and the floor of CURT's 10–15 percent band."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does a finished hookup prove the truck can tow the trailer?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. The coupler latch, chains, and lights do not check payload, GCWR, or the hitch rating. A worked payload example using Ford's published 1,815 lb PowerBoost maximum available payload, a 500 lb tongue, and Ford's 150 lb driver-and-passenger footnote returns 1,165 lb left. That payload figure is an engine-line maximum, not the payload of one specific truck."
-      }
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
   "@type": "Article",
   "headline": "How to Hook Up a Trailer to a Truck",
   "datePublished": "2026-10-03",
@@ -57,6 +25,58 @@
   "publisher": {"@type": "Organization", "name": "Trailer Tow Calc", "url": "https://trailertowcalc.com"},
   "mainEntityOfPage": "https://trailertowcalc.com/how-to-hook-up-a-trailer.html",
   "description": "NHTSA's connection order and pre-departure checks, then a 5,000 lb example through this site's tongue-weight and payload functions."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How should safety chains be connected?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With slack for sharp turns, off the pavement, and crossed under the tongue. NHTSA says most states require them, and the cross is what keeps the tongue off the road if the coupler lets go."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the calculator return at 5,000 lb and 10 percent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Five hundred pounds of tongue weight, inside the band, with targets of 500, 600, and 750 lb. The 500 lb result matches the F-150 factory receiver's weight-carrying tongue figure. Class 3's weight-carrying tongue cap is 800 lb."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does hooking up prove the truck can tow it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The payload example above uses Ford's 1,815 lb PowerBoost maximum available payload, a 500 lb tongue, and the 150 lb figure from Ford's driver-and-passenger footnote, and the function returns 1,165 lb left. Your door sticker can be lower, and payload and towing may not be achieved at the same time."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Trailer Tow Calculator",
+   "item": "https://trailertowcalc.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "How to Hook Up a Trailer to a Truck",
+   "item": "https://trailertowcalc.com/how-to-hook-up-a-trailer.html"
+  }
+ ]
 }
 </script>
 </head>
@@ -149,6 +169,6 @@
 </ul>
 </main>
 <footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/index.html#methodology-note">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
-<script src="assets/app.js"></script>
+<script src="assets/app.js" defer></script>
 </body>
 </html>

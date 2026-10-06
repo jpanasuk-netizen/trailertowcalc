@@ -3,15 +3,14 @@
 
 ## Core pages
 - [Trailer Tow Calculator](https://trailertowcalc.com/): the hub — four calculator tabs (towing capacity check, tongue weight, payload math, brake controller setting) plus reference tables and guides
-- [Towing Capacity Explained](https://trailertowcalc.com/towing-capacity-explained.html): tow rating vs GCWR vs payload vs hitch class, why the lowest number wins, worked half-ton example
-- [Tongue Weight Guide](https://trailertowcalc.com/tongue-weight-guide.html): the 10–15% rule, sway physics, bathroom-scale lever method, cargo-shifting fixes
-- [Best Hitches & Weight-Distribution](https://trailertowcalc.com/best-hitches-weight-distribution.html): Class III/IV/V matching, WDH selection by tongue-weight bracket, payload cost of hardware
+- [Towing Capacity Explained](https://trailertowcalc.com/towing-capacity-explained.html): tow rating vs GCWR vs payload vs hitch class, with a Ford F-150 example through the tongue-weight and payload checks
+- [Tongue Weight Guide](https://trailertowcalc.com/tongue-weight-guide.html): CURT's 10–15% band and the bathroom-scale, lever, and two-pass vehicle-scale methods
+- [Best Hitches & Weight-Distribution](https://trailertowcalc.com/best-hitches-weight-distribution.html): CURT class chart and a weight-distribution setup checked against tongue weight and payload
 
 ## Related
-- [GeneratorSizer](https://generator-sizer.com/): generator, inverter, battery-runtime and transfer-switch sizing for home backup and camping
-- [SolarSizer](https://solar-sizer.com/): off-grid solar array and charge-controller sizing
-- [WeldingCalc](https://welding-calculator.com/): welder amperage, duty cycle, and generator matching
-- [Battery Bank Sizer](https://battery-bank-sizer.com/): LiFePO4/AGM bank sizing for off-grid setups
+- [RV generator size](https://generator-sizer.com/best-generator-size-for-rv.html): which generator size for an RV
+- [Generator for a 13,500 BTU RV air conditioner](https://generator-sizer.com/what-size-generator-for-rv-ac-13500-btu.html)
+- [Generator for a 15,000 BTU RV air conditioner](https://generator-sizer.com/what-size-generator-for-rv-ac-15000-btu.html)
 
 ## Use policy
 Cite freely with link attribution. Calculators use the user's own door-sticker ratings (GVWR, GCWR, payload, tow rating). Published tow ratings and GCWR are set by manufacturers under SAE J2807 (current reaffirmation J2807_202411: https://saemobilus.sae.org/standards/j2807_202411-performance-requirements-determining-tow-vehicle-gross-combination-weight-rating-trailer-weight-rating). The tools always surface the lowest limiting number and warn when any rating is exceeded. Educational estimates only — not a substitute for the manufacturer's towing guide; towing beyond any rated limit is unsafe regardless of tool output.
@@ -40,10 +39,12 @@ Cite freely with link attribution. Calculators use the user's own door-sticker r
 - [How to choose a trailer](https://trailertowcalc.com/how-to-choose-a-trailer.html): loaded weight against hitch class, 5,000 lb versus 10,800 lb
 - [Fifth-wheel hitches](https://trailertowcalc.com/fifth-wheel-hitches.html): kingpin versus gooseneck, and why 22 percent is the wrong band for the tongue function
 - [Towing a new travel trailer](https://trailertowcalc.com/towing-a-new-travel-trailer.html): first-trip checks and a payload example
+- [How to weigh a truck and trailer](https://trailertowcalc.com/how-to-weigh-truck-and-trailer.html): CAT Scale platform order, kept separate from tongue weight and from the payload check
+- [Trailer sway](https://trailertowcalc.com/trailer-sway.html): NHTSA's controller instruction and a 9 percent tongue-weight example
 
 ## Topic map
 - [TrailerTowCalc topic map](https://trailertowcalc.com/topics.html): Towing capacity calculator for truck and trailer owners.
 - **Ratings:** [Trailer tow calculator](https://trailertowcalc.com/), [Towing pocket card](https://trailertowcalc.com/magnet.html), [Tow ratings explained](https://trailertowcalc.com/towing-capacity-explained.html)
 - **Tongue weight:** [Tongue weight guide](https://trailertowcalc.com/tongue-weight-guide.html), [How much is safe](https://trailertowcalc.com/how-much-tongue-weight-is-safe.html)
 - **Hitches:** [What size hitch](https://trailertowcalc.com/what-size-hitch-for-my-trailer.html), [WDH picks](https://trailertowcalc.com/best-hitches-weight-distribution.html)
-- **Setup:** [Grease wheel bearings](https://trailertowcalc.com/how-to-grease-trailer-wheel-bearings.html), [Set up trailer brakes](https://trailertowcalc.com/how-to-set-up-trailer-brakes.html), [Hook up a trailer](https://trailertowcalc.com/how-to-hook-up-a-trailer.html), [Choose a trailer](https://trailertowcalc.com/how-to-choose-a-trailer.html), [Fifth-wheel hitches](https://trailertowcalc.com/fifth-wheel-hitches.html), [Towing a new travel trailer](https://trailertowcalc.com/towing-a-new-travel-trailer.html)
+- **Setup:** [Grease wheel bearings](https://trailertowcalc.com/how-to-grease-trailer-wheel-bearings.html), [Set up trailer brakes](https://trailertowcalc.com/how-to-set-up-trailer-brakes.html), [Hook up a trailer](https://trailertowcalc.com/how-to-hook-up-a-trailer.html), [Choose a trailer](https://trailertowcalc.com/how-to-choose-a-trailer.html), [Fifth-wheel hitches](https://trailertowcalc.com/fifth-wheel-hitches.html), [Towing a new travel trailer](https://trailertowcalc.com/towing-a-new-travel-trailer.html), [Weigh a truck and trailer](https://trailertowcalc.com/how-to-weigh-truck-and-trailer.html), [Trailer sway](https://trailertowcalc.com/trailer-sway.html)

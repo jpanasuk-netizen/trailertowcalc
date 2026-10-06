@@ -17,38 +17,6 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What does NHTSA say to do before driving a new combination on main roads?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Take time to practice before driving on main roads, and never allow anyone to ride in or on the trailer. If electric trailer brakes are installed and the trailer sways, activate the trailer brake controller by hand. Do not try to control sway by applying the tow vehicle brakes."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What payload result does a 5,000 lb trailer at 10 percent produce against a 1,815 lb payload?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "TTC.tongueWeight returns 500 lb. TTC.payloadCheck with payload rating 1,815 lb, tongue 500 lb, hitch hardware 0, and passengers 150 lb returns 650 lb used and the verdict Passes with 1,165 lb to spare. The 1,815 lb figure is Ford's PowerBoost maximum available payload, not the payload of one door sticker, and Ford says payload and towing may not be achieved simultaneously."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How should you uncouple so the tongue cannot flip up?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "NHTSA says to place blocks at the front and rear of the trailer tires before releasing the coupling, and to place jack stands under the rear of the trailer before uncoupling because an unbalanced load may cause the tongue to rotate upward."
-      }
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Towing a New Travel Trailer: First Trip and Payload",
   "datePublished": "2026-10-03",
@@ -57,6 +25,58 @@
   "publisher": {"@type": "Organization", "name": "Trailer Tow Calc", "url": "https://trailertowcalc.com"},
   "mainEntityOfPage": "https://trailertowcalc.com/towing-a-new-travel-trailer.html",
   "description": "NHTSA's first-trip driving and uncoupling warnings, plus a payload check for a 5,000 lb trailer at 10 percent tongue weight."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What should happen before the first trip on main roads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Practice first. Nobody rides in or on the trailer. If the trailer sways and you have an electric brake controller, use that controller by hand. Do not try to stop the sway with the tow vehicle's brakes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the payload check return for this 5,000 lb example?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tongue weight is 500 lb at 10 percent. With a 1,815 lb payload rating, 500 lb of tongue, and 150 lb of passengers, the function returns 650 lb used and \"Passes with 1,165 lb to spare.\" The 1,815 lb figure is Ford's PowerBoost maximum available payload, and it may not be available at the same time as the tow rating. Read your doorjamb label."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you uncouple without the tongue flipping?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Block the trailer tires front and rear, and put jack stands under the rear before you release the coupler. NHTSA warns that an unbalanced load can rotate the tongue upward."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Trailer Tow Calculator",
+   "item": "https://trailertowcalc.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Towing a New Travel Trailer",
+   "item": "https://trailertowcalc.com/towing-a-new-travel-trailer.html"
+  }
+ ]
 }
 </script>
 </head>
@@ -123,6 +143,8 @@
 <li><a href="how-to-hook-up-a-trailer.html">How to hook up a trailer</a></li>
 <li><a href="tongue-weight-guide.html">Tongue weight guide</a></li>
 <li><a href="towing-capacity-explained.html">Towing capacity explained</a></li>
+<li><a href="trailer-sway.html">Trailer sway</a></li>
+<li><a href="https://generator-sizer.com/best-generator-size-for-rv.html" rel="noopener">RV generator size</a>, including <a href="https://generator-sizer.com/what-size-generator-for-rv-ac-13500-btu.html" rel="noopener">13,500 BTU</a> and <a href="https://generator-sizer.com/what-size-generator-for-rv-ac-15000-btu.html" rel="noopener">15,000 BTU</a> air conditioning</li>
 </ul>
 
 <h2>FAQ</h2>
@@ -143,6 +165,6 @@
 </ul>
 </main>
 <footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/index.html#methodology-note">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
-<script src="assets/app.js"></script>
+<script src="assets/app.js" defer></script>
 </body>
 </html>

@@ -22,36 +22,26 @@
 }
 </script>
 
-<script id="sources-data" type="application/json">
+<script type="application/ld+json">
 {
-  "sources": [
-    {
-      "title": "NHTSA, Towing a Trailer: Being Equipped for Safety",
-      "url": "https://dmna.ny.gov/nynm/training/NHTSA_TowingSafety.pdf",
-      "date": "2026-10-02"
-    },
-    {
-      "title": "CURT Manufacturing, Types of Trailer Hitches and Hitch Classes",
-      "url": "https://www.curtmfg.com/types-trailer-hitches",
-      "date": "2026-10-02"
-    },
-    {
-      "title": "CURT, How to Measure Tongue Weight",
-      "url": "https://www.curtmfg.com/trailer-parts/couplers/learn-more",
-      "date": "2026-10-02"
-    },
-    {
-      "title": "SAE J2807_202411, Performance Requirements for Determining Tow-Vehicle GCWR and Trailer Weight Rating",
-      "url": "https://saemobilus.sae.org/standards/j2807_202411-performance-requirements-determining-tow-vehicle-gross-combination-weight-rating-trailer-weight-rating",
-      "date": "2026-10-02"
-    }
-  ]
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Trailer Tow Calculator",
+   "item": "https://trailertowcalc.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "What TrailerTowCalc is for",
+   "item": "https://trailertowcalc.com/topics.html"
+  }
+ ]
 }
 </script>
-<script>
-document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getElementById('sources-data').textContent);var s=document.createElement('div');s.className='sources-section';s.innerHTML='<h2 id="sources-heading">Sources & Standards</h2><p>Sources for the ratings and rules cited on this page:</p><ul>'+d.sources.map(x=>'<li><a href="'+x.url+'" target="_blank">'+x.title+'</a></li>').join('')+'</ul><p><button id="cite-toggle">Show Copyable Citations</button></p><div id="cite-output" style="display:none"></div>';var t=document.querySelector('nav')||document.querySelector('footer')||document.body;t.parentNode.insertBefore(s,t);var o=s.querySelector('#cite-toggle'),c=s.querySelector('#cite-output');o.onclick=()=>{c.textContent=d.sources.map(x=>x.title+'. '+x.url+'. Accessed '+x.date).join('\n\n');c.style.display='block';o.style.display='none'};});
-</script>
-<meta name="llms.txt" content="https://trailertowcalc.com/sources.json">
 </head>
 <body>
 <header class="site-head">
@@ -64,6 +54,7 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 </header>
 <main>
 <h1>What TrailerTowCalc is for</h1>
+<p data-magnet-cta="1" style="margin:.6rem 0 1.1rem;padding:.7rem .9rem;border-left:4px solid #f59e0b;background:rgba(245,158,11,.08);font-size:1.02rem"><a href="magnet.html" style="font-weight:700">Free towing pocket card — print it, 10 minutes.</a></p>
 <p class="sub">Towing capacity calculator for truck and trailer owners.</p>
 <p>Not CDL / heavy haul. The door-jamb sticker is the truck; the billboard is a rumor.</p>
 <p>This map lists <strong>pages that exist</strong>. It is not a keyword dump and it does not treat every article as its own niche. The calculator (or the pack) is the hub. Guides sit under one pillar each.</p>
@@ -72,10 +63,10 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <ul>
 <li><a href="/">Trailer tow calculator</a> — Tow, GCWR, payload, hitch — lowest wins.</li>
 <li><a href="/magnet.html">Towing pocket card</a> — Printable class ranges.</li>
-<li><a href="/towing-capacity-explained.html">Tow ratings explained</a> — Why 11,000 lb on the window is not 11,000 lb of camper.</li>
+<li><a href="/towing-capacity-explained.html">Tow ratings explained</a> — Why the brochure maximum is not the only number that has to pass.</li>
 </ul>
 <h2>Tongue weight</h2>
-<p>10–15%. 13% is a sane plan.</p>
+<p>CURT's band is 10–15 percent of gross trailer weight.</p>
 <ul>
 <li><a href="/tongue-weight-guide.html">Tongue weight guide</a> — How to measure, where to shift cargo.</li>
 <li><a href="/how-much-tongue-weight-is-safe.html">How much is safe</a> — The band, sway, and the half-ton trap.</li>
@@ -114,12 +105,19 @@ document.addEventListener('DOMContentLoaded',()=>{var d=JSON.parse(document.getE
 <li><a href="/how-to-choose-a-trailer.html">How to choose a trailer</a> — Four categories, then two tongue weights against Class 3.</li>
 <li><a href="/fifth-wheel-hitches.html">Fifth-wheel hitches</a> — Kingpin, pin weight, and the bumper-pull band.</li>
 <li><a href="/towing-a-new-travel-trailer.html">Towing a new travel trailer</a> — Practice, sway, uncoupling, and a payload example.</li>
+<li><a href="/how-to-weigh-truck-and-trailer.html">How to weigh a truck and trailer</a> — CAT Scale platforms, then a separate payload check.</li>
+<li><a href="/trailer-sway.html">Trailer sway</a> — NHTSA's controller instruction, and a tongue weight under 10 percent.</li>
 </ul>
 <h2>Sisters</h2>
-<p>Adjacent math lives next door, not here. <a href="https://generator-sizer.com/">GeneratorSizer</a></p>
+<p>RV generator sizing is the adjacent topic, on GeneratorSizer: <a href="https://generator-sizer.com/best-generator-size-for-rv.html">which size</a>, <a href="https://generator-sizer.com/what-size-generator-for-rv-ac-13500-btu.html">13,500 BTU air conditioning</a>, <a href="https://generator-sizer.com/what-size-generator-for-rv-ac-15000-btu.html">15,000 BTU air conditioning</a>.</p>
+
+<section class="sources-section" aria-labelledby="sources-heading">
+<h2 id="sources-heading">Sources & Standards</h2>
+<p>Sources for the ratings and rules cited on this page:</p>
+<ul><li><a href="https://dmna.ny.gov/nynm/training/NHTSA_TowingSafety.pdf" rel="noopener" target="_blank">NHTSA, Towing a Trailer: Being Equipped for Safety</a></li><li><a href="https://www.curtmfg.com/types-trailer-hitches" rel="noopener" target="_blank">CURT Manufacturing, Types of Trailer Hitches and Hitch Classes</a></li><li><a href="https://www.curtmfg.com/trailer-parts/couplers/learn-more" rel="noopener" target="_blank">CURT, How to Measure Tongue Weight</a></li><li><a href="https://saemobilus.sae.org/standards/j2807_202411-performance-requirements-determining-tow-vehicle-gross-combination-weight-rating-trailer-weight-rating" rel="noopener" target="_blank">SAE J2807_202411, Performance Requirements for Determining Tow-Vehicle GCWR and Trailer Weight Rating</a></li></ul>
+</section>
 </main>
-<footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/index.html#methodology-note">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links</footer>
-<script src="assets/magnet-cta.js"></script>
+<footer>Built by Jeremy Panasuk · <a href="/about.html">About &amp; how this was made</a> · <a href="/index.html#methodology-note">Methodology</a> · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · pages may contain affiliate links · <a href="https://www.tiktok.com/@3jsa7" rel="noopener" target="_blank" data-tiktok-cta="1">TikTok @3jsa7</a></footer>
 
 
 
