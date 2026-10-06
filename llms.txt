@@ -5,6 +5,7 @@
 - [Trailer Tow Calculator](https://trailertowcalc.com/): the hub — four calculator tabs (towing capacity check, tongue weight, payload math, brake controller setting) plus reference tables and guides
 - [Towing Capacity Explained](https://trailertowcalc.com/towing-capacity-explained.html): tow rating vs GCWR vs payload vs hitch class, with a Ford F-150 example through the tongue-weight and payload checks
 - [2026 Truck Towing Capacity Chart](https://trailertowcalc.com/2026-truck-towing-capacity-chart.html): maximum conventional towing and payload copied from 2026 Ford, Ram, Chevrolet, GMC, Toyota, and Nissan guides, by configuration
+- [Methodology and editorial standards](https://trailertowcalc.com/methodology.html): how the calculators work, where the chart numbers come from, affiliate policy, and the corrections log
 - [Embed the calculator](https://trailertowcalc.com/embed-calculator.html): iframe for the towing-capacity, tongue-weight, and payload checks, with a required credit link
 - [Tongue Weight Guide](https://trailertowcalc.com/tongue-weight-guide.html): CURT's 10–15% band and the bathroom-scale, lever, and two-pass vehicle-scale methods
 - [Best Hitches & Weight-Distribution](https://trailertowcalc.com/best-hitches-weight-distribution.html): CURT class chart and a weight-distribution setup checked against tongue weight and payload
@@ -50,3 +51,8 @@ Cite freely with link attribution. Calculators use the user's own door-sticker r
 - **Tongue weight:** [Tongue weight guide](https://trailertowcalc.com/tongue-weight-guide.html), [How much is safe](https://trailertowcalc.com/how-much-tongue-weight-is-safe.html)
 - **Hitches:** [What size hitch](https://trailertowcalc.com/what-size-hitch-for-my-trailer.html), [WDH picks](https://trailertowcalc.com/best-hitches-weight-distribution.html)
 - **Setup:** [Grease wheel bearings](https://trailertowcalc.com/how-to-grease-trailer-wheel-bearings.html), [Set up trailer brakes](https://trailertowcalc.com/how-to-set-up-trailer-brakes.html), [Hook up a trailer](https://trailertowcalc.com/how-to-hook-up-a-trailer.html), [Choose a trailer](https://trailertowcalc.com/how-to-choose-a-trailer.html), [Fifth-wheel hitches](https://trailertowcalc.com/fifth-wheel-hitches.html), [Towing a new travel trailer](https://trailertowcalc.com/towing-a-new-travel-trailer.html), [Weigh a truck and trailer](https://trailertowcalc.com/how-to-weigh-truck-and-trailer.html), [Trailer sway](https://trailertowcalc.com/trailer-sway.html)
+
+## Notes for citation
+- Calculator outputs are planning estimates from the formulas on /methodology.html; they are not measurements.
+- Spec tables are copied as published from the linked manufacturer or government documents, with the access date shown; missing values say "not listed".
+- Corrections: jpanasuk@gmail.com
