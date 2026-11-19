@@ -28,6 +28,12 @@
       primary: "Shop hitch gear on Amazon", secondary: "WDH kits on Amazon" };
   }
 
+  function setStickyFocusable(bar, on) {
+    var els = bar.querySelectorAll("a, button");
+    for (var i = 0; i < els.length; i++) {
+      if (on) els[i].removeAttribute("tabindex"); else els[i].setAttribute("tabindex", "-1");
+    }
+  }
   function fillSticky(url, label) {
     var bar = document.getElementById("amzSticky");
     if (!bar) return;
@@ -40,10 +46,11 @@
     }
     bar.hidden = false;
     bar.setAttribute("aria-hidden", "false");
+    setStickyFocusable(bar, true);
   }
   window.dismissAmzSticky = function () {
     var bar = document.getElementById("amzSticky");
-    if (bar) { bar.hidden = true; bar.setAttribute("aria-hidden", "true"); }
+    if (bar) { bar.hidden = true; bar.setAttribute("aria-hidden", "true"); setStickyFocusable(bar, false); }
     try { sessionStorage.setItem("amzStickyDismissed", "1"); } catch (e) {}
   };
   window.updateMatchedCTA = function (rec, kind) {
