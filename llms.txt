@@ -1,5 +1,5 @@
 # TrailerTowCalc
-> Free towing safety calculators: towing capacity check (tow rating, GCWR, payload and hitch margins — always surfaces the lowest limiting number), tongue weight (10–15% band with bathroom-scale lever method), payload math (tongue weight + passengers + cargo vs payload rating), and electric brake controller starting gain. Sister site of GeneratorSizer. Built and owned by Jeremy Panasuk (jpanasuk@gmail.com). Page text is drafted with AI assistance from the sources cited on each page.
+> Free towing safety calculators: towing capacity check (tow rating, GCWR, payload and hitch margins — always surfaces the lowest limiting number), tongue weight (10–15% band with bathroom-scale lever method), payload math (tongue weight + passengers + cargo vs payload rating), and electric brake controller starting gain. Sister site of GeneratorSizer. Built and owned by Jeremy Panasuk, New Auburn, Wisconsin (jpanasuk@gmail.com). Page text is drafted with AI assistance from the sources cited on each page.
 
 ## Core pages
 - [Trailer Tow Calculator](https://trailertowcalc.com/): the hub — four calculator tabs (towing capacity check, tongue weight, payload math, brake controller setting) plus reference tables and guides
@@ -14,6 +14,29 @@
 - [RV generator size](https://generator-sizer.com/best-generator-size-for-rv.html): which generator size for an RV
 - [Generator for a 13,500 BTU RV air conditioner](https://generator-sizer.com/what-size-generator-for-rv-ac-13500-btu.html)
 - [Generator for a 15,000 BTU RV air conditioner](https://generator-sizer.com/what-size-generator-for-rv-ac-15000-btu.html)
+
+## Data
+- [Trailer hitch class and ball weight ratings (CURT data)](https://trailertowcalc.com/hitch-class-and-ball-ratings-data.html): 10 sourced rows: trailer hitch class and hitch ball weight ratings, each linked to the published source, with a CSV download and citation.
+- [Trailer hitch class and ball weight ratings (CURT data) CSV](https://trailertowcalc.com/hitch-class-and-ball-ratings-data.csv): the same rows as Trailer hitch class and ball weight ratings (CURT data), as CSV
+
+## U-Haul trailers
+- [What Size Hitch for a U-Haul 5x8 Trailer? Class 2 (2,700 lbs)](https://trailertowcalc.com/what-size-hitch-for-a-uhaul-5x8-trailer.html): U-Haul's 5x8 cargo trailer is 2,700 lbs loaded: over CURT's 2,000 lb Class 1 and inside Class 2. Check your vehicle's curb weight against U-Haul's rule.
+- [What Size Hitch for a U-Haul 6x12 Trailer? Class 3 (4,400 lbs)](https://trailertowcalc.com/what-size-hitch-for-a-uhaul-6x12-trailer.html): U-Haul's 6x12 cargo trailer is 4,400 lbs loaded with a surge brake: past CURT's 3,500 lb Class 2, inside Class 3. Run U-Haul's 80% curb-weight rule.
+- [What Size Hitch for a U-Haul Car Trailer? Class 3 (7,500 lbs)](https://trailertowcalc.com/what-size-hitch-for-a-uhaul-car-trailer.html): U-Haul's auto transport trailer is 7,500 lbs gross with a surge brake and a 2 in. ball: over CURT's 3,500 lb Class 2 and inside Class 3.
+- [What Size Hitch for a U-Haul Motorcycle Trailer? Class 2 (2,400 lbs)](https://trailertowcalc.com/what-size-hitch-for-a-uhaul-motorcycle-trailer.html): U-Haul's motorcycle trailer is 2,400 lbs with a full load, on a 1-7/8 or 2 in. ball: over CURT's 2,000 lb Class 1 and inside Class 2.
+- [What Size Hitch for a U-Haul Tow Dolly? Class 3 (About 4,820 lbs)](https://trailertowcalc.com/what-size-hitch-for-a-uhaul-tow-dolly.html): U-Haul's tow dolly is 740 lbs empty with a 4,080 lb max load, about 4,820 lbs loaded, on a 2 in. ball rated 3,500 lbs: past CURT's Class 2, inside Class 3.
+- [What Size Hitch for a U-Haul Trailer? Class 2 or Class 3 by Trailer](https://trailertowcalc.com/what-size-hitch-for-a-uhaul-trailer.html): U-Haul's motorcycle and 5x8 trailers fit CURT Class 2; the 6x12, tow dolly and auto transport need Class 3. Pick a trailer to see its loaded weight and class.
+
+## Vehicle hitch guides
+- [Best Hitch for a Ford Maverick (2,000 lb Standard, 4,000 lb with 4K)](https://trailertowcalc.com/best-hitch-for-ford-maverick.html): Ford rates the 2026 Maverick at 2,000 lbs standard. The 4K Tow Package raises AWD models to 4,000 lbs with a Class III receiver. Class 2 stops at 3,500 lbs.
+- [Best Hitch for a Subaru Forester (1,500 lb, Wilderness 3,500 lb)](https://trailertowcalc.com/best-hitch-for-subaru-forester.html): Subaru rates most 2026 Foresters at 1,500 lbs and the Wilderness at 3,500 lbs. Do not use a weight-distributing hitch. Class 2 covers the Wilderness.
+- [Best Hitch for Toyota RAV4: 2026 Tow Ratings and Hitch Class](https://trailertowcalc.com/best-hitch-for-toyota-rav4.html): RAV4 hitch: Toyota lists the 2026 RAV4 at 1,750 lb on the LE and 3,500 lb on the AWD XLE Premium and Woodland. CURT's Class 2 is rated to 3,500 lb.
+- [Best Hitch for Toyota Sienna: 3,500 lb Rating and Hitch Class](https://trailertowcalc.com/best-hitch-for-toyota-sienna.html): Best hitch for a Toyota Sienna: Toyota lists up to 3,500 lb of towing for the 2026 Sienna. CURT's Class 2 is rated to 3,500 lb with 350 lb of tongue weight.
+
+## Site info
+- [About & how this site is built](https://trailertowcalc.com/about.html): TrailerTowCalc is built by Jeremy Panasuk in New Auburn, Wisconsin. Calculators drafted with AI from published sources, funded by Amazon affiliate links.
+- [Privacy Policy](https://trailertowcalc.com/privacy.html): Privacy policy for trailertowcalc.com: no account, calculator entries stay in your browser, Amazon affiliate links, no advertising cookies.
+- [Contact Trailer Tow Calculator](https://trailertowcalc.com/contact.html): Contact Jeremy Panasuk about the trailer tow calculators: questions, corrections, and feedback on towing and hitch calculations, with clear steps.
 
 ## Use policy
 Cite freely with link attribution. Calculators use the user's own door-sticker ratings (GVWR, GCWR, payload, tow rating). Published tow ratings and GCWR are set by manufacturers under SAE J2807 (current reaffirmation J2807_202411: https://saemobilus.sae.org/standards/j2807_202411-performance-requirements-determining-tow-vehicle-gross-combination-weight-rating-trailer-weight-rating). The tools always surface the lowest limiting number and warn when any rating is exceeded. Educational estimates only — not a substitute for the manufacturer's towing guide; towing beyond any rated limit is unsafe regardless of tool output.
