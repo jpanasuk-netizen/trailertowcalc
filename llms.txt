@@ -79,3 +79,7 @@ Cite freely with link attribution. Calculators use the user's own door-sticker r
 - Calculator outputs are planning estimates from the formulas on /methodology.html; they are not measurements.
 - Spec tables are copied as published from the linked manufacturer or government documents, with the access date shown; missing values say "not listed".
 - Corrections: jpanasuk@gmail.com
+
+## Search this site (for agents)
+- Search endpoint: https://trailertowcalc.com/.well-known/search?q={query} (HTTP GET, or the HTTP QUERY method with the question as the body). It returns matching passages from this site as Markdown with source paths, not a generated answer. Provided by Cloudflare Search for Agents; docs: https://developers.cloudflare.com/ai-search/how-to/search-for-agents/
+- If that endpoint returns 404, it is not switched on yet; use the pages and topic map above instead.
